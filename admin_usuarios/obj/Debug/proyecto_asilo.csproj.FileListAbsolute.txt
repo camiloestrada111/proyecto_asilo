@@ -1,0 +1,54 @@
+C:\Users\Camilo\Documents\Visual Studio 2017\Projects\admin_usuarios\admin_usuarios\bin\Debug\db_asilo.mdf
+C:\Users\Camilo\Documents\Visual Studio 2017\Projects\admin_usuarios\admin_usuarios\bin\Debug\db_asilo_log.ldf
+C:\Users\Camilo\Documents\Visual Studio 2017\Projects\admin_usuarios\admin_usuarios\bin\Debug\admin_us.exe.config
+C:\Users\Camilo\Documents\Visual Studio 2017\Projects\admin_usuarios\admin_usuarios\bin\Debug\admin_us.exe
+C:\Users\Camilo\Documents\Visual Studio 2017\Projects\admin_usuarios\admin_usuarios\bin\Debug\admin_us.pdb
+C:\Users\Camilo\Documents\Visual Studio 2017\Projects\admin_usuarios\admin_usuarios\obj\Debug\proyecto_asilo.csprojAssemblyReference.cache
+C:\Users\Camilo\Documents\Visual Studio 2017\Projects\admin_usuarios\admin_usuarios\obj\Debug\admin_usuarios.admin_usuarios.resources
+C:\Users\Camilo\Documents\Visual Studio 2017\Projects\admin_usuarios\admin_usuarios\obj\Debug\admin_us.frmLogin.resources
+C:\Users\Camilo\Documents\Visual Studio 2017\Projects\admin_usuarios\admin_usuarios\obj\Debug\admin_us.Properties.Resources.resources
+C:\Users\Camilo\Documents\Visual Studio 2017\Projects\admin_usuarios\admin_usuarios\obj\Debug\proyecto_asilo.csproj.GenerateResource.cache
+C:\Users\Camilo\Documents\Visual Studio 2017\Projects\admin_usuarios\admin_usuarios\obj\Debug\proyecto_asilo.csproj.CoreCompileInputs.cache
+C:\Users\Camilo\Documents\Visual Studio 2017\Projects\admin_usuarios\admin_usuarios\obj\Debug\admin_us.exe
+C:\Users\Camilo\Documents\Visual Studio 2017\Projects\admin_usuarios\admin_usuarios\obj\Debug\admin_us.pdb
+C:\Users\Camilo\Desktop\Proyecto Asilo\Primera Iteracion\Proyecto_asilo\admin_usuarios\bin\Debug\db_asilo.mdf
+C:\Users\Camilo\Desktop\Proyecto Asilo\Primera Iteracion\Proyecto_asilo\admin_usuarios\bin\Debug\db_asilo_log.ldf
+C:\Users\Camilo\Desktop\Proyecto Asilo\Primera Iteracion\Proyecto_asilo\admin_usuarios\bin\Debug\admin_us.exe.config
+C:\Users\Camilo\Desktop\Proyecto Asilo\Primera Iteracion\Proyecto_asilo\admin_usuarios\bin\Debug\admin_us.exe
+C:\Users\Camilo\Desktop\Proyecto Asilo\Primera Iteracion\Proyecto_asilo\admin_usuarios\bin\Debug\admin_us.pdb
+C:\Users\Camilo\Desktop\Proyecto Asilo\Primera Iteracion\Proyecto_asilo\admin_usuarios\obj\Debug\proyecto_asilo.csprojAssemblyReference.cache
+C:\Users\Camilo\Desktop\Proyecto Asilo\Primera Iteracion\Proyecto_asilo\admin_usuarios\obj\Debug\admin_usuarios.admin_usuarios.resources
+C:\Users\Camilo\Desktop\Proyecto Asilo\Primera Iteracion\Proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmLogin.resources
+C:\Users\Camilo\Desktop\Proyecto Asilo\Primera Iteracion\Proyecto_asilo\admin_usuarios\obj\Debug\admin_us.Properties.Resources.resources
+C:\Users\Camilo\Desktop\Proyecto Asilo\Primera Iteracion\Proyecto_asilo\admin_usuarios\obj\Debug\proyecto_asilo.csproj.GenerateResource.cache
+C:\Users\Camilo\Desktop\Proyecto Asilo\Primera Iteracion\Proyecto_asilo\admin_usuarios\obj\Debug\proyecto_asilo.csproj.CoreCompileInputs.cache
+C:\Users\Camilo\Desktop\Proyecto Asilo\Primera Iteracion\Proyecto_asilo\admin_usuarios\obj\Debug\admin_us.exe
+C:\Users\Camilo\Desktop\Proyecto Asilo\Primera Iteracion\Proyecto_asilo\admin_usuarios\obj\Debug\admin_us.pdb
+D:\Visual_Projects\Asilo\Proyecto_asilo\admin_usuarios\bin\Debug\db_asilo.mdf
+D:\Visual_Projects\Asilo\Proyecto_asilo\admin_usuarios\bin\Debug\db_asilo_log.ldf
+D:\Visual_Projects\Asilo\Proyecto_asilo\admin_usuarios\bin\Debug\admin_us.exe.config
+D:\Visual_Projects\Asilo\Proyecto_asilo\admin_usuarios\bin\Debug\admin_us.exe
+D:\Visual_Projects\Asilo\Proyecto_asilo\admin_usuarios\bin\Debug\admin_us.pdb
+D:\Visual_Projects\Asilo\Proyecto_asilo\admin_usuarios\obj\Debug\proyecto_asilo.csprojAssemblyReference.cache
+D:\Visual_Projects\Asilo\Proyecto_asilo\admin_usuarios\obj\Debug\admin_usuarios.admin_usuarios.resources
+D:\Visual_Projects\Asilo\Proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmLogin.resources
+D:\Visual_Projects\Asilo\Proyecto_asilo\admin_usuarios\obj\Debug\admin_us.Properties.Resources.resources
+D:\Visual_Projects\Asilo\Proyecto_asilo\admin_usuarios\obj\Debug\proyecto_asilo.csproj.GenerateResource.cache
+D:\Visual_Projects\Asilo\Proyecto_asilo\admin_usuarios\obj\Debug\proyecto_asilo.csproj.CoreCompileInputs.cache
+D:\Visual_Projects\Asilo\Proyecto_asilo\admin_usuarios\obj\Debug\admin_us.exe
+D:\Visual_Projects\Asilo\Proyecto_asilo\admin_usuarios\obj\Debug\admin_us.pdb
+D:\Visual_Projects\Asilo\Proyecto_asilo\admin_usuarios\obj\Debug\MenuAsilo.Menu.resources
+C:\Users\Camilo\Desktop\Proyecto Asilo\Versiones Estables\V.1.0\Proyecto_asilo\admin_usuarios\bin\Debug\db_asilo.mdf
+C:\Users\Camilo\Desktop\Proyecto Asilo\Versiones Estables\V.1.0\Proyecto_asilo\admin_usuarios\bin\Debug\db_asilo_log.ldf
+C:\Users\Camilo\Desktop\Proyecto Asilo\Versiones Estables\V.1.0\Proyecto_asilo\admin_usuarios\bin\Debug\admin_us.exe.config
+C:\Users\Camilo\Desktop\Proyecto Asilo\Versiones Estables\V.1.0\Proyecto_asilo\admin_usuarios\bin\Debug\admin_us.exe
+C:\Users\Camilo\Desktop\Proyecto Asilo\Versiones Estables\V.1.0\Proyecto_asilo\admin_usuarios\bin\Debug\admin_us.pdb
+C:\Users\Camilo\Desktop\Proyecto Asilo\Versiones Estables\V.1.0\Proyecto_asilo\admin_usuarios\obj\Debug\proyecto_asilo.csprojAssemblyReference.cache
+C:\Users\Camilo\Desktop\Proyecto Asilo\Versiones Estables\V.1.0\Proyecto_asilo\admin_usuarios\obj\Debug\admin_usuarios.admin_usuarios.resources
+C:\Users\Camilo\Desktop\Proyecto Asilo\Versiones Estables\V.1.0\Proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmLogin.resources
+C:\Users\Camilo\Desktop\Proyecto Asilo\Versiones Estables\V.1.0\Proyecto_asilo\admin_usuarios\obj\Debug\MenuAsilo.Menu.resources
+C:\Users\Camilo\Desktop\Proyecto Asilo\Versiones Estables\V.1.0\Proyecto_asilo\admin_usuarios\obj\Debug\admin_us.Properties.Resources.resources
+C:\Users\Camilo\Desktop\Proyecto Asilo\Versiones Estables\V.1.0\Proyecto_asilo\admin_usuarios\obj\Debug\proyecto_asilo.csproj.GenerateResource.cache
+C:\Users\Camilo\Desktop\Proyecto Asilo\Versiones Estables\V.1.0\Proyecto_asilo\admin_usuarios\obj\Debug\proyecto_asilo.csproj.CoreCompileInputs.cache
+C:\Users\Camilo\Desktop\Proyecto Asilo\Versiones Estables\V.1.0\Proyecto_asilo\admin_usuarios\obj\Debug\admin_us.exe
+C:\Users\Camilo\Desktop\Proyecto Asilo\Versiones Estables\V.1.0\Proyecto_asilo\admin_usuarios\obj\Debug\admin_us.pdb

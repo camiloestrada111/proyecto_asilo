@@ -1,0 +1,12 @@
+C:\Users\Camilo\Documents\Visual Studio 2017\Projects\admin_usuarios\admin_usuarios\bin\Debug\db_asilo.mdf
+C:\Users\Camilo\Documents\Visual Studio 2017\Projects\admin_usuarios\admin_usuarios\bin\Debug\db_asilo_log.ldf
+C:\Users\Camilo\Documents\Visual Studio 2017\Projects\admin_usuarios\admin_usuarios\obj\Debug\admin_usuarios.csprojAssemblyReference.cache
+C:\Users\Camilo\Documents\Visual Studio 2017\Projects\admin_usuarios\admin_usuarios\obj\Debug\admin_usuarios.csproj.GenerateResource.cache
+C:\Users\Camilo\Documents\Visual Studio 2017\Projects\admin_usuarios\admin_usuarios\obj\Debug\admin_usuarios.csproj.CoreCompileInputs.cache
+C:\Users\Camilo\Documents\Visual Studio 2017\Projects\admin_usuarios\admin_usuarios\obj\Debug\admin_usuarios.admin_usuarios.resources
+C:\Users\Camilo\Documents\Visual Studio 2017\Projects\admin_usuarios\admin_usuarios\bin\Debug\admin_us.exe.config
+C:\Users\Camilo\Documents\Visual Studio 2017\Projects\admin_usuarios\admin_usuarios\bin\Debug\admin_us.exe
+C:\Users\Camilo\Documents\Visual Studio 2017\Projects\admin_usuarios\admin_usuarios\bin\Debug\admin_us.pdb
+C:\Users\Camilo\Documents\Visual Studio 2017\Projects\admin_usuarios\admin_usuarios\obj\Debug\admin_us.Properties.Resources.resources
+C:\Users\Camilo\Documents\Visual Studio 2017\Projects\admin_usuarios\admin_usuarios\obj\Debug\admin_us.exe
+C:\Users\Camilo\Documents\Visual Studio 2017\Projects\admin_usuarios\admin_usuarios\obj\Debug\admin_us.pdb
