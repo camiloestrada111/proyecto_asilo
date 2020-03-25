@@ -39,18 +39,23 @@ namespace MenuAsilo
         private void Personalizar()
         {
             panelUsuario.Visible = false;
+            panelAdministracion.Visible = false;
             panelInicio.Visible = false;
         }
 
         private void SubMenu()
         {
-            if(panelInicio.Visible == true)
+            if(panelAdministracion.Visible == true)
             {
-                panelInicio.Visible = false;
+                panelAdministracion.Visible = false;
             }
             else if (panelUsuario.Visible == true)
             {
                 panelUsuario.Visible = false;
+            }
+            else if (panelInicio.Visible == true)
+            {
+                panelInicio.Visible = false;
             }
         }
         private void MostrarSubMenu(Panel subMenu)
@@ -81,30 +86,9 @@ namespace MenuAsilo
 
         }
 
-        private void pictureBox6_Click(object sender, EventArgs e)
-        {
-            if(panelIzquierda.Width == 294)
-            {
-                panelIzquierda.Width = 143;
-            }
-            else
-            {
-                panelIzquierda.Width = 294;
-            }
-        }
+       
 
-
-        private void pictureBox7_Click_1(object sender, EventArgs e)
-        {
-            if (panelIzquierda.Width == 294)
-            {
-                panelIzquierda.Width = 143;
-            }
-            else
-            {
-                panelIzquierda.Width = 294;
-            }
-        }
+      
 
         private void pictureBox4_Click_2(object sender, EventArgs e)
         {
@@ -146,7 +130,7 @@ namespace MenuAsilo
 
         private void button4_Click(object sender, EventArgs e)
         {
-            MostrarSubMenu(panelInicio);
+            MostrarSubMenu(panelAdministracion);
            
         }
 
@@ -172,16 +156,7 @@ namespace MenuAsilo
 
         private void btnCerrarS_Click(object sender, EventArgs e)
         {
-            SubMenu(); //de ultimo
-
-            admin_us.frmLogin frmLog = new admin_us.frmLogin();
-            Form frminstancia = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is admin_usuarios.admin_usuarios);
-            if (frminstancia != null)
-            {
-                frminstancia.Close();
-            }
-            frmLog.Show();
-            this.Hide();
+           
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -206,20 +181,7 @@ namespace MenuAsilo
             }
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Maximized;
-            Restaurar.Visible = true;
-            Maxi.Visible = false;
-
-        }
-
-        private void Restaurar_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Normal;
-            Restaurar.Visible = false;
-            Maxi.Visible = true;
-        }
+       
 
         private void Mini_Click(object sender, EventArgs e)
         {
@@ -230,6 +192,84 @@ namespace MenuAsilo
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112 , 0xf012, 0);
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
+            btn_Restaurar.Visible = false;
+            btn_Maximizar.Visible = true;
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+            btn_Restaurar.Visible = true;
+            btn_Maximizar.Visible = false;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void Restaurar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            MostrarSubMenu(panelInicio);
+        }
+
+        private void button2_Click_2(object sender, EventArgs e)
+        {
+            SubMenu(); //de ultimo
+
+            admin_us.frmLogin frmLog = new admin_us.frmLogin();
+            Form frminstancia = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is admin_usuarios.admin_usuarios);
+            if (frminstancia != null)
+            {
+                frminstancia.Close();
+            }
+            frmLog.Show();
+            this.Hide();
+        }
+
+        private void panelInicio_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint_2(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
