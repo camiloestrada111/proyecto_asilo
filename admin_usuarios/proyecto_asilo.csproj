@@ -64,6 +64,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="db_asiloDataSet.cs">
+      <DependentUpon>db_asiloDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="frmAdminUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +90,12 @@
     <Compile Include="frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_subcategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_subcategorias.Designer.cs">
+      <DependentUpon>frm_subcategorias.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAdminUsuarios.resx">
@@ -97,6 +106,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_subcategorias.resx">
+      <DependentUpon>frm_subcategorias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

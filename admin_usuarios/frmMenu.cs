@@ -264,7 +264,8 @@ namespace MenuAsilo
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-
+            admin_us.frm_subcategorias frmsubcategorias = new admin_us.frm_subcategorias();
+            frmsubcategorias.Show();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
