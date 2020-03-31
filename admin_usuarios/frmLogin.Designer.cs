@@ -32,6 +32,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.tbusuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dbasiloDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -44,7 +45,6 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tb_usuarioTableAdapter = new admin_us.db_asiloDataSetTableAdapters.tb_usuarioTableAdapter();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbusuarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbasiloDataSetBindingSource)).BeginInit();
@@ -57,7 +57,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(177)))), ((int)(((byte)(247)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(80)))), ((int)(((byte)(89)))));
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
@@ -91,6 +91,16 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(370, 432);
             this.panel3.TabIndex = 19;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(264, 58);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // comboBox2
             // 
@@ -207,7 +217,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::admin_us.Properties.Resources.user;
+            this.pictureBox1.Image = global::admin_us.Properties.Resources.user2;
             this.pictureBox1.Location = new System.Drawing.Point(127, 24);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
@@ -219,15 +229,6 @@
             // tb_usuarioTableAdapter
             // 
             this.tb_usuarioTableAdapter.ClearBeforeFill = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(264, 58);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 23;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // frmLogin
             // 

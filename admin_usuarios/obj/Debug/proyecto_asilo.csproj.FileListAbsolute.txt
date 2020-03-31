@@ -95,3 +95,4 @@ C:\Users\Erik Adolfo\source\repos\camiloestrada111\proyecto_asilo\admin_usuarios
 C:\Users\Erik Adolfo\source\repos\camiloestrada111\proyecto_asilo\admin_usuarios\obj\Debug\proyecto_asilo.csproj.CoreCompileInputs.cache
 C:\Users\Erik Adolfo\source\repos\camiloestrada111\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.exe
 C:\Users\Erik Adolfo\source\repos\camiloestrada111\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.pdb
+C:\Users\Camilo\Source\Repos\camiloestrada111\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frm_subcategorias.resources

@@ -128,6 +128,13 @@ namespace admin_us
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            admin_us.frm_subcategorias frmsubcategorias = new admin_us.frm_subcategorias();
+            frmsubcategorias.Show();
+            this.Hide();
+        }
+
         public frmLogin()
         {
             InitializeComponent();
