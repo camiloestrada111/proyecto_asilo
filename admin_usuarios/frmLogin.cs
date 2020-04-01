@@ -135,6 +135,13 @@ namespace admin_us
             this.Hide();
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            admin_us.frmproductos frm = new admin_us.frmproductos();
+            frm.Show();
+            this.Hide();
+        }
+
         public frmLogin()
         {
             InitializeComponent();
