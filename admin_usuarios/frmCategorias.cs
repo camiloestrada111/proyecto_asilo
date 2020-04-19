@@ -54,7 +54,30 @@ namespace admin_us
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            
+
+            //this.tb_tipoTableAdapter.Eliminar();
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox2.Checked == true)
+            {
+
+                comboBox1_nombre.Visible = true;
+                btnEliminar.Enabled = true;
+                btnModificar.Enabled = true;
+                btnAgregar.Enabled = false;
+                //llenardatos(comboBox2.Text);
+
+            }
+            else
+            {
+                comboBox1_nombre.Visible = false;
+                btnAgregar.Enabled = true;
+                btnEliminar.Enabled = false;
+                btnModificar.Enabled = false;
+                txtNombre.Text = "Nombre";
+            }
         }
     }
 }
