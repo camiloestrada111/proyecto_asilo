@@ -17,6 +17,5 @@ namespace admin_us.db_asiloDataSetTableAdapters
     {
     }
 
-    public partial class tb_subtipoTableAdapter {
-    }
+
 }

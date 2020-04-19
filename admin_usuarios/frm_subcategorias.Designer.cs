@@ -270,7 +270,7 @@
             this.txtNombre.Text = "Nombre";
             this.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtNombre.Click += new System.EventHandler(this.txtNombre_Click);
-            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
+
             this.txtNombre.Leave += new System.EventHandler(this.txtNombre_Leave);
             // 
             // frm_subcategorias

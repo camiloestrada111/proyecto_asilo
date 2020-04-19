@@ -158,10 +158,7 @@ namespace admin_us
 
         }
 
-        private void txtNombre_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
+
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
 
