@@ -12,6 +12,10 @@ namespace admin_us
 {
     public partial class frmCategorias : Form
     {
+
+        public static DataTable Tabla = new DataTable();
+
+
         public int predecedor;
         public frmCategorias()
         {
@@ -33,18 +37,52 @@ namespace admin_us
 
         }
 
+        public void llenardatos(string tipo)
+        {
+            foreach (DataRow row in Tabla.Rows)
+            {
+                comboBox1.Items.Add(row["nombre"]);
+            }
+            try
+            {
+                comboBox1.SelectedIndex = 0;
+            }
+            catch (Exception)
+            {
+
+            }
+            txtNombre.Text = comboBox1.Text;
+        }
+
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            if (comboBox1.Text == "Sí")
+            try
             {
-                predecedor = 1;
+                if (txtNombre.Text == "Nombre")
+                {
+                    MessageBox.Show("Existe un error");
+                }
+                else
+                {
+                    if (comboBox1.Text == "Sí")
+                    {
+                        predecedor = 1;
+                    }
+                    else if (comboBox1.Text == "No")
+                    {
+                        predecedor = 0;
+                    }
+                    this.tb_tipoTableAdapter.Agregar(txtNombre.Text, predecedor);
+                    this.tb_tipoTableAdapter.Fill(this.db_asiloDataSet.tb_tipo);
+                    MessageBox.Show("Ingresado Correctamente");
+                    txtNombre.Text = "Nombre";
+                }
             }
-            else if (comboBox1.Text == "No")
+            catch (Exception)
             {
-                predecedor = 0;
+                MessageBox.Show("Existe un error");
             }
-            this.tb_tipoTableAdapter.Agregar(txtNombre.Text, predecedor);
-            this.tb_tipoTableAdapter.Fill(this.db_asiloDataSet.tb_tipo);
+            
         }
 
         private void txtNombre_TextChanged(object sender, EventArgs e)
@@ -67,7 +105,7 @@ namespace admin_us
                 btnEliminar.Enabled = true;
                 btnModificar.Enabled = true;
                 btnAgregar.Enabled = false;
-                //llenardatos(comboBox2.Text);
+                llenardatos(comboBox2.Text);
 
             }
             else
