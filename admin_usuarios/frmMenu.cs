@@ -99,37 +99,49 @@ namespace MenuAsilo
 
         private void FormsHijos(Form formNuevo)
         {
-            if(activo != null)
+            if (activo != null)
             {
                 activo.Close();
-                activo = formNuevo;
-                formNuevo.TopLevel = false;
-                formNuevo.FormBorderStyle = FormBorderStyle.None;
-                formNuevo.Dock = DockStyle.Fill;
-                formNuevo.BringToFront();
-                formNuevo.Show();
+                CrearForm(formNuevo);
+            }
+            else
+            {
+                CrearForm(formNuevo);
             }
         }
-    
-        
+
+        private void CrearForm(Form formNuevo)
+        {
+            activo = formNuevo;
+            formNuevo.TopLevel = false;
+            formNuevo.FormBorderStyle = FormBorderStyle.None;
+            formNuevo.TopLevel = false;
+            formNuevo.TopMost = true;
+            formNuevo.BringToFront();
+
+            this.Contenedor.Controls.Add(formNuevo);
+
+            //Centrar form
+            formNuevo.Location = new Point(
+            this.Contenedor.Width / 2 - formNuevo.Size.Width / 2,
+            this.Contenedor.Height / 2 - formNuevo.Size.Height / 2);
+            formNuevo.Anchor = AnchorStyles.None;
+            Contenedor.BackgroundImage = null;
+
+            formNuevo.Show();
+        }
+
+
 
         private void button2_Click(object sender, EventArgs e)
         {
-
-            
-
             SubMenu(); //de ultimo
-            
-            Form frminstancia = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is admin_usuarios.admin_usuarios);
-            if (frminstancia != null)
-            {
-                frminstancia.BringToFront();
-                return;
-            }
 
+            Form frminstancia = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is admin_usuarios.admin_usuarios);
             frminstancia = new admin_usuarios.admin_usuarios();
-            frminstancia.Show();
-            
+            FormsHijos(frminstancia);
+
+            activo = frminstancia;
 
         }
 
@@ -161,7 +173,13 @@ namespace MenuAsilo
 
         private void btnCerrarS_Click(object sender, EventArgs e)
         {
-           
+            SubMenu(); //de ultimo
+            Form frminstancia = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is admin_us.frmCategorias);
+
+            frminstancia = new admin_us.frmCategorias();
+            FormsHijos(frminstancia);
+
+            activo = frminstancia;
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -209,6 +227,7 @@ namespace MenuAsilo
             this.WindowState = FormWindowState.Normal;
             btn_Restaurar.Visible = false;
             btn_Maximizar.Visible = true;
+            Contenedor.BackgroundImageLayout = ImageLayout.Zoom;
         }
 
         private void button4_Click_1(object sender, EventArgs e)
@@ -235,7 +254,8 @@ namespace MenuAsilo
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
+            activo.Close();
+            Contenedor.BackgroundImage = admin_us.Properties.Resources.Logo;
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -269,12 +289,29 @@ namespace MenuAsilo
 
         private void button3_Click_1(object sender, EventArgs e)
         {
+            SubMenu(); //de ultimo
 
+            Form frminstancia = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is admin_us.frm_subcategorias);
+            frminstancia = new admin_us.frm_subcategorias();
+            FormsHijos(frminstancia);
+
+            activo = frminstancia;
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Button4_Click_2(object sender, EventArgs e)
+        {
+            SubMenu(); //de ultimo
+
+            Form frminstancia = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is admin_us.frmproductos);
+            frminstancia = new admin_us.frmproductos();
+            FormsHijos(frminstancia);
+
+            activo = frminstancia;
         }
     }
 }

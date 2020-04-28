@@ -170,6 +170,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>db_asilo.mdf</DependentUpon>
     </Content>
+    <Content Include="Resources\Logo.jpg" />
     <None Include="Resources\user21.png" />
     <None Include="Resources\user.png" />
     <None Include="Resources\man-1.png" />
