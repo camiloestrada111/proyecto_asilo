@@ -123,9 +123,10 @@ namespace admin_us
                 //MessageBox.Show("Iniciando sesion");
                 MenuAsilo.Menu frmMenu = new MenuAsilo.Menu();
                 frmMenu.Show();
-                this.Hide();
                 messageBoxLogin.Show();
-            }else
+                this.Hide();
+            }
+            else
             {
                 MessageBox.Show("Error Contraseña no Valida");
             }
