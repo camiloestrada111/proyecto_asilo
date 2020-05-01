@@ -87,7 +87,11 @@ namespace admin_us
 
         private void txtNombre_TextChanged(object sender, EventArgs e)
         {
+        }
 
+        private void TxtNombre_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -115,6 +119,19 @@ namespace admin_us
                 btnEliminar.Enabled = false;
                 btnModificar.Enabled = false;
                 txtNombre.Text = "Nombre";
+            }
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
+
+        private void txtNombre_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (txtNombre.Text == "Nombre" || txtNombre.Text == comboBox1.Text)
+            {
+                txtNombre.Text = "";
             }
         }
     }

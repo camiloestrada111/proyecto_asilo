@@ -148,6 +148,11 @@ namespace admin_us
             }
         }
 
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             llenardatos(comboBox2.Text);

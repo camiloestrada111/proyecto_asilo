@@ -163,6 +163,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(492, 54);
             this.panel2.TabIndex = 24;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // PictureBox4
             // 
@@ -189,6 +190,7 @@
             this.txtNombre.TabIndex = 1;
             this.txtNombre.Text = "Nombre";
             this.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNombre.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtNombre_MouseClick);
             this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // db_asiloDataSet

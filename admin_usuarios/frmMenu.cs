@@ -254,8 +254,11 @@ namespace MenuAsilo
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            activo.Close();
-            Contenedor.BackgroundImage = admin_us.Properties.Resources.Logo;
+            if(activo != null)
+            {
+                activo.Close();
+                Contenedor.BackgroundImage = admin_us.Properties.Resources.Logo;
+            }
         }
 
         private void button1_Click_1(object sender, EventArgs e)
