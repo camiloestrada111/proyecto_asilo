@@ -145,6 +145,13 @@ namespace admin_us
             this.Hide();
         }
 
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            frmInventario asda = new frmInventario();
+            asda.Show();
+            this.Hide();
+        }
+
         public frmLogin()
         {
             InitializeComponent();

@@ -206,6 +206,8 @@ namespace admin_us
         }
         private void frmproductos_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'db_asiloDataSet.tb_inventario' Puede moverla o quitarla según sea necesario.
+            this.tb_inventarioTableAdapter.Fill(this.db_asiloDataSet.tb_inventario);
             // TODO: esta línea de código carga datos en la tabla 'db_asiloDataSet.tb_objeto' Puede moverla o quitarla según sea necesario.
             this.tb_objetoTableAdapter.Fill(this.db_asiloDataSet.tb_objeto);
             // TODO: esta línea de código carga datos en la tabla 'db_asiloDataSet.tb_subtipo' Puede moverla o quitarla según sea necesario.
@@ -271,8 +273,9 @@ namespace admin_us
                         {
                             this.tb_objetoTableAdapter.agregar_objeto(txtNombre.Text, id_tipos, comboBox_objetos.Text, id_subtipos);
                             txtNombre.Text = "Nombre";
-                            MessageBox.Show("Agregado");
-                        }
+                            int id_obj = Convert.ToInt32(this.tb_objetoTableAdapter.Selecionar_ultimo());
+                            this.tb_inventarioTableAdapter.agregar_inventario(id_obj, 0, 0);
+                            MessageBox.Show("Agregado");                       }
                     }
                     else
                     {
@@ -284,6 +287,8 @@ namespace admin_us
                         else
                         {
                             this.tb_objetoTableAdapter.agregar_objeto(txtNombre.Text, id_tipos, txtUsuario.Text, id_subtipos);
+                            int id_obj = Convert.ToInt32(this.tb_objetoTableAdapter.Selecionar_ultimo());
+                            this.tb_inventarioTableAdapter.agregar_inventario(id_obj, 0, 0);
                             MessageBox.Show("Agregado");
                         }
                     }
