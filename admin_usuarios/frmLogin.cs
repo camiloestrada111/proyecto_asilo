@@ -114,6 +114,8 @@ namespace admin_us
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
+            frmMessageBoxLogin messageBoxLogin = new frmMessageBoxLogin();
+
             int x;
             x = Convert.ToInt32(this.tb_usuarioTableAdapter.iniciarsesion(comboBox2.Text, txtContra.Text));
             if(x == 1)
@@ -122,6 +124,7 @@ namespace admin_us
                 MenuAsilo.Menu frmMenu = new MenuAsilo.Menu();
                 frmMenu.Show();
                 this.Hide();
+                messageBoxLogin.Show();
             }else
             {
                 MessageBox.Show("Error Contraseña no Valida");

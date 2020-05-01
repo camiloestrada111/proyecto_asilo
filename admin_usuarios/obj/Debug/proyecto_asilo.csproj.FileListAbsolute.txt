@@ -148,3 +148,25 @@ D:\Estudio\Usac 5to semestre\compi\camiloestrada111\proyecto_asilo\admin_usuario
 D:\Estudio\Usac 5to semestre\compi\camiloestrada111\proyecto_asilo\admin_usuarios\obj\Debug\proyecto_asilo.csproj.CoreCompileInputs.cache
 D:\Estudio\Usac 5to semestre\compi\camiloestrada111\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.exe
 D:\Estudio\Usac 5to semestre\compi\camiloestrada111\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.pdb
+C:\Users\carlo_w8yoedd\Source\Repos\proyecto_asilo2\admin_usuarios\bin\Debug\db_asilo.mdf
+C:\Users\carlo_w8yoedd\Source\Repos\proyecto_asilo2\admin_usuarios\bin\Debug\db_asilo_log.ldf
+C:\Users\carlo_w8yoedd\Source\Repos\proyecto_asilo2\admin_usuarios\bin\Debug\admin_us.exe.config
+C:\Users\carlo_w8yoedd\Source\Repos\proyecto_asilo2\admin_usuarios\bin\Debug\admin_us.exe
+C:\Users\carlo_w8yoedd\Source\Repos\proyecto_asilo2\admin_usuarios\bin\Debug\admin_us.pdb
+C:\Users\carlo_w8yoedd\Source\Repos\proyecto_asilo2\admin_usuarios\obj\Debug\proyecto_asilo.csprojAssemblyReference.cache
+C:\Users\carlo_w8yoedd\Source\Repos\proyecto_asilo2\admin_usuarios\obj\Debug\admin_usuarios.admin_usuarios.resources
+C:\Users\carlo_w8yoedd\Source\Repos\proyecto_asilo2\admin_usuarios\obj\Debug\admin_us.frmCategorias.resources
+C:\Users\carlo_w8yoedd\Source\Repos\proyecto_asilo2\admin_usuarios\obj\Debug\admin_us.frmLogin.resources
+C:\Users\carlo_w8yoedd\Source\Repos\proyecto_asilo2\admin_usuarios\obj\Debug\MenuAsilo.Menu.resources
+C:\Users\carlo_w8yoedd\Source\Repos\proyecto_asilo2\admin_usuarios\obj\Debug\admin_us.frmMessageBoxLogin.resources
+C:\Users\carlo_w8yoedd\Source\Repos\proyecto_asilo2\admin_usuarios\obj\Debug\admin_us.frmproductos.resources
+C:\Users\carlo_w8yoedd\Source\Repos\proyecto_asilo2\admin_usuarios\obj\Debug\admin_us.frm_subcategorias.resources
+C:\Users\carlo_w8yoedd\Source\Repos\proyecto_asilo2\admin_usuarios\obj\Debug\admin_us.Properties.Resources.resources
+C:\Users\carlo_w8yoedd\Source\Repos\proyecto_asilo2\admin_usuarios\obj\Debug\proyecto_asilo.csproj.GenerateResource.cache
+C:\Users\carlo_w8yoedd\Source\Repos\proyecto_asilo2\admin_usuarios\obj\Debug\proyecto_asilo.csproj.CoreCompileInputs.cache
+C:\Users\carlo_w8yoedd\Source\Repos\proyecto_asilo2\admin_usuarios\obj\Debug\admin_us.exe
+C:\Users\carlo_w8yoedd\Source\Repos\proyecto_asilo2\admin_usuarios\obj\Debug\admin_us.pdb
+C:\Users\carlo_w8yoedd\Source\Repos\proyecto_asilo2\admin_usuarios\obj\Debug\admin_us.frmMessageBoxPregunta.resources
+C:\Users\carlo_w8yoedd\Source\Repos\proyecto_asilo2\admin_usuarios\obj\Debug\admin_us.frmMessageBoxEliminar.resources
+C:\Users\carlo_w8yoedd\Source\Repos\proyecto_asilo2\admin_usuarios\obj\Debug\admin_us.frmMessageBoxModificar.resources
+C:\Users\carlo_w8yoedd\Source\Repos\proyecto_asilo2\admin_usuarios\obj\Debug\admin_us.frmMessageBoxActualizar.resources

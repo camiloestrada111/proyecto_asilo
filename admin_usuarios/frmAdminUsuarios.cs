@@ -1,4 +1,5 @@
-﻿using System;
+﻿using admin_us;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -182,6 +183,7 @@ namespace admin_usuarios
         //desactiva el evento de textchange que si no se bugea
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            frmMessageBoxLogin messageBoxLogin = new frmMessageBoxLogin();
             comboBox2.SelectedIndexChanged -= comboBox2_SelectedIndexChanged;
             int auxiliartipo = 0;
             int verificar = 0;
@@ -209,7 +211,7 @@ namespace admin_usuarios
                 comboBox2.Enabled = false;
                 comboBox2.DropDownStyle = ComboBoxStyle.Simple;
                 comboBox2.Text = "Nuevo";
-                MessageBox.Show("Agregado Correctamente");
+                messageBoxLogin.Show();
                 reiniciartexto();
             }
             else
@@ -221,43 +223,57 @@ namespace admin_usuarios
         //Lo mismo que con agregar pero modificando tampoco deja modificar el usuario por uno que ya exista sin contar el original
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            comboBox2.SelectedIndexChanged -= comboBox2_SelectedIndexChanged;
-            int auxiliartipo = 0;
-            int verificar = 0;
-            if (comboBox1.Text == "Admin")
+
+            frmMessageBoxModificar modificar = new frmMessageBoxModificar();
+            frmMessageBoxModificar mensaje = new frmMessageBoxModificar();
+
+            DialogResult resultado = new DialogResult();
+            Form mensaje1 = new frmMessageBoxModificar();
+
+            resultado = mensaje1.ShowDialog();
+
+
+            if (resultado == DialogResult.OK)
             {
-                auxiliartipo = 1;
-            }
-            else
-            {
-                auxiliartipo = 2;
-            }
-            try
-            {
-                if(usuario == txtUsuario.Text)
+                comboBox2.SelectedIndexChanged -= comboBox2_SelectedIndexChanged;
+                int auxiliartipo = 0;
+                int verificar = 0;
+                if (comboBox1.Text == "Admin")
                 {
+                    auxiliartipo = 1;
                 }
                 else
                 {
-                    verificar = Convert.ToInt32(this.tb_usuarioTableAdapter.buscar(txtUsuario.Text));
+                    auxiliartipo = 2;
                 }
+                try
+                {
+                    if (usuario == txtUsuario.Text)
+                    {
+                    }
+                    else
+                    {
+                        verificar = Convert.ToInt32(this.tb_usuarioTableAdapter.buscar(txtUsuario.Text));
+                    }
+                }
+                catch (Exception)
+                {
+                    verificar = 0;
+                    throw;
+                }
+                if (verificar == 0)
+                {
+                    this.tb_usuarioTableAdapter.modificar(txtNombre.Text, txtApellido.Text, txtUsuario.Text, txtContra.Text, auxiliartipo, id);
+                    this.tb_usuarioTableAdapter.Fill(this.db_asiloDataSet.tb_usuario);
+                    MessageBox.Show("Actualizado Correctamente");
+                }
+                else
+                {
+                    MessageBox.Show("Error ya existe el usuario");
+                }
+                comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
             }
-            catch (Exception)
-            {
-                verificar = 0;
-                throw;
-            }
-            if (verificar == 0)
-            {
-                this.tb_usuarioTableAdapter.modificar(txtNombre.Text, txtApellido.Text, txtUsuario.Text, txtContra.Text, auxiliartipo, id);
-                this.tb_usuarioTableAdapter.Fill(this.db_asiloDataSet.tb_usuario);
-                MessageBox.Show("Actualizado Correctamente");
-            }
-            else
-            {
-                MessageBox.Show("Error ya existe el usuario");
-            }
-            comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
+
         }
 
         private void picContra_MouseHover(object sender, EventArgs e)
@@ -292,12 +308,29 @@ namespace admin_usuarios
         //Posdata si se borran todos los usuarios se bugea
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            comboBox2.SelectedIndexChanged -= comboBox2_SelectedIndexChanged;
-            this.tb_usuarioTableAdapter.eliminar(id);
-            this.tb_usuarioTableAdapter.Fill(this.db_asiloDataSet.tb_usuario);
-            MessageBox.Show("Eliminado Correctamente");
-            comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
-            llenardatos();
+            frmMessageBoxEliminar eliminado = new frmMessageBoxEliminar();
+
+            DialogResult resultado = new DialogResult();
+            Form mensaje = new frmMessageBoxPregunta();
+
+            resultado = mensaje.ShowDialog();
+
+
+            if(resultado == DialogResult.OK)
+            {
+                comboBox2.SelectedIndexChanged -= comboBox2_SelectedIndexChanged;
+                this.tb_usuarioTableAdapter.eliminar(id);
+                this.tb_usuarioTableAdapter.Fill(this.db_asiloDataSet.tb_usuario);
+                comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
+                llenardatos();
+                //eliminado.Show();
+            }
+            else
+            {
+
+            }
+            
+
         }
         //Muestra o oculta la contraseña pendiente cambiar iconos
         private void pictureBox5_Click(object sender, EventArgs e)

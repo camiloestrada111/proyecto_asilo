@@ -96,6 +96,36 @@
     <Compile Include="frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMessageBoxActualizar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMessageBoxActualizar.Designer.cs">
+      <DependentUpon>frmMessageBoxActualizar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMessageBoxEliminar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMessageBoxEliminar.Designer.cs">
+      <DependentUpon>frmMessageBoxEliminar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMessageBoxLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMessageBoxLogin.Designer.cs">
+      <DependentUpon>frmMessageBoxLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMessageBoxModificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMessageBoxModificar.Designer.cs">
+      <DependentUpon>frmMessageBoxModificar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMessageBoxPregunta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMessageBoxPregunta.Designer.cs">
+      <DependentUpon>frmMessageBoxPregunta.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmproductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +151,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMessageBoxActualizar.resx">
+      <DependentUpon>frmMessageBoxActualizar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMessageBoxEliminar.resx">
+      <DependentUpon>frmMessageBoxEliminar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMessageBoxLogin.resx">
+      <DependentUpon>frmMessageBoxLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMessageBoxModificar.resx">
+      <DependentUpon>frmMessageBoxModificar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMessageBoxPregunta.resx">
+      <DependentUpon>frmMessageBoxPregunta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmproductos.resx">
       <DependentUpon>frmproductos.cs</DependentUpon>
