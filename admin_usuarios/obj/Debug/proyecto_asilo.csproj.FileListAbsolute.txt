@@ -177,3 +177,4 @@ C:\Users\Camilo\Source\Repos\camiloestrada111\proyecto_asilo\admin_usuarios\obj\
 C:\Users\Camilo\Source\Repos\camiloestrada111\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmMessageBoxLogin.resources
 C:\Users\Camilo\Source\Repos\camiloestrada111\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmMessageBoxModificar.resources
 C:\Users\Camilo\Source\Repos\camiloestrada111\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmMessageBoxPregunta.resources
+C:\Users\carlo_w8yoedd\Source\Repos\proyecto_asilo2\admin_usuarios\obj\Debug\admin_us.frmInventario.resources

@@ -51,6 +51,7 @@ namespace admin_us
         }
         private void btn_agregar_Click(object sender, EventArgs e)
         {
+            frmMessageBoxLogin frm = new frmMessageBoxLogin();
             try
             {
                 if(txtNombre.Text == "Nombre")
@@ -60,8 +61,8 @@ namespace admin_us
                 else
                 {
                     this.tb_subtipoTableAdapter.agregar_subtipo(txtNombre.Text, this.tb_tipoTableAdapter.Consultar_id(comboBox2.Text));
-                    MessageBox.Show("Ingresado Correctamente");
                     txtNombre.Text = "Nombre";
+                    frm.Show();
                 }
             }
             catch (Exception)
@@ -84,16 +85,30 @@ namespace admin_us
         }
         private void btn_eliminar_Click(object sender, EventArgs e)
         {
-            if (txtNombre.Text == comboBox1.Text)
-            {
-                int id_tipo = Convert.ToInt32(this.tb_tipoTableAdapter.Consultar_id(comboBox2.Text));
-                int id_subtipo = Convert.ToInt32(this.tb_subtipoTableAdapter.obtener_idsubtipo(id_tipo, comboBox1.Text));
-                this.tb_subtipoTableAdapter.borrar_subtipo(id_subtipo);
-                llenardatos(comboBox2.Text);
-            } else
-            {
+            frmMessageBoxEliminar eliminado = new frmMessageBoxEliminar();
 
+            DialogResult resultado = new DialogResult();
+            Form mensaje = new frmMessageBoxPregunta();
+            frmMessageBoxEliminar eliminar = new frmMessageBoxEliminar();
+            resultado = mensaje.ShowDialog();
+
+
+            if (resultado == DialogResult.OK)
+            {
+                if (txtNombre.Text == comboBox1.Text)
+                {
+                    int id_tipo = Convert.ToInt32(this.tb_tipoTableAdapter.Consultar_id(comboBox2.Text));
+                    int id_subtipo = Convert.ToInt32(this.tb_subtipoTableAdapter.obtener_idsubtipo(id_tipo, comboBox1.Text));
+                    this.tb_subtipoTableAdapter.borrar_subtipo(id_subtipo);
+                    llenardatos(comboBox2.Text);
+                    eliminar.Show();
+                }
+                else
+                {
+
+                }
             }
+
 
         }
 
@@ -126,26 +141,41 @@ namespace admin_us
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            if(txtNombre.Text == comboBox1.Text)
-            {
+           
+            frmMessageBoxModificar mensaje = new frmMessageBoxModificar();
 
-            }
-            else
+            DialogResult resultado = new DialogResult();
+            Form mensaje1 = new frmMessageBoxModificar();
+
+
+            resultado = mensaje1.ShowDialog();
+
+
+            if (resultado == DialogResult.OK)
             {
-                int id_tipo = Convert.ToInt32(this.tb_tipoTableAdapter.Consultar_id(comboBox2.Text));
-                int id_subtipo = Convert.ToInt32(this.tb_subtipoTableAdapter.obtener_idsubtipo(id_tipo, comboBox1.Text));
-                int existe = Convert.ToInt32(this.tb_subtipoTableAdapter.obtener_si_existe(txtNombre.Text, id_tipo));
-                if (existe == 0)
+                if (txtNombre.Text == comboBox1.Text)
                 {
-                    this.tb_subtipoTableAdapter.modificar_subtipo(txtNombre.Text, id_subtipo);
-                    MessageBox.Show("Modificado Correctamente");
-                    llenardatos(comboBox2.Text);
+
                 }
                 else
                 {
-                    MessageBox.Show("Error ya existe el que quiere Modificar");
+                    int id_tipo = Convert.ToInt32(this.tb_tipoTableAdapter.Consultar_id(comboBox2.Text));
+                    int id_subtipo = Convert.ToInt32(this.tb_subtipoTableAdapter.obtener_idsubtipo(id_tipo, comboBox1.Text));
+                    int existe = Convert.ToInt32(this.tb_subtipoTableAdapter.obtener_si_existe(txtNombre.Text, id_tipo));
+                    if (existe == 0)
+                    {
+                        this.tb_subtipoTableAdapter.modificar_subtipo(txtNombre.Text, id_subtipo);
+                        llenardatos(comboBox2.Text);
+                        //mensaje.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error ya existe el que quiere Modificar");
+                    }
                 }
             }
+
+
         }
 
         private void txtNombre_TextChanged(object sender, EventArgs e)

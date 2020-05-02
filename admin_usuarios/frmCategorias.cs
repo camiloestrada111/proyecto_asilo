@@ -56,6 +56,7 @@ namespace admin_us
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            frmMessageBoxLogin frm = new frmMessageBoxLogin();
             try
             {
                 if (txtNombre.Text == "Nombre")
@@ -74,7 +75,7 @@ namespace admin_us
                     }
                     this.tb_tipoTableAdapter.Agregar(txtNombre.Text, predecedor);
                     this.tb_tipoTableAdapter.Fill(this.db_asiloDataSet.tb_tipo);
-                    MessageBox.Show("Ingresado Correctamente");
+                    frm.Show();
                     txtNombre.Text = "Nombre";
                 }
             }

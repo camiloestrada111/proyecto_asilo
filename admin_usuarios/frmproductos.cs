@@ -242,6 +242,8 @@ namespace admin_us
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+
+            frmMessageBoxLogin agregarmsg = new frmMessageBoxLogin();
             int id_tipos = Convert.ToInt32(this.tb_tipoTableAdapter.Consultar_id(comboBox_tipos.Text));
             int id_subtipos = Convert.ToInt32(this.tb_subtipoTableAdapter.obtener_idsubtipo(id_tipos, comboBox_subtipos.Text));
             int existe = 0;
@@ -275,7 +277,7 @@ namespace admin_us
                             txtNombre.Text = "Nombre";
                             int id_obj = Convert.ToInt32(this.tb_objetoTableAdapter.Selecionar_ultimo());
                             this.tb_inventarioTableAdapter.agregar_inventario(id_obj, 0, 0);
-                            MessageBox.Show("Agregado");                       }
+                            agregarmsg.Show();                      }
                     }
                     else
                     {
@@ -302,66 +304,93 @@ namespace admin_us
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            frmMessageBoxModificar mensaje = new frmMessageBoxModificar();
+
             int id_tipos = Convert.ToInt32(this.tb_tipoTableAdapter.Consultar_id(comboBox_tipos.Text));
             int id_subtipos = Convert.ToInt32(this.tb_subtipoTableAdapter.obtener_idsubtipo(id_tipos, comboBox_subtipos.Text));
             int id_objetos = Convert.ToInt32(this.tb_objetoTableAdapter.obtener_id(comboBox_objetos.Text, id_tipos, id_subtipos));
             int existe = 0;
-            if (txtNombre.Text == comboBox_objetos.Text)
-            {
-                if (checkBox1.Checked == false)
-                {
-                    existe = Convert.ToInt32(this.tb_objetoTableAdapter.obtener_siexiste(txtNombre.Text, id_tipos, comboBox_pesos.Text, id_subtipos));
-                    if (existe == 0)
-                    {
-                        if (comboBox_pesos.Text == "")
-                        {
 
-                        }else
+            DialogResult resultado = new DialogResult();
+            Form mensaje1 = new frmMessageBoxModificar();
+
+            resultado = mensaje1.ShowDialog();
+
+            if (resultado == DialogResult.OK)
+            {
+                if (txtNombre.Text == comboBox_objetos.Text)
+                {
+                    if (checkBox1.Checked == false)
+                    {
+                        existe = Convert.ToInt32(this.tb_objetoTableAdapter.obtener_siexiste(txtNombre.Text, id_tipos, comboBox_pesos.Text, id_subtipos));
+                        if (existe == 0)
                         {
-                           this.tb_objetoTableAdapter.modificar_objeto(txtNombre.Text, id_tipos, comboBox_pesos.Text, id_subtipos, id_objetos);
-                            llenardatos_objetos();
-                            llenardatos_pesos();
+                            if (comboBox_pesos.Text == "")
+                            {
+
+                            }
+                            else
+                            {
+                                this.tb_objetoTableAdapter.modificar_objeto(txtNombre.Text, id_tipos, comboBox_pesos.Text, id_subtipos, id_objetos);
+                                llenardatos_objetos();
+                                llenardatos_pesos();
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error Ya existe");
                         }
                     }
                     else
                     {
-                        MessageBox.Show("Error Ya existe");
+                        existe = Convert.ToInt32(this.tb_objetoTableAdapter.obtener_siexiste(txtNombre.Text, id_tipos, txtUsuario.Text, id_subtipos));
+                        if (existe == 0)
+                        {
+                            if (txtUsuario.Text == PESO1)
+                            {
+
+                            }
+                            else
+                            {
+                                this.tb_objetoTableAdapter.modificar_objeto(txtNombre.Text, id_tipos, txtUsuario.Text, id_subtipos, id_objetos);
+                                llenardatos_objetos();
+                                llenardatos_pesos();
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error Ya existe");
+                        }
                     }
                 }
                 else
                 {
-                    existe = Convert.ToInt32(this.tb_objetoTableAdapter.obtener_siexiste(txtNombre.Text, id_tipos, txtUsuario.Text, id_subtipos));
-                    if (existe == 0)
-                    {
-                        if (txtUsuario.Text == PESO1)
-                        {
 
-                        }else
-                        {
-                            this.tb_objetoTableAdapter.modificar_objeto(txtNombre.Text, id_tipos, txtUsuario.Text, id_subtipos, id_objetos);
-                            llenardatos_objetos();
-                            llenardatos_pesos();
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show("Error Ya existe");
-                    }
                 }
-            }else
-            {
-
             }
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            int id_tipos = Convert.ToInt32(this.tb_tipoTableAdapter.Consultar_id(comboBox_tipos.Text));
-            int id_subtipos = Convert.ToInt32(this.tb_subtipoTableAdapter.obtener_idsubtipo(id_tipos, comboBox_subtipos.Text));
-            int id_objetos = Convert.ToInt32(this.tb_objetoTableAdapter.obtener_id(comboBox_objetos.Text, id_tipos, id_subtipos));
-            this.tb_objetoTableAdapter.eliminar_objeto(id_objetos);
-            llenardatos_objetos();
-            llenardatos_pesos();
+            frmMessageBoxEliminar eliminado = new frmMessageBoxEliminar();
+
+            DialogResult resultado = new DialogResult();
+            Form mensaje = new frmMessageBoxPregunta();
+            frmMessageBoxEliminar eliminar = new frmMessageBoxEliminar();
+            resultado = mensaje.ShowDialog();
+
+
+            if (resultado == DialogResult.OK)
+            {
+                int id_tipos = Convert.ToInt32(this.tb_tipoTableAdapter.Consultar_id(comboBox_tipos.Text));
+                int id_subtipos = Convert.ToInt32(this.tb_subtipoTableAdapter.obtener_idsubtipo(id_tipos, comboBox_subtipos.Text));
+                int id_objetos = Convert.ToInt32(this.tb_objetoTableAdapter.obtener_id(comboBox_objetos.Text, id_tipos, id_subtipos));
+                this.tb_objetoTableAdapter.eliminar_objeto(id_objetos);
+                llenardatos_objetos();
+                llenardatos_pesos();
+                //eliminar.Show();
+            }
+
         }
     }
 }
