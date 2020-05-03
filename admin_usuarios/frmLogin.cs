@@ -153,6 +153,11 @@ namespace admin_us
             this.Hide();
         }
 
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
         public frmLogin()
         {
             InitializeComponent();
