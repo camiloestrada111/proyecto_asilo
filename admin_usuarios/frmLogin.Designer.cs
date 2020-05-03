@@ -62,20 +62,21 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(370, 18);
+            this.panel1.Size = new System.Drawing.Size(370, 38);
             this.panel1.TabIndex = 16;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.label2.Location = new System.Drawing.Point(104, 155);
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(111, 168);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(146, 20);
             this.label2.TabIndex = 13;
             this.label2.Text = "Nombre de Usuario";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // panel3
             // 
@@ -87,9 +88,9 @@
             this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 18);
+            this.panel3.Location = new System.Drawing.Point(0, 38);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(370, 432);
+            this.panel3.Size = new System.Drawing.Size(370, 412);
             this.panel3.TabIndex = 19;
             // 
             // comboBox2

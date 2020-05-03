@@ -153,11 +153,9 @@ namespace admin_us
             this.Hide();
         }
 
-        private void button1_Click_2(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
-            frmIngresos asda = new frmIngresos();
-            asda.Show();
-            this.Hide();
+
         }
 
         public frmLogin()

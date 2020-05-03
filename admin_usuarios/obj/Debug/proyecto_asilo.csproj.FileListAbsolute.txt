@@ -178,4 +178,48 @@ C:\Users\Camilo\Source\Repos\camiloestrada111\proyecto_asilo\admin_usuarios\obj\
 C:\Users\Camilo\Source\Repos\camiloestrada111\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmMessageBoxModificar.resources
 C:\Users\Camilo\Source\Repos\camiloestrada111\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmMessageBoxPregunta.resources
 C:\Users\carlo_w8yoedd\Source\Repos\proyecto_asilo2\admin_usuarios\obj\Debug\admin_us.frmInventario.resources
-C:\Users\Camilo\Source\Repos\camiloestrada111\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmIngresos.resources
+C:\Users\jordi\Documents\GITHUB\camiloestrada111\proyecto_asilo\admin_usuarios\bin\Debug\db_asilo.mdf
+C:\Users\jordi\Documents\GITHUB\camiloestrada111\proyecto_asilo\admin_usuarios\bin\Debug\db_asilo_log.ldf
+C:\Users\jordi\Documents\GITHUB\camiloestrada111\proyecto_asilo\admin_usuarios\bin\Debug\admin_us.exe.config
+C:\Users\jordi\Documents\GITHUB\camiloestrada111\proyecto_asilo\admin_usuarios\bin\Debug\admin_us.exe
+C:\Users\jordi\Documents\GITHUB\camiloestrada111\proyecto_asilo\admin_usuarios\bin\Debug\admin_us.pdb
+C:\Users\jordi\Documents\GITHUB\camiloestrada111\proyecto_asilo\admin_usuarios\obj\Debug\admin_usuarios.admin_usuarios.resources
+C:\Users\jordi\Documents\GITHUB\camiloestrada111\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmCategorias.resources
+C:\Users\jordi\Documents\GITHUB\camiloestrada111\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmInventario.resources
+C:\Users\jordi\Documents\GITHUB\camiloestrada111\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmLogin.resources
+C:\Users\jordi\Documents\GITHUB\camiloestrada111\proyecto_asilo\admin_usuarios\obj\Debug\MenuAsilo.Menu.resources
+C:\Users\jordi\Documents\GITHUB\camiloestrada111\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmMessageBoxActualizar.resources
+C:\Users\jordi\Documents\GITHUB\camiloestrada111\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmMessageBoxEliminar.resources
+C:\Users\jordi\Documents\GITHUB\camiloestrada111\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmMessageBoxLogin.resources
+C:\Users\jordi\Documents\GITHUB\camiloestrada111\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmMessageBoxModificar.resources
+C:\Users\jordi\Documents\GITHUB\camiloestrada111\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmMessageBoxPregunta.resources
+C:\Users\jordi\Documents\GITHUB\camiloestrada111\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmproductos.resources
+C:\Users\jordi\Documents\GITHUB\camiloestrada111\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frm_subcategorias.resources
+C:\Users\jordi\Documents\GITHUB\camiloestrada111\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.Properties.Resources.resources
+C:\Users\jordi\Documents\GITHUB\camiloestrada111\proyecto_asilo\admin_usuarios\obj\Debug\proyecto_asilo.csproj.GenerateResource.Cache
+C:\Users\jordi\Documents\GITHUB\camiloestrada111\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.exe
+C:\Users\jordi\Documents\GITHUB\camiloestrada111\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.pdb
+C:\Users\jordi\Documents\GITHUB\camiloestrada111\proyecto_asilo\admin_usuarios\obj\Debug\proyecto_asilo.csprojResolveAssemblyReference.cache
+C:\Users\Camilo\Desktop\proyecto_asilo jod\admin_usuarios\bin\Debug\db_asilo.mdf
+C:\Users\Camilo\Desktop\proyecto_asilo jod\admin_usuarios\bin\Debug\db_asilo_log.ldf
+C:\Users\Camilo\Desktop\proyecto_asilo jod\admin_usuarios\bin\Debug\admin_us.exe.config
+C:\Users\Camilo\Desktop\proyecto_asilo jod\admin_usuarios\bin\Debug\admin_us.exe
+C:\Users\Camilo\Desktop\proyecto_asilo jod\admin_usuarios\bin\Debug\admin_us.pdb
+C:\Users\Camilo\Desktop\proyecto_asilo jod\admin_usuarios\obj\Debug\proyecto_asilo.csprojAssemblyReference.cache
+C:\Users\Camilo\Desktop\proyecto_asilo jod\admin_usuarios\obj\Debug\admin_usuarios.admin_usuarios.resources
+C:\Users\Camilo\Desktop\proyecto_asilo jod\admin_usuarios\obj\Debug\admin_us.frmCategorias.resources
+C:\Users\Camilo\Desktop\proyecto_asilo jod\admin_usuarios\obj\Debug\admin_us.frmInventario.resources
+C:\Users\Camilo\Desktop\proyecto_asilo jod\admin_usuarios\obj\Debug\admin_us.frmLogin.resources
+C:\Users\Camilo\Desktop\proyecto_asilo jod\admin_usuarios\obj\Debug\MenuAsilo.Menu.resources
+C:\Users\Camilo\Desktop\proyecto_asilo jod\admin_usuarios\obj\Debug\admin_us.frmMessageBoxActualizar.resources
+C:\Users\Camilo\Desktop\proyecto_asilo jod\admin_usuarios\obj\Debug\admin_us.frmMessageBoxEliminar.resources
+C:\Users\Camilo\Desktop\proyecto_asilo jod\admin_usuarios\obj\Debug\admin_us.frmMessageBoxLogin.resources
+C:\Users\Camilo\Desktop\proyecto_asilo jod\admin_usuarios\obj\Debug\admin_us.frmMessageBoxModificar.resources
+C:\Users\Camilo\Desktop\proyecto_asilo jod\admin_usuarios\obj\Debug\admin_us.frmMessageBoxPregunta.resources
+C:\Users\Camilo\Desktop\proyecto_asilo jod\admin_usuarios\obj\Debug\admin_us.frmproductos.resources
+C:\Users\Camilo\Desktop\proyecto_asilo jod\admin_usuarios\obj\Debug\admin_us.frm_subcategorias.resources
+C:\Users\Camilo\Desktop\proyecto_asilo jod\admin_usuarios\obj\Debug\admin_us.Properties.Resources.resources
+C:\Users\Camilo\Desktop\proyecto_asilo jod\admin_usuarios\obj\Debug\proyecto_asilo.csproj.GenerateResource.cache
+C:\Users\Camilo\Desktop\proyecto_asilo jod\admin_usuarios\obj\Debug\proyecto_asilo.csproj.CoreCompileInputs.cache
+C:\Users\Camilo\Desktop\proyecto_asilo jod\admin_usuarios\obj\Debug\admin_us.exe
+C:\Users\Camilo\Desktop\proyecto_asilo jod\admin_usuarios\obj\Debug\admin_us.pdb

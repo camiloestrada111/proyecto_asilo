@@ -304,6 +304,11 @@ namespace admin_usuarios
 
         }
 
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
         //Elimina el usuario que se seleciono mas adelante evitar que se borre el usuario que inicio sesion y los admin talves
         //Posdata si se borran todos los usuarios se bugea
         private void btnEliminar_Click(object sender, EventArgs e)

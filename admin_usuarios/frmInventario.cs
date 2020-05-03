@@ -101,5 +101,10 @@ namespace admin_us
 
             }
         }
+
+        private void tb_inventarioDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

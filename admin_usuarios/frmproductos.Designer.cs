@@ -62,6 +62,7 @@
             this.tb_inventarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tb_inventarioTableAdapter = new admin_us.db_asiloDataSetTableAdapters.tb_inventarioTableAdapter();
             this.tableAdapterManager = new admin_us.db_asiloDataSetTableAdapters.TableAdapterManager();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel_objetos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -83,6 +84,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.panel_objetos);
             this.panel1.Controls.Add(this.checkBox1);
@@ -101,7 +103,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.Location = new System.Drawing.Point(623, 366);
+            this.label1.Location = new System.Drawing.Point(694, 395);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 20);
             this.label1.TabIndex = 31;
@@ -112,7 +114,7 @@
             this.panel_objetos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.panel_objetos.Controls.Add(this.pictureBox3);
             this.panel_objetos.Controls.Add(this.comboBox_objetos);
-            this.panel_objetos.Location = new System.Drawing.Point(248, 256);
+            this.panel_objetos.Location = new System.Drawing.Point(319, 285);
             this.panel_objetos.Name = "panel_objetos";
             this.panel_objetos.Size = new System.Drawing.Size(369, 44);
             this.panel_objetos.TabIndex = 30;
@@ -145,7 +147,7 @@
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.checkBox1.Location = new System.Drawing.Point(642, 390);
+            this.checkBox1.Location = new System.Drawing.Point(713, 419);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(15, 14);
             this.checkBox1.TabIndex = 21;
@@ -157,7 +159,7 @@
             this.comboBox1_nombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.comboBox1_nombre.Controls.Add(this.pictureBox1);
             this.comboBox1_nombre.Controls.Add(this.comboBox_subtipos);
-            this.comboBox1_nombre.Location = new System.Drawing.Point(249, 195);
+            this.comboBox1_nombre.Location = new System.Drawing.Point(320, 224);
             this.comboBox1_nombre.Name = "comboBox1_nombre";
             this.comboBox1_nombre.Size = new System.Drawing.Size(369, 44);
             this.comboBox1_nombre.TabIndex = 29;
@@ -190,7 +192,7 @@
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.panel7.Controls.Add(this.checkBox2);
             this.panel7.Controls.Add(this.comboBox_tipos);
-            this.panel7.Location = new System.Drawing.Point(248, 134);
+            this.panel7.Location = new System.Drawing.Point(319, 163);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(369, 44);
             this.panel7.TabIndex = 28;
@@ -236,7 +238,7 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.panel2.Controls.Add(this.PictureBox4);
             this.panel2.Controls.Add(this.txtNombre);
-            this.panel2.Location = new System.Drawing.Point(248, 317);
+            this.panel2.Location = new System.Drawing.Point(319, 346);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(369, 44);
             this.panel2.TabIndex = 22;
@@ -273,7 +275,7 @@
             this.panel4.Controls.Add(this.pictureBox2);
             this.panel4.Controls.Add(this.comboBox_pesos);
             this.panel4.Controls.Add(this.txtUsuario);
-            this.panel4.Location = new System.Drawing.Point(248, 378);
+            this.panel4.Location = new System.Drawing.Point(319, 407);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(369, 44);
             this.panel4.TabIndex = 24;
@@ -321,7 +323,7 @@
             this.panel6.Controls.Add(this.btnModificar);
             this.panel6.Controls.Add(this.btnAgregar);
             this.panel6.Controls.Add(this.btnEliminar);
-            this.panel6.Location = new System.Drawing.Point(248, 439);
+            this.panel6.Location = new System.Drawing.Point(319, 468);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(369, 40);
             this.panel6.TabIndex = 26;
@@ -415,6 +417,21 @@
             this.tableAdapterManager.tb_usuarioTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = admin_us.db_asiloDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label3.Location = new System.Drawing.Point(279, 99);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(460, 25);
+            this.label3.TabIndex = 32;
+            this.label3.Text = "INGRESO Y MODIFICACIÓN DE PRODUCTOS";
+            // 
             // frmproductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -486,5 +503,6 @@
         private System.Windows.Forms.BindingSource tb_inventarioBindingSource;
         private db_asiloDataSetTableAdapters.tb_inventarioTableAdapter tb_inventarioTableAdapter;
         private db_asiloDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.Label label3;
     }
 }

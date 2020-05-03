@@ -183,6 +183,11 @@ namespace admin_us
 
         }
 
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             llenardatos(comboBox2.Text);
