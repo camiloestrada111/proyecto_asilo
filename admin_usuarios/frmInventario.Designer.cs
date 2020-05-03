@@ -135,6 +135,7 @@
             this.tb_inventarioDataGridView.ReadOnly = true;
             this.tb_inventarioDataGridView.Size = new System.Drawing.Size(695, 463);
             this.tb_inventarioDataGridView.TabIndex = 3;
+            this.tb_inventarioDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tb_inventarioDataGridView_CellContentClick);
             // 
             // noDataGridViewTextBoxColumn
             // 
@@ -243,7 +244,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(60, 15);
             this.label1.TabIndex = 24;
-            this.label1.Text = "Categoria";
+            this.label1.Text = "Categoría";
             // 
             // comboBox_tipos
             // 
@@ -285,16 +286,16 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(80, 15);
             this.label2.TabIndex = 25;
-            this.label2.Text = "Subcategoria";
+            this.label2.Text = "Subcategoría";
             // 
             // label4
             // 
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(49, 79);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(46, 79);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(81, 40);
+            this.label4.Size = new System.Drawing.Size(84, 40);
             this.label4.TabIndex = 33;
-            this.label4.Text = "Activar Busqueda";
+            this.label4.Text = "Activar Búsqueda";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // checkBox1

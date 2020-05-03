@@ -107,20 +107,19 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 460);
+            this.panel1.Size = new System.Drawing.Size(663, 415);
             this.panel1.TabIndex = 10;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // comboBox1_nombre
             // 
             this.comboBox1_nombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.comboBox1_nombre.Controls.Add(this.pictureBox1);
             this.comboBox1_nombre.Controls.Add(this.comboBox1);
-            this.comboBox1_nombre.Location = new System.Drawing.Point(143, 132);
-            this.comboBox1_nombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox1_nombre.Location = new System.Drawing.Point(139, 153);
             this.comboBox1_nombre.Name = "comboBox1_nombre";
-            this.comboBox1_nombre.Size = new System.Drawing.Size(492, 54);
+            this.comboBox1_nombre.Size = new System.Drawing.Size(369, 44);
             this.comboBox1_nombre.TabIndex = 23;
             this.comboBox1_nombre.Visible = false;
             // 
@@ -128,10 +127,9 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::admin_us.Properties.Resources.pencil_6x;
-            this.pictureBox1.Location = new System.Drawing.Point(7, 10);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(5, 8);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(33, 31);
+            this.pictureBox1.Size = new System.Drawing.Size(25, 25);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
@@ -142,10 +140,9 @@
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.comboBox1.ForeColor = System.Drawing.Color.DimGray;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(45, 10);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox1.Location = new System.Drawing.Point(34, 8);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(441, 33);
+            this.comboBox1.Size = new System.Drawing.Size(332, 28);
             this.comboBox1.TabIndex = 20;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -155,10 +152,9 @@
             this.panel5.Controls.Add(this.btnModificar);
             this.panel5.Controls.Add(this.btnAgregar);
             this.panel5.Controls.Add(this.btnEliminar);
-            this.panel5.Location = new System.Drawing.Point(143, 326);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Location = new System.Drawing.Point(139, 316);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(492, 54);
+            this.panel5.Size = new System.Drawing.Size(369, 44);
             this.panel5.TabIndex = 23;
             // 
             // btnModificar
@@ -169,9 +165,8 @@
             this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.Color.White;
             this.btnModificar.Location = new System.Drawing.Point(0, 0);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(153, 49);
+            this.btnModificar.Size = new System.Drawing.Size(115, 40);
             this.btnModificar.TabIndex = 14;
             this.btnModificar.Text = "MODIFICAR";
             this.btnModificar.UseVisualStyleBackColor = false;
@@ -183,10 +178,9 @@
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(169, 0);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregar.Location = new System.Drawing.Point(127, 0);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(153, 49);
+            this.btnAgregar.Size = new System.Drawing.Size(115, 40);
             this.btnAgregar.TabIndex = 12;
             this.btnAgregar.Text = "AGREGAR";
             this.btnAgregar.UseVisualStyleBackColor = false;
@@ -199,10 +193,9 @@
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(339, 0);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminar.Location = new System.Drawing.Point(254, 0);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(153, 49);
+            this.btnEliminar.Size = new System.Drawing.Size(115, 40);
             this.btnEliminar.TabIndex = 13;
             this.btnEliminar.Text = "ELIMINAR";
             this.btnEliminar.UseVisualStyleBackColor = false;
@@ -213,20 +206,18 @@
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.panel7.Controls.Add(this.checkBox2);
             this.panel7.Controls.Add(this.comboBox2);
-            this.panel7.Location = new System.Drawing.Point(143, 42);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel7.Location = new System.Drawing.Point(139, 70);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(492, 54);
+            this.panel7.Size = new System.Drawing.Size(369, 44);
             this.panel7.TabIndex = 22;
             // 
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
             this.checkBox2.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.checkBox2.Location = new System.Drawing.Point(12, 20);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox2.Location = new System.Drawing.Point(9, 16);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(18, 17);
+            this.checkBox2.Size = new System.Drawing.Size(15, 14);
             this.checkBox2.TabIndex = 19;
             this.checkBox2.UseVisualStyleBackColor = true;
             this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
@@ -239,10 +230,9 @@
             this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.comboBox2.ForeColor = System.Drawing.Color.DimGray;
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(45, 10);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox2.Location = new System.Drawing.Point(30, 8);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(441, 33);
+            this.comboBox2.Size = new System.Drawing.Size(332, 28);
             this.comboBox2.TabIndex = 20;
             this.comboBox2.ValueMember = "nombre";
             this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
@@ -252,20 +242,18 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.panel2.Controls.Add(this.PictureBox4);
             this.panel2.Controls.Add(this.txtNombre);
-            this.panel2.Location = new System.Drawing.Point(143, 231);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Location = new System.Drawing.Point(139, 239);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(492, 54);
+            this.panel2.Size = new System.Drawing.Size(369, 44);
             this.panel2.TabIndex = 19;
             // 
             // PictureBox4
             // 
             this.PictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.PictureBox4.Image = global::admin_us.Properties.Resources.pencil_6x;
-            this.PictureBox4.Location = new System.Drawing.Point(8, 12);
-            this.PictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PictureBox4.Location = new System.Drawing.Point(6, 10);
             this.PictureBox4.Name = "PictureBox4";
-            this.PictureBox4.Size = new System.Drawing.Size(33, 31);
+            this.PictureBox4.Size = new System.Drawing.Size(25, 25);
             this.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PictureBox4.TabIndex = 8;
             this.PictureBox4.TabStop = false;
@@ -276,10 +264,9 @@
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.ForeColor = System.Drawing.Color.DimGray;
-            this.txtNombre.Location = new System.Drawing.Point(49, 15);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombre.Location = new System.Drawing.Point(37, 12);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(403, 23);
+            this.txtNombre.Size = new System.Drawing.Size(302, 19);
             this.txtNombre.TabIndex = 1;
             this.txtNombre.Text = "Nombre";
             this.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -289,14 +276,14 @@
             // 
             // frm_subcategorias
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 460);
+            this.ClientSize = new System.Drawing.Size(663, 415);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frm_subcategorias";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_subcategorias";

@@ -37,6 +37,7 @@
             this.btn_Cerrar = new System.Windows.Forms.Button();
             this.btn_Maximizar = new System.Windows.Forms.Button();
             this.panelIzquierda = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
             this.panelInicio = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -51,7 +52,8 @@
             this.btnUsuario = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Contenedor = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             this.panelCabecera.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelIzquierda.SuspendLayout();
@@ -164,13 +166,15 @@
             // 
             this.panelIzquierda.AutoScroll = true;
             this.panelIzquierda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(48)))), ((int)(((byte)(64)))));
-            this.panelIzquierda.Controls.Add(this.button6);
-            this.panelIzquierda.Controls.Add(this.panelInicio);
-            this.panelIzquierda.Controls.Add(this.button1);
             this.panelIzquierda.Controls.Add(this.panelAdministracion);
             this.panelIzquierda.Controls.Add(this.btnInicio);
             this.panelIzquierda.Controls.Add(this.panelUsuario);
+            this.panelIzquierda.Controls.Add(this.panelInicio);
             this.panelIzquierda.Controls.Add(this.btnUsuario);
+            this.panelIzquierda.Controls.Add(this.button1);
+            this.panelIzquierda.Controls.Add(this.button8);
+            this.panelIzquierda.Controls.Add(this.button7);
+            this.panelIzquierda.Controls.Add(this.button6);
             this.panelIzquierda.Controls.Add(this.panel1);
             this.panelIzquierda.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelIzquierda.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -180,13 +184,36 @@
             this.panelIzquierda.TabIndex = 1;
             this.panelIzquierda.Paint += new System.Windows.Forms.PaintEventHandler(this.panelIzquierda_Paint);
             // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(48)))), ((int)(((byte)(64)))));
+            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(48)))), ((int)(((byte)(64)))));
+            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(191)))), ((int)(((byte)(151)))));
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
+            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.Location = new System.Drawing.Point(0, 46);
+            this.button6.Name = "button6";
+            this.button6.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
+            this.button6.Size = new System.Drawing.Size(282, 49);
+            this.button6.TabIndex = 7;
+            this.button6.Text = "INVENTARIO";
+            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // panelInicio
             // 
             this.panelInicio.Controls.Add(this.button2);
-            this.panelInicio.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelInicio.Location = new System.Drawing.Point(0, 447);
+            this.panelInicio.Location = new System.Drawing.Point(3, 605);
             this.panelInicio.Name = "panelInicio";
-            this.panelInicio.Size = new System.Drawing.Size(282, 49);
+            this.panelInicio.Size = new System.Drawing.Size(276, 49);
             this.panelInicio.TabIndex = 6;
             this.panelInicio.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint_2);
             // 
@@ -194,17 +221,16 @@
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(131)))), ((int)(((byte)(103)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(0, 0);
+            this.button2.Location = new System.Drawing.Point(-6, 0);
             this.button2.Name = "button2";
             this.button2.Padding = new System.Windows.Forms.Padding(62, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(282, 46);
+            this.button2.Size = new System.Drawing.Size(282, 49);
             this.button2.TabIndex = 2;
             this.button2.Text = "Cerrar Sesion";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -216,7 +242,6 @@
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(48)))), ((int)(((byte)(64)))));
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(48)))), ((int)(((byte)(64)))));
@@ -225,7 +250,7 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 398);
+            this.button1.Location = new System.Drawing.Point(0, 554);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
             this.button1.Size = new System.Drawing.Size(282, 49);
@@ -239,13 +264,13 @@
             // panelAdministracion
             // 
             this.panelAdministracion.Controls.Add(this.button5);
+            this.panelAdministracion.Controls.Add(this.btnCerrarS);
             this.panelAdministracion.Controls.Add(this.button4);
             this.panelAdministracion.Controls.Add(this.button3);
-            this.panelAdministracion.Controls.Add(this.btnCerrarS);
             this.panelAdministracion.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelAdministracion.Location = new System.Drawing.Point(0, 207);
+            this.panelAdministracion.Location = new System.Drawing.Point(0, 350);
             this.panelAdministracion.Name = "panelAdministracion";
-            this.panelAdministracion.Size = new System.Drawing.Size(282, 191);
+            this.panelAdministracion.Size = new System.Drawing.Size(282, 203);
             this.panelAdministracion.TabIndex = 4;
             this.panelAdministracion.Paint += new System.Windows.Forms.PaintEventHandler(this.panelInicio_Paint);
             // 
@@ -260,10 +285,10 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(0, 141);
+            this.button5.Location = new System.Drawing.Point(0, 152);
             this.button5.Name = "button5";
             this.button5.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
-            this.button5.Size = new System.Drawing.Size(282, 50);
+            this.button5.Size = new System.Drawing.Size(282, 51);
             this.button5.TabIndex = 5;
             this.button5.Text = "Tipos de Productos";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -281,10 +306,10 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(0, 94);
+            this.button4.Location = new System.Drawing.Point(0, 51);
             this.button4.Name = "button4";
             this.button4.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(282, 47);
+            this.button4.Size = new System.Drawing.Size(282, 51);
             this.button4.TabIndex = 4;
             this.button4.Text = "Productos";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -303,10 +328,10 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(0, 47);
+            this.button3.Location = new System.Drawing.Point(0, 0);
             this.button3.Name = "button3";
             this.button3.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(282, 47);
+            this.button3.Size = new System.Drawing.Size(282, 51);
             this.button3.TabIndex = 3;
             this.button3.Text = "Sub-Categorias";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -325,10 +350,10 @@
             this.btnCerrarS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarS.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrarS.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarS.Image")));
-            this.btnCerrarS.Location = new System.Drawing.Point(0, 0);
+            this.btnCerrarS.Location = new System.Drawing.Point(0, 102);
             this.btnCerrarS.Name = "btnCerrarS";
             this.btnCerrarS.Padding = new System.Windows.Forms.Padding(52, 0, 0, 0);
-            this.btnCerrarS.Size = new System.Drawing.Size(282, 47);
+            this.btnCerrarS.Size = new System.Drawing.Size(282, 50);
             this.btnCerrarS.TabIndex = 2;
             this.btnCerrarS.Text = "Categorias ";
             this.btnCerrarS.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -349,7 +374,7 @@
             this.btnInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInicio.Image = ((System.Drawing.Image)(resources.GetObject("btnInicio.Image")));
             this.btnInicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInicio.Location = new System.Drawing.Point(0, 158);
+            this.btnInicio.Location = new System.Drawing.Point(0, 301);
             this.btnInicio.Name = "btnInicio";
             this.btnInicio.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.btnInicio.Size = new System.Drawing.Size(282, 49);
@@ -364,26 +389,25 @@
             // 
             this.panelUsuario.Controls.Add(this.btnAdminUs);
             this.panelUsuario.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelUsuario.Location = new System.Drawing.Point(0, 113);
+            this.panelUsuario.Location = new System.Drawing.Point(0, 247);
             this.panelUsuario.Name = "panelUsuario";
-            this.panelUsuario.Size = new System.Drawing.Size(282, 45);
+            this.panelUsuario.Size = new System.Drawing.Size(282, 54);
             this.panelUsuario.TabIndex = 2;
             // 
             // btnAdminUs
             // 
             this.btnAdminUs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
             this.btnAdminUs.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdminUs.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnAdminUs.FlatAppearance.BorderSize = 0;
             this.btnAdminUs.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
             this.btnAdminUs.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(131)))), ((int)(((byte)(103)))));
             this.btnAdminUs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdminUs.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdminUs.Image = ((System.Drawing.Image)(resources.GetObject("btnAdminUs.Image")));
-            this.btnAdminUs.Location = new System.Drawing.Point(0, 0);
+            this.btnAdminUs.Location = new System.Drawing.Point(0, -1);
             this.btnAdminUs.Name = "btnAdminUs";
             this.btnAdminUs.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.btnAdminUs.Size = new System.Drawing.Size(282, 45);
+            this.btnAdminUs.Size = new System.Drawing.Size(282, 55);
             this.btnAdminUs.TabIndex = 0;
             this.btnAdminUs.Text = "Admin Usuario";
             this.btnAdminUs.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -404,10 +428,10 @@
             this.btnUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsuario.Image = ((System.Drawing.Image)(resources.GetObject("btnUsuario.Image")));
             this.btnUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsuario.Location = new System.Drawing.Point(0, 64);
+            this.btnUsuario.Location = new System.Drawing.Point(0, 193);
             this.btnUsuario.Name = "btnUsuario";
-            this.btnUsuario.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.btnUsuario.Size = new System.Drawing.Size(282, 49);
+            this.btnUsuario.Padding = new System.Windows.Forms.Padding(44, 0, 0, 0);
+            this.btnUsuario.Size = new System.Drawing.Size(282, 54);
             this.btnUsuario.TabIndex = 1;
             this.btnUsuario.Text = "USUARIOS";
             this.btnUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -420,7 +444,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(282, 64);
+            this.panel1.Size = new System.Drawing.Size(282, 46);
             this.panel1.TabIndex = 0;
             // 
             // Contenedor
@@ -432,34 +456,56 @@
             this.Contenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
             this.Contenedor.BackgroundImage = global::admin_us.Properties.Resources.Logo;
             this.Contenedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Contenedor.Location = new System.Drawing.Point(282, 41);
+            this.Contenedor.Location = new System.Drawing.Point(279, 41);
             this.Contenedor.Name = "Contenedor";
-            this.Contenedor.Size = new System.Drawing.Size(998, 679);
+            this.Contenedor.Size = new System.Drawing.Size(1001, 679);
             this.Contenedor.TabIndex = 2;
             // 
-            // button6
+            // button7
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(48)))), ((int)(((byte)(64)))));
-            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(48)))), ((int)(((byte)(64)))));
-            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(191)))), ((int)(((byte)(151)))));
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(0, 496);
-            this.button6.Name = "button6";
-            this.button6.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
-            this.button6.Size = new System.Drawing.Size(282, 49);
-            this.button6.TabIndex = 7;
-            this.button6.Text = "INVENTARIO";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(48)))), ((int)(((byte)(64)))));
+            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button7.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(48)))), ((int)(((byte)(64)))));
+            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(191)))), ((int)(((byte)(151)))));
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
+            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.Location = new System.Drawing.Point(0, 95);
+            this.button7.Name = "button7";
+            this.button7.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
+            this.button7.Size = new System.Drawing.Size(282, 49);
+            this.button7.TabIndex = 8;
+            this.button7.Text = "INGRESOS";
+            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button7.UseVisualStyleBackColor = false;
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(48)))), ((int)(((byte)(64)))));
+            this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button8.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(48)))), ((int)(((byte)(64)))));
+            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(191)))), ((int)(((byte)(151)))));
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
+            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button8.Location = new System.Drawing.Point(0, 144);
+            this.button8.Name = "button8";
+            this.button8.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
+            this.button8.Size = new System.Drawing.Size(282, 49);
+            this.button8.TabIndex = 9;
+            this.button8.Text = "SALIDAS";
+            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button8.UseVisualStyleBackColor = false;
             // 
             // Menu
             // 
@@ -510,6 +556,8 @@
         private System.Windows.Forms.Panel panelContenedor;
         private System.Windows.Forms.Panel Contenedor;
         public System.Windows.Forms.Button button6;
+        public System.Windows.Forms.Button button8;
+        public System.Windows.Forms.Button button7;
     }
 }
 
