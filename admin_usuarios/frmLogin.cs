@@ -158,6 +158,29 @@ namespace admin_us
 
         }
 
+        private void txtContra_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter && txtContra.TextLength > 0 )
+            {
+                frmMessageBoxLogin messageBoxLogin = new frmMessageBoxLogin();
+
+                int x;
+                x = Convert.ToInt32(this.tb_usuarioTableAdapter.iniciarsesion(comboBox2.Text, txtContra.Text));
+                if (x == 1)
+                {
+                    //MessageBox.Show("Iniciando sesion");
+                    MenuAsilo.Menu frmMenu = new MenuAsilo.Menu();
+                    frmMenu.Show();
+                    messageBoxLogin.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Error Contraseña no Valida");
+                }
+            }
+        }
+
         public frmLogin()
         {
             InitializeComponent();

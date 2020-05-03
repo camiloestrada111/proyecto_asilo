@@ -223,3 +223,4 @@ C:\Users\Camilo\Desktop\proyecto_asilo jod\admin_usuarios\obj\Debug\proyecto_asi
 C:\Users\Camilo\Desktop\proyecto_asilo jod\admin_usuarios\obj\Debug\proyecto_asilo.csproj.CoreCompileInputs.cache
 C:\Users\Camilo\Desktop\proyecto_asilo jod\admin_usuarios\obj\Debug\admin_us.exe
 C:\Users\Camilo\Desktop\proyecto_asilo jod\admin_usuarios\obj\Debug\admin_us.pdb
+C:\Users\Camilo\Source\Repos\camiloestrada111\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmIngresos.resources

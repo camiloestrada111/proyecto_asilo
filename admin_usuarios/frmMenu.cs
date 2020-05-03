@@ -330,5 +330,14 @@ namespace MenuAsilo
         {
 
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Form frminstancia = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is admin_us.frmIngresos);
+            frminstancia = new admin_us.frmIngresos();
+            FormsHijos(frminstancia);
+
+            activo = frminstancia;
+        }
     }
 }
