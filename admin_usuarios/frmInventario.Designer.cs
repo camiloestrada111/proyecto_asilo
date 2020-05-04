@@ -46,6 +46,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel25 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel_busqueda = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox_tipos = new System.Windows.Forms.ComboBox();
@@ -80,7 +81,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(982, 640);
+            this.panel1.Size = new System.Drawing.Size(998, 644);
             this.panel1.TabIndex = 0;
             // 
             // panel5
@@ -90,7 +91,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(157, 147);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(695, 493);
+            this.panel5.Size = new System.Drawing.Size(711, 497);
             this.panel5.TabIndex = 4;
             // 
             // tb_inventarioDataGridView
@@ -133,8 +134,9 @@
             this.tb_inventarioDataGridView.Location = new System.Drawing.Point(0, 0);
             this.tb_inventarioDataGridView.Name = "tb_inventarioDataGridView";
             this.tb_inventarioDataGridView.ReadOnly = true;
-            this.tb_inventarioDataGridView.Size = new System.Drawing.Size(695, 463);
+            this.tb_inventarioDataGridView.Size = new System.Drawing.Size(711, 467);
             this.tb_inventarioDataGridView.TabIndex = 3;
+            this.tb_inventarioDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tb_inventarioDataGridView_CellContentClick);
             // 
             // noDataGridViewTextBoxColumn
             // 
@@ -191,9 +193,9 @@
             // panel6
             // 
             this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel6.Location = new System.Drawing.Point(0, 463);
+            this.panel6.Location = new System.Drawing.Point(0, 467);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(695, 30);
+            this.panel6.Size = new System.Drawing.Size(711, 30);
             this.panel6.TabIndex = 0;
             // 
             // panel2
@@ -201,27 +203,43 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 147);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(157, 493);
+            this.panel2.Size = new System.Drawing.Size(157, 497);
             this.panel2.TabIndex = 3;
             // 
             // panel4
             // 
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(852, 147);
+            this.panel4.Location = new System.Drawing.Point(868, 147);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(130, 493);
+            this.panel4.Size = new System.Drawing.Size(130, 497);
             this.panel4.TabIndex = 2;
             // 
             // panel25
             // 
+            this.panel25.Controls.Add(this.label3);
             this.panel25.Controls.Add(this.panel_busqueda);
             this.panel25.Controls.Add(this.label4);
             this.panel25.Controls.Add(this.checkBox1);
             this.panel25.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel25.Location = new System.Drawing.Point(0, 0);
             this.panel25.Name = "panel25";
-            this.panel25.Size = new System.Drawing.Size(982, 147);
+            this.panel25.Size = new System.Drawing.Size(998, 147);
             this.panel25.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label3.Location = new System.Drawing.Point(430, 38);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(138, 25);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "INVENTARIO";
             // 
             // panel_busqueda
             // 
@@ -238,12 +256,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(202, 8);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(202, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 15);
+            this.label1.Size = new System.Drawing.Size(78, 20);
             this.label1.TabIndex = 24;
-            this.label1.Text = "Categoria";
+            this.label1.Text = "Categoría";
             // 
             // comboBox_tipos
             // 
@@ -268,7 +286,7 @@
             // combo_subtipos
             // 
             this.combo_subtipos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.combo_subtipos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.combo_subtipos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.combo_subtipos.ForeColor = System.Drawing.Color.DimGray;
             this.combo_subtipos.FormattingEnabled = true;
             this.combo_subtipos.Location = new System.Drawing.Point(360, 27);
@@ -280,21 +298,22 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(416, 8);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(407, 4);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 15);
+            this.label2.Size = new System.Drawing.Size(104, 20);
             this.label2.TabIndex = 25;
-            this.label2.Text = "Subcategoria";
+            this.label2.Text = "Subcategoría";
             // 
             // label4
             // 
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(49, 79);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.DimGray;
+            this.label4.Location = new System.Drawing.Point(46, 79);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(81, 40);
+            this.label4.Size = new System.Drawing.Size(84, 40);
             this.label4.TabIndex = 33;
-            this.label4.Text = "Activar Busqueda";
+            this.label4.Text = "Activar Búsqueda";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // checkBox1
@@ -348,7 +367,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(982, 640);
+            this.ClientSize = new System.Drawing.Size(998, 644);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmInventario";
@@ -400,5 +419,6 @@
         private System.Windows.Forms.ComboBox comboBox_tipos;
         private System.Windows.Forms.BindingSource tbtipoBindingSource;
         private db_asiloDataSetTableAdapters.tb_tipoTableAdapter tb_tipoTableAdapter;
+        private System.Windows.Forms.Label label3;
     }
 }

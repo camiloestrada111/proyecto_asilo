@@ -255,12 +255,10 @@ namespace admin_us
             {
                 existe = Convert.ToInt32(this.tb_objetoTableAdapter.obtener_siexiste(txtNombre.Text, id_tipos, txtUsuario.Text, id_subtipos));
             }
-            MessageBox.Show(Convert.ToString(existe));
             if(existe == 0)
             {
                 if (txtNombre.Text == "Nombre")
                 {
-                    MessageBox.Show("1");
                 }
                 else
                 {
@@ -269,7 +267,6 @@ namespace admin_us
                         if (comboBox_pesos.Text == "")
                         {
 
-                            MessageBox.Show("2");
                         }
                         else
                         {
@@ -284,7 +281,6 @@ namespace admin_us
                         if (txtUsuario.Text == "Peso")
                         {
 
-                            MessageBox.Show("3");
                         }
                         else
                         {
