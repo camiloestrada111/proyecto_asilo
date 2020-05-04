@@ -84,6 +84,12 @@
     <Compile Include="frmCategorias.Designer.cs">
       <DependentUpon>frmCategorias.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEgresos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEgresos.Designer.cs">
+      <DependentUpon>frmEgresos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmIngresos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCategorias.resx">
       <DependentUpon>frmCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEgresos.resx">
+      <DependentUpon>frmEgresos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmIngresos.resx">
       <DependentUpon>frmIngresos.cs</DependentUpon>
@@ -233,6 +242,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>db_asilo.mdf</DependentUpon>
     </Content>
+    <Content Include="Resources\danger.bmp" />
     <Content Include="Resources\Logo.jpg" />
     <None Include="Resources\user21.png" />
     <None Include="Resources\user.png" />

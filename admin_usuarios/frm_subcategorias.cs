@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace admin_us
@@ -33,7 +27,7 @@ namespace admin_us
             comboBox1.Items.Clear();
             foreach (DataRow row in Tabla.Rows)
             {
-                comboBox1.Items.Add(row["nombre"]);                
+                comboBox1.Items.Add(row["nombre"]);
             }
             try
             {
@@ -41,7 +35,7 @@ namespace admin_us
             }
             catch (Exception)
             {
-                
+
             }
             txtNombre.Text = comboBox1.Text;
         }
@@ -54,7 +48,7 @@ namespace admin_us
             frmMessageBoxLogin frm = new frmMessageBoxLogin();
             try
             {
-                if(txtNombre.Text == "Nombre")
+                if (txtNombre.Text == "Nombre")
                 {
                     MessageBox.Show("Existe un error");
                 }
@@ -129,10 +123,11 @@ namespace admin_us
         {
             if (txtNombre.TextLength == 0)
             {
-                if(checkBox2.Checked == true)
+                if (checkBox2.Checked == true)
                 {
                     txtNombre.Text = comboBox1.Text;
-                }else
+                }
+                else
                 {
                     txtNombre.Text = "Nombre";
                 }
@@ -141,7 +136,7 @@ namespace admin_us
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-           
+
             frmMessageBoxModificar mensaje = new frmMessageBoxModificar();
 
             DialogResult resultado = new DialogResult();
@@ -226,7 +221,7 @@ namespace admin_us
         }
         private void comboBox1_nombre_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
         }
     }
 }

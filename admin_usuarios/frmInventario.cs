@@ -15,6 +15,7 @@ namespace admin_us
         public frmInventario()
         {
             InitializeComponent();
+            Estilo();
         }
         //Se usa para consultar la tabla
         public static DataRow Fila;
@@ -22,6 +23,14 @@ namespace admin_us
         //Tabla que uso para guardar los datos de las consultas
         public static DataTable Tabla = new DataTable();
 
+        //Correción de estilo para la tabla
+        public void Estilo() {
+            tb_inventarioDataGridView.Font = new Font("Microsoft Sans Serif", 12);
+            tb_inventarioDataGridView.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 12, FontStyle.Bold);
+            this.tb_inventarioDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.tb_inventarioDataGridView.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells;
+
+        }
         private void tb_inventarioBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();

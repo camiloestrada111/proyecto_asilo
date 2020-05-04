@@ -224,3 +224,27 @@ C:\Users\Camilo\Desktop\proyecto_asilo jod\admin_usuarios\obj\Debug\proyecto_asi
 C:\Users\Camilo\Desktop\proyecto_asilo jod\admin_usuarios\obj\Debug\admin_us.exe
 C:\Users\Camilo\Desktop\proyecto_asilo jod\admin_usuarios\obj\Debug\admin_us.pdb
 C:\Users\Camilo\Source\Repos\camiloestrada111\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmIngresos.resources
+D:\Visual_Projects\proyecto_asilo\proyecto_asilo\admin_usuarios\bin\Debug\db_asilo.mdf
+D:\Visual_Projects\proyecto_asilo\proyecto_asilo\admin_usuarios\bin\Debug\db_asilo_log.ldf
+D:\Visual_Projects\proyecto_asilo\proyecto_asilo\admin_usuarios\bin\Debug\admin_us.exe.config
+D:\Visual_Projects\proyecto_asilo\proyecto_asilo\admin_usuarios\bin\Debug\admin_us.exe
+D:\Visual_Projects\proyecto_asilo\proyecto_asilo\admin_usuarios\bin\Debug\admin_us.pdb
+D:\Visual_Projects\proyecto_asilo\proyecto_asilo\admin_usuarios\obj\Debug\admin_usuarios.admin_usuarios.resources
+D:\Visual_Projects\proyecto_asilo\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmCategorias.resources
+D:\Visual_Projects\proyecto_asilo\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmEgresos.resources
+D:\Visual_Projects\proyecto_asilo\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmIngresos.resources
+D:\Visual_Projects\proyecto_asilo\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmInventario.resources
+D:\Visual_Projects\proyecto_asilo\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmLogin.resources
+D:\Visual_Projects\proyecto_asilo\proyecto_asilo\admin_usuarios\obj\Debug\MenuAsilo.Menu.resources
+D:\Visual_Projects\proyecto_asilo\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmMessageBoxActualizar.resources
+D:\Visual_Projects\proyecto_asilo\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmMessageBoxEliminar.resources
+D:\Visual_Projects\proyecto_asilo\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmMessageBoxLogin.resources
+D:\Visual_Projects\proyecto_asilo\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmMessageBoxModificar.resources
+D:\Visual_Projects\proyecto_asilo\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmMessageBoxPregunta.resources
+D:\Visual_Projects\proyecto_asilo\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmproductos.resources
+D:\Visual_Projects\proyecto_asilo\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frm_subcategorias.resources
+D:\Visual_Projects\proyecto_asilo\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.Properties.Resources.resources
+D:\Visual_Projects\proyecto_asilo\proyecto_asilo\admin_usuarios\obj\Debug\proyecto_asilo.csproj.GenerateResource.cache
+D:\Visual_Projects\proyecto_asilo\proyecto_asilo\admin_usuarios\obj\Debug\proyecto_asilo.csproj.CoreCompileInputs.cache
+D:\Visual_Projects\proyecto_asilo\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.exe
+D:\Visual_Projects\proyecto_asilo\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.pdb
