@@ -192,3 +192,10 @@ C:\Users\deleo\Source\Repos\camiloestrada111\proyecto_asilo\admin_usuarios\obj\D
 C:\Users\deleo\Source\Repos\camiloestrada111\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmMessageBoxExisteUnError.resources
 C:\Users\deleo\Source\Repos\camiloestrada111\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmMessageBoxErrorYaExisteElQueQuiereAgregar.resources
 C:\Users\deleo\Source\Repos\camiloestrada111\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmMessageBoxErrorYaExisteElUsuario.resources
+C:\Users\Camilo\Source\Repos\camiloestrada111\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmEgresos.resources
+C:\Users\Camilo\Source\Repos\camiloestrada111\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmIngresos.resources
+C:\Users\Camilo\Source\Repos\camiloestrada111\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmMessageBoxAgregado.resources
+C:\Users\Camilo\Source\Repos\camiloestrada111\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmMessageBoxErrorYaExisteElQueQuiereAgregar.resources
+C:\Users\Camilo\Source\Repos\camiloestrada111\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmMessageBoxErrorYaExisteElUsuario.resources
+C:\Users\Camilo\Source\Repos\camiloestrada111\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmMessageBoxExisteUnError.resources
+C:\Users\Camilo\Source\Repos\camiloestrada111\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmMessageBoxNoLogin.resources

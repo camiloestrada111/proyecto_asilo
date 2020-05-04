@@ -177,7 +177,7 @@ namespace admin_us
             }
             catch (Exception)
             {
-
+                checkBox2.Checked = false;
             }
             txtNombre.Text = comboBox_objetos.Text;
             int id_objeto = Convert.ToInt32(this.tb_objetoTableAdapter.obtener_id(comboBox_objetos.Text, id_tipos, id_subtipos));
@@ -201,7 +201,7 @@ namespace admin_us
             }
             catch (Exception)
             {
-
+                checkBox1.Checked = true;
             }
         }
         private void frmproductos_Load(object sender, EventArgs e)
@@ -382,8 +382,10 @@ namespace admin_us
                 int id_subtipos = Convert.ToInt32(this.tb_subtipoTableAdapter.obtener_idsubtipo(id_tipos, comboBox_subtipos.Text));
                 int id_objetos = Convert.ToInt32(this.tb_objetoTableAdapter.obtener_id(comboBox_objetos.Text, id_tipos, id_subtipos));
                 this.tb_objetoTableAdapter.eliminar_objeto(id_objetos);
+                this.tb_inventarioTableAdapter.Eliminar_Inventario(id_objetos);
                 llenardatos_objetos();
                 llenardatos_pesos();
+                checkBox2.Checked = false;
                 //eliminar.Show();
             }
 

@@ -55,7 +55,7 @@ namespace admin_us
                 }
                 else
                 {
-                    this.tb_subtipoTableAdapter.agregar_subtipo(txtNombre.Text, this.tb_tipoTableAdapter.Consultar_id(comboBox2.Text));
+                    this.tb_subtipoTableAdapter.agregar_subtipo(txtNombre.Text, Convert.ToInt32(this.tb_tipoTableAdapter.Consultar_id(comboBox2.Text)));
                     txtNombre.Text = "Nombre";
                     frm.Show();
                 }

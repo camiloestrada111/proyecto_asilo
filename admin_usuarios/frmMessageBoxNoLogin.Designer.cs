@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMessageBoxNoLogin));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblInicio = new System.Windows.Forms.Label();
             this.btn_Cerrar = new System.Windows.Forms.Button();
+            this.lblInicio = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,17 +45,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(375, 22);
             this.panel2.TabIndex = 18;
-            // 
-            // lblInicio
-            // 
-            this.lblInicio.AutoSize = true;
-            this.lblInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInicio.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblInicio.Location = new System.Drawing.Point(90, 58);
-            this.lblInicio.Name = "lblInicio";
-            this.lblInicio.Size = new System.Drawing.Size(190, 25);
-            this.lblInicio.TabIndex = 20;
-            this.lblInicio.Text = "Problema al ingresar";
             // 
             // btn_Cerrar
             // 
@@ -73,6 +62,17 @@
             this.btn_Cerrar.UseVisualStyleBackColor = true;
             this.btn_Cerrar.Click += new System.EventHandler(this.btn_Cerrar_Click);
             // 
+            // lblInicio
+            // 
+            this.lblInicio.AutoSize = true;
+            this.lblInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInicio.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblInicio.Location = new System.Drawing.Point(111, 58);
+            this.lblInicio.Name = "lblInicio";
+            this.lblInicio.Size = new System.Drawing.Size(153, 20);
+            this.lblInicio.TabIndex = 20;
+            this.lblInicio.Text = "Problema al ingresar";
+            // 
             // frmMessageBoxNoLogin
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -80,6 +80,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.lblInicio);
             this.Controls.Add(this.panel2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMessageBoxNoLogin";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
