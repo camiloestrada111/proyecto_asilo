@@ -51,12 +51,13 @@ namespace admin_us
         }
         private void btn_agregar_Click(object sender, EventArgs e)
         {
+            frmMessageBoxExisteUnError messageBoxExisteUnError = new frmMessageBoxExisteUnError();
             frmMessageBoxLogin frm = new frmMessageBoxLogin();
             try
             {
                 if(txtNombre.Text == "Nombre")
                 {
-                    MessageBox.Show("Existe un error");
+                    messageBoxExisteUnError.Show();
                 }
                 else
                 {
@@ -67,7 +68,7 @@ namespace admin_us
             }
             catch (Exception)
             {
-                MessageBox.Show("Existe un error");
+                messageBoxExisteUnError.Show();
             }
         }
         private void tb_subtipoBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -150,6 +151,7 @@ namespace admin_us
 
             resultado = mensaje1.ShowDialog();
 
+            frmMessageBoxErrorYaExisteElQueQuiereAgregar MessageBoxErrorYaExisteElQueQuiereAgregar = new frmMessageBoxErrorYaExisteElQueQuiereAgregar();
 
             if (resultado == DialogResult.OK)
             {
@@ -170,7 +172,7 @@ namespace admin_us
                     }
                     else
                     {
-                        MessageBox.Show("Error ya existe el que quiere Modificar");
+                        MessageBoxErrorYaExisteElQueQuiereAgregar.Show();
                     }
                 }
             }

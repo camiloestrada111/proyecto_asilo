@@ -232,6 +232,8 @@ namespace admin_usuarios
 
             resultado = mensaje1.ShowDialog();
 
+            frmMessageBoxErrorYaExisteElUsuario MessageBoxErrorYaExisteElUsuario = new frmMessageBoxErrorYaExisteElUsuario();
+            frmMessageBoxActualizar MessageBoxActualizar = new frmMessageBoxActualizar();
 
             if (resultado == DialogResult.OK)
             {
@@ -265,11 +267,11 @@ namespace admin_usuarios
                 {
                     this.tb_usuarioTableAdapter.modificar(txtNombre.Text, txtApellido.Text, txtUsuario.Text, txtContra.Text, auxiliartipo, id);
                     this.tb_usuarioTableAdapter.Fill(this.db_asiloDataSet.tb_usuario);
-                    MessageBox.Show("Actualizado Correctamente");
+                    MessageBoxActualizar.Show();
                 }
                 else
                 {
-                    MessageBox.Show("Error ya existe el usuario");
+                    MessageBoxErrorYaExisteElUsuario.Show();
                 }
                 comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
             }

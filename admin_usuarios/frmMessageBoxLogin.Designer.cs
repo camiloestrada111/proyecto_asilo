@@ -72,6 +72,7 @@
             this.Name = "frmMessageBoxLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMessageBoxLogin";
+            this.Load += new System.EventHandler(this.frmMessageBoxLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

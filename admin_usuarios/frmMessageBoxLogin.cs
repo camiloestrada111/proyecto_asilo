@@ -21,5 +21,10 @@ namespace admin_us
         {
             this.Close();
         }
+
+        private void frmMessageBoxLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

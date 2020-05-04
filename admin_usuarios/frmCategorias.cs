@@ -56,12 +56,13 @@ namespace admin_us
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            frmMessageBoxExisteUnError messageBoxExisteUnError = new frmMessageBoxExisteUnError();
             frmMessageBoxLogin frm = new frmMessageBoxLogin();
             try
             {
                 if (txtNombre.Text == "Nombre")
                 {
-                    MessageBox.Show("Existe un error");
+                    messageBoxExisteUnError.Show();
                 }
                 else
                 {
@@ -81,7 +82,7 @@ namespace admin_us
             }
             catch (Exception)
             {
-                MessageBox.Show("Existe un error");
+                messageBoxExisteUnError.Show();
             }
             
         }
@@ -134,6 +135,11 @@ namespace admin_us
             {
                 txtNombre.Text = "";
             }
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

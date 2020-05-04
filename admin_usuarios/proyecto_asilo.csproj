@@ -108,11 +108,35 @@
     <Compile Include="frmMessageBoxActualizar.Designer.cs">
       <DependentUpon>frmMessageBoxActualizar.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMessageBoxAgregado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMessageBoxAgregado.Designer.cs">
+      <DependentUpon>frmMessageBoxAgregado.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMessageBoxEliminar.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMessageBoxEliminar.Designer.cs">
       <DependentUpon>frmMessageBoxEliminar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMessageBoxErrorYaExisteElQueQuiereAgregar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMessageBoxErrorYaExisteElQueQuiereAgregar.Designer.cs">
+      <DependentUpon>frmMessageBoxErrorYaExisteElQueQuiereAgregar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMessageBoxErrorYaExisteElUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMessageBoxErrorYaExisteElUsuario.Designer.cs">
+      <DependentUpon>frmMessageBoxErrorYaExisteElUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMessageBoxExisteUnError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMessageBoxExisteUnError.Designer.cs">
+      <DependentUpon>frmMessageBoxExisteUnError.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMessageBoxLogin.cs">
       <SubType>Form</SubType>
@@ -125,6 +149,12 @@
     </Compile>
     <Compile Include="frmMessageBoxModificar.Designer.cs">
       <DependentUpon>frmMessageBoxModificar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMessageBoxNoLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMessageBoxNoLogin.Designer.cs">
+      <DependentUpon>frmMessageBoxNoLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMessageBoxPregunta.cs">
       <SubType>Form</SubType>
@@ -164,14 +194,29 @@
     <EmbeddedResource Include="frmMessageBoxActualizar.resx">
       <DependentUpon>frmMessageBoxActualizar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmMessageBoxAgregado.resx">
+      <DependentUpon>frmMessageBoxAgregado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMessageBoxEliminar.resx">
       <DependentUpon>frmMessageBoxEliminar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMessageBoxErrorYaExisteElQueQuiereAgregar.resx">
+      <DependentUpon>frmMessageBoxErrorYaExisteElQueQuiereAgregar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMessageBoxErrorYaExisteElUsuario.resx">
+      <DependentUpon>frmMessageBoxErrorYaExisteElUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMessageBoxExisteUnError.resx">
+      <DependentUpon>frmMessageBoxExisteUnError.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMessageBoxLogin.resx">
       <DependentUpon>frmMessageBoxLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMessageBoxModificar.resx">
       <DependentUpon>frmMessageBoxModificar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMessageBoxNoLogin.resx">
+      <DependentUpon>frmMessageBoxNoLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMessageBoxPregunta.resx">
       <DependentUpon>frmMessageBoxPregunta.cs</DependentUpon>
