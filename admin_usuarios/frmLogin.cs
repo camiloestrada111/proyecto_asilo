@@ -185,6 +185,13 @@ namespace admin_us
             }
         }
 
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            frmReportes asd = new frmReportes();
+            asd.Show();
+            this.Hide();
+        }
+
         public frmLogin()
         {
             InitializeComponent();

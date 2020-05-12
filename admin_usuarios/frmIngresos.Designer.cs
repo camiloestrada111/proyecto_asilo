@@ -84,6 +84,8 @@
             this.combo_donante = new System.Windows.Forms.ComboBox();
             this.tbinventarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tb_inventarioTableAdapter = new admin_us.db_asiloDataSetTableAdapters.tb_inventarioTableAdapter();
+            this.tbreportesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tb_reportesTableAdapter = new admin_us.db_asiloDataSetTableAdapters.tb_reportesTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.db_asiloDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbtipoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbingresosBindingSource)).BeginInit();
@@ -117,6 +119,7 @@
             this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbinventarioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbreportesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // db_asiloDataSet
@@ -679,6 +682,15 @@
             // 
             this.tb_inventarioTableAdapter.ClearBeforeFill = true;
             // 
+            // tbreportesBindingSource
+            // 
+            this.tbreportesBindingSource.DataMember = "tb_reportes";
+            this.tbreportesBindingSource.DataSource = this.db_asiloDataSet;
+            // 
+            // tb_reportesTableAdapter
+            // 
+            this.tb_reportesTableAdapter.ClearBeforeFill = true;
+            // 
             // frmIngresos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -732,6 +744,7 @@
             this.panel12.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbinventarioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbreportesBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -792,5 +805,7 @@
         private System.Windows.Forms.ComboBox combo_donante;
         private System.Windows.Forms.BindingSource tbinventarioBindingSource;
         private db_asiloDataSetTableAdapters.tb_inventarioTableAdapter tb_inventarioTableAdapter;
+        private System.Windows.Forms.BindingSource tbreportesBindingSource;
+        private db_asiloDataSetTableAdapters.tb_reportesTableAdapter tb_reportesTableAdapter;
     }
 }

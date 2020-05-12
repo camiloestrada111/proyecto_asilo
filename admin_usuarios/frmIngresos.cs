@@ -87,6 +87,8 @@ namespace admin_us
         //EVENTOS
         private void frmIngresos_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'db_asiloDataSet.tb_reportes' Puede moverla o quitarla según sea necesario.
+            this.tb_reportesTableAdapter.Fill(this.db_asiloDataSet.tb_reportes);
             // TODO: esta línea de código carga datos en la tabla 'db_asiloDataSet.tb_inventario' Puede moverla o quitarla según sea necesario.
             this.tb_inventarioTableAdapter.Fill(this.db_asiloDataSet.tb_inventario);
             // TODO: esta línea de código carga datos en la tabla 'db_asiloDataSet.tb_objeto' Puede moverla o quitarla según sea necesario.
@@ -205,6 +207,7 @@ namespace admin_us
                                 int nueva_cantidad = cantidad_actual + Convert.ToInt32(numeric_cantidad.Value);
                                 int ID_Inver = Convert.ToInt32(this.tb_inventarioTableAdapter.Obtener_id(ID_objeto));
                                 this.tb_inventarioTableAdapter.Actualizar_inventario(nueva_cantidad, ID_objeto, ID_Inver);
+                                this.tb_reportesTableAdapter.AgregarRegistro(ID_objeto, Convert.ToInt32(numeric_cantidad.Value), Convert.ToString(fecha), "Ingreso");
                                 //Mensaje Agregado cambiar
                                 MessageBox.Show("Ingresado");
                             }
@@ -216,6 +219,7 @@ namespace admin_us
                                 int nueva_cantidad = cantidad_actual + Convert.ToInt32(numeric_cantidad.Value);
                                 int ID_Inver = Convert.ToInt32(this.tb_inventarioTableAdapter.Obtener_id(ID_objeto));
                                 this.tb_inventarioTableAdapter.Actualizar_inventario(nueva_cantidad, ID_objeto, ID_Inver);
+                                this.tb_reportesTableAdapter.AgregarRegistro(ID_objeto, Convert.ToInt32(numeric_cantidad.Value), Convert.ToString(fecha), "Ingreso");
                                 //Mensaje Agregado cambiar
                                 MessageBox.Show("Ingresado");
                             }
@@ -227,6 +231,7 @@ namespace admin_us
                             int nueva_cantidad = cantidad_actual + Convert.ToInt32(numeric_cantidad.Value);
                             int ID_Inver = Convert.ToInt32(this.tb_inventarioTableAdapter.Obtener_id(ID_objeto));
                             this.tb_inventarioTableAdapter.Actualizar_inventario(nueva_cantidad, ID_objeto, ID_Inver);
+                            this.tb_reportesTableAdapter.AgregarRegistro(ID_objeto, Convert.ToInt32(numeric_cantidad.Value), Convert.ToString(fecha), "Ingreso");
                             //Mensaje Agregado cambiar
                             MessageBox.Show("Ingresado");
                         }
@@ -248,6 +253,7 @@ namespace admin_us
                             int nueva_cantidad = cantidad_actual + Convert.ToInt32(numeric_cantidad.Value);
                             int ID_Inver = Convert.ToInt32(this.tb_inventarioTableAdapter.Obtener_id(ID_objeto));
                             this.tb_inventarioTableAdapter.Actualizar_inventario(nueva_cantidad, ID_objeto, ID_Inver);
+                            this.tb_reportesTableAdapter.AgregarRegistro(ID_objeto, Convert.ToInt32(numeric_cantidad.Value), Convert.ToString(fecha), "Ingreso");
                             //Mensaje Agregado cambiar
                             MessageBox.Show("Ingresado");
                         }
@@ -259,6 +265,7 @@ namespace admin_us
                             int nueva_cantidad = cantidad_actual + Convert.ToInt32(numeric_cantidad.Value);
                             int ID_Inver = Convert.ToInt32(this.tb_inventarioTableAdapter.Obtener_id(ID_objeto));
                             this.tb_inventarioTableAdapter.Actualizar_inventario(nueva_cantidad, ID_objeto, ID_Inver);
+                            this.tb_reportesTableAdapter.AgregarRegistro(ID_objeto, Convert.ToInt32(numeric_cantidad.Value), Convert.ToString(fecha), "Ingreso");
                             //Mensaje Agregado cambiar
                             MessageBox.Show("Ingresado");
                         }
@@ -271,6 +278,7 @@ namespace admin_us
                         int nueva_cantidad = cantidad_actual + Convert.ToInt32(numeric_cantidad.Value);
                         int ID_Inver = Convert.ToInt32(this.tb_inventarioTableAdapter.Obtener_id(ID_objeto));
                         this.tb_inventarioTableAdapter.Actualizar_inventario(nueva_cantidad, ID_objeto, ID_Inver);
+                        this.tb_reportesTableAdapter.AgregarRegistro(ID_objeto, Convert.ToInt32(numeric_cantidad.Value), Convert.ToString(fecha), "Ingreso");
                         //Mensaje Agregado cambiar
                         MessageBox.Show("Ingresado");
                     }

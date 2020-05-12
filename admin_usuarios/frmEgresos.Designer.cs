@@ -67,6 +67,7 @@
             this.btnRetirar = new System.Windows.Forms.Button();
             this.tbinventarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tb_inventarioTableAdapter = new admin_us.db_asiloDataSetTableAdapters.tb_inventarioTableAdapter();
+            this.tb_reportesTableAdapter = new admin_us.db_asiloDataSetTableAdapters.tb_reportesTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.db_asiloDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbtipoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbsubtipoBindingSource)).BeginInit();
@@ -481,6 +482,10 @@
             // 
             this.tb_inventarioTableAdapter.ClearBeforeFill = true;
             // 
+            // tb_reportesTableAdapter
+            // 
+            this.tb_reportesTableAdapter.ClearBeforeFill = true;
+            // 
             // frmEgresos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -564,5 +569,6 @@
         private System.Windows.Forms.Label lbl_stock;
         private System.Windows.Forms.Panel panel2;
         internal System.Windows.Forms.PictureBox pictureBox2;
+        private db_asiloDataSetTableAdapters.tb_reportesTableAdapter tb_reportesTableAdapter;
     }
 }

@@ -181,6 +181,7 @@ namespace admin_us
                 int ID_Inver = Convert.ToInt32(this.tb_inventarioTableAdapter.Obtener_id(ID_objeto));
                 this.tb_salidasTableAdapter.Egresar(ID_objeto, Convert.ToInt32(numeric_cantidad.Value), Convert.ToString(fecha));
                 this.tb_inventarioTableAdapter.Actualizar_inventario(nueva_cantidad, ID_objeto, ID_Inver);
+                this.tb_reportesTableAdapter.AgregarRegistro(ID_objeto, Convert.ToInt32(numeric_cantidad.Value), Convert.ToString(fecha), "Salida");
                 //Mensaje Agregado cambiar
                 MessageBox.Show("Egresado");
                 determinar_stock();
