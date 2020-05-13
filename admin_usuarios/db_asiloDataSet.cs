@@ -12,6 +12,10 @@
 
 namespace admin_us.db_asiloDataSetTableAdapters
 {
+    partial class tb_Mostrar_ReportesTableAdapter
+    {
+    }
+
     partial class tb_ingresosTableAdapter
     {
     }

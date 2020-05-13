@@ -344,6 +344,7 @@
             this.tableAdapterManager.tb_ingresosTableAdapter = null;
             this.tableAdapterManager.tb_inventarioTableAdapter = this.tb_inventarioTableAdapter;
             this.tableAdapterManager.tb_objetoTableAdapter = null;
+            this.tableAdapterManager.tb_reportesTableAdapter = null;
             this.tableAdapterManager.tb_salidasTableAdapter = null;
             this.tableAdapterManager.tb_subtipoTableAdapter = null;
             this.tableAdapterManager.tb_tipoTableAdapter = null;

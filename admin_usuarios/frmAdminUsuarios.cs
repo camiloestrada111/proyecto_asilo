@@ -44,13 +44,9 @@ namespace admin_usuarios
         //Cambia los datos por los del usuario seleccionado
         public void llenardatos()
         {
-
-            admin_us.frmLogin llamar = new frmLogin();
-
             comboBox2.Enabled = true;
             comboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
             Tabla = this.tb_usuarioTableAdapter.Obtenerdatos(comboBox2.Text);
-
             try
             {
                 Fila = Tabla.Rows[0];
@@ -85,11 +81,7 @@ namespace admin_usuarios
             comboBox2.Enabled = false;
             comboBox2.DropDownStyle = ComboBoxStyle.Simple;
             comboBox2.Text = "Nuevo";
-            
         }
-
-        string var1 = "";
-
         private void admin_usuarios_Load(object sender, EventArgs e)
         {
 
@@ -103,7 +95,7 @@ namespace admin_usuarios
         //Si tiene escrito Nombre lo cambia por vacio
         private void txtNombre_Click(object sender, EventArgs e)
         {
-            if (txtNombre.Text == "Nombre")
+            if(txtNombre.Text == "Nombre")
             {
                 txtNombre.Text = "";
                 txtNombre.ForeColor = colortexto;
@@ -112,7 +104,7 @@ namespace admin_usuarios
         //si no tiene nada escrito y cambia de casilla se vuelve a llenar
         private void txtNombre_Leave(object sender, EventArgs e)
         {
-            if (txtNombre.TextLength == 0)
+            if(txtNombre.TextLength == 0)
             {
                 txtNombre.Text = "Nombre";
                 txtNombre.ForeColor = colorinici;
@@ -195,7 +187,7 @@ namespace admin_usuarios
             comboBox2.SelectedIndexChanged -= comboBox2_SelectedIndexChanged;
             int auxiliartipo = 0;
             int verificar = 0;
-            if (comboBox1.Text == "Admin")
+            if(comboBox1.Text == "Admin")
             {
                 auxiliartipo = 1;
             }
@@ -212,7 +204,7 @@ namespace admin_usuarios
                 verificar = 0;
                 throw;
             }
-            if (verificar == 0)
+            if(verificar == 0)
             {
                 this.tb_usuarioTableAdapter.agregarUsuarios(txtNombre.Text, txtApellido.Text, txtUsuario.Text, txtContra.Text, 1);
                 this.tb_usuarioTableAdapter.Fill(this.db_asiloDataSet.tb_usuario);
@@ -288,10 +280,10 @@ namespace admin_usuarios
 
         private void picContra_MouseHover(object sender, EventArgs e)
         {
-            if (ver == 0)
+            if(ver == 0)
             {
                 picContra.Image = admin_us.Properties.Resources.ocultaSelec;
-            } else if (ver == 1)
+            }else if(ver == 1)
             {
                 picContra.Image = admin_us.Properties.Resources.muestraSelec;
             }
@@ -331,7 +323,7 @@ namespace admin_usuarios
             resultado = mensaje.ShowDialog();
 
 
-            if (resultado == DialogResult.OK)
+            if(resultado == DialogResult.OK)
             {
                 comboBox2.SelectedIndexChanged -= comboBox2_SelectedIndexChanged;
                 this.tb_usuarioTableAdapter.eliminar(id);
@@ -344,15 +336,15 @@ namespace admin_usuarios
             {
 
             }
-
+            
 
         }
         //Muestra o oculta la contraseña pendiente cambiar iconos
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            if (txtContra.Text != "Contraseña")
+            if(txtContra.Text != "Contraseña")
             {
-                if (txtContra.PasswordChar == '*')
+                if(txtContra.PasswordChar == '*')
                 {
                     txtContra.PasswordChar = '\0';
                     picContra.Image = admin_us.Properties.Resources.muestraSelec;
@@ -369,9 +361,9 @@ namespace admin_usuarios
         //Verifica que los datos esten llenos para activar los botones dependiendo del estado del checkbox
         private void txtNombre_TextChanged(object sender, EventArgs e)
         {
-            if (txtNombre.Text != "Nombre" && txtApellido.Text != "Apellido" && txtContra.Text != "Contraseña" && txtUsuario.Text != "Usuario" && comboBox1.Text != "")
+            if(txtNombre.Text != "Nombre" && txtApellido.Text != "Apellido" && txtContra.Text != "Contraseña" && txtUsuario.Text != "Usuario" && comboBox1.Text != "")
             {
-                if (checkBox1.Checked == true)
+                if(checkBox1.Checked == true)
                 {
                     btnAgregar.Enabled = false;
                     btnEliminar.Enabled = true;
@@ -392,7 +384,7 @@ namespace admin_usuarios
         //Cambia del modo ingresar usuario a el de modificar y eliminar
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox1.Checked == true)
+            if(checkBox1.Checked == true)
             {
                 comboBox2.Enabled = true;
                 comboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -409,5 +401,7 @@ namespace admin_usuarios
                 reiniciartexto();
             }
         }
+
+        
     }
 }

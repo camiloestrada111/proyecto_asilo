@@ -19,18 +19,6 @@ namespace MenuAsilo
             Personalizar();
         }
 
-        string conocertipouser;
-
-        public void obtenertipodeusuario(string conocer)
-        {
-            string ve = conocer;
-            conocertipouser = ve;
-            if (conocertipouser == "2")
-            {
-                btnUsuario.Visible = false;
-            }
-        }
-
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
 
@@ -147,11 +135,12 @@ namespace MenuAsilo
 
         private void button2_Click(object sender, EventArgs e)
         {
-            admin_usuarios.admin_usuarios llamar = new admin_usuarios.admin_usuarios();
             SubMenu(); //de ultimo
+
             Form frminstancia = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is admin_usuarios.admin_usuarios);
             frminstancia = new admin_usuarios.admin_usuarios();
             FormsHijos(frminstancia);
+
             activo = frminstancia;
 
         }
@@ -355,6 +344,15 @@ namespace MenuAsilo
         {
             Form frminstancia = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is admin_us.frmEgresos);
             frminstancia = new admin_us.frmEgresos();
+            FormsHijos(frminstancia);
+
+            activo = frminstancia;
+        }
+
+        private void Button5_Click(object sender, EventArgs e)
+        {
+            Form frminstancia = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is admin_us.frmReportes);
+            frminstancia = new admin_us.frmReportes();
             FormsHijos(frminstancia);
 
             activo = frminstancia;
