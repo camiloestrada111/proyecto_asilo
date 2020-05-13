@@ -12473,12 +12473,11 @@ FROM            tb_reportes INNER JOIN
                          tb_objeto ON tb_reportes.id_objeto = tb_objeto.id_objeto INNER JOIN
                          tb_tipo ON tb_objeto.id_tipo = tb_tipo.id_tipo INNER JOIN
                          tb_subtipo ON tb_objeto.id_subtipo = tb_subtipo.id_subtipo
-WHERE        ( tb_reportes.tipo = @Id_Tipo) AND (tb_tipo.id_tipo = @Id_categoria) AND (tb_subtipo.id_subtipo = @Id_Subtipo) AND (tb_objeto.id_objeto = @Id_objeto)";
+WHERE        ( tb_reportes.tipo = @Id_Tipo) AND (tb_tipo.id_tipo = @Id_categoria) AND (tb_subtipo.id_subtipo = @Id_Subtipo)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_Tipo", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Tipo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_categoria", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id_tipo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_Subtipo", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id_subtipo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_objeto", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id_objeto", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
             this._commandCollection[2].CommandText = @"SELECT        tb_reportes.id_reportes AS No, tb_objeto.nombre AS Producto, tb_tipo.nombre AS Categoria, tb_subtipo.nombre AS Subcategoria, tb_reportes.cantidad AS Cantidad, tb_reportes.fecha_ingreso AS Fecha, tb_reportes.tipo AS Tipo
@@ -12558,12 +12557,11 @@ FROM            tb_reportes INNER JOIN
                          tb_objeto ON tb_reportes.id_objeto = tb_objeto.id_objeto INNER JOIN
                          tb_tipo ON tb_objeto.id_tipo = tb_tipo.id_tipo INNER JOIN
                          tb_subtipo ON tb_objeto.id_subtipo = tb_subtipo.id_subtipo
-WHERE        ( tb_reportes.tipo = @Id_Tipo) AND (tb_tipo.id_tipo = @Id_categoria) AND (tb_subtipo.id_subtipo = @Id_Subtipo) AND (tb_objeto.id_objeto = @Id_objeto) AND (fecha_ingreso BETWEEN convert(date, convert(varchar(10), @desde, 102)) AND convert(date, convert(varchar(10), @hasta, 102)))";
+WHERE        ( tb_reportes.tipo = @Id_Tipo) AND (tb_tipo.id_tipo = @Id_categoria) AND (tb_subtipo.id_subtipo = @Id_Subtipo) AND (fecha_ingreso BETWEEN convert(date, convert(varchar(10), @desde, 102)) AND convert(date, convert(varchar(10), @hasta, 102)))";
             this._commandCollection[8].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[8].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_Tipo", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Tipo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[8].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_categoria", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id_tipo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[8].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_Subtipo", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id_subtipo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[8].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_objeto", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id_objeto", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[8].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@desde", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[8].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@hasta", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[9] = new global::System.Data.SqlClient.SqlCommand();
@@ -12598,11 +12596,10 @@ FROM            tb_reportes INNER JOIN
                          tb_objeto ON tb_reportes.id_objeto = tb_objeto.id_objeto INNER JOIN
                          tb_tipo ON tb_objeto.id_tipo = tb_tipo.id_tipo INNER JOIN
                          tb_subtipo ON tb_objeto.id_subtipo = tb_subtipo.id_subtipo
-WHERE        (tb_tipo.id_tipo = @Id_categoria) AND (tb_subtipo.id_subtipo = @Id_Subtipo) AND (tb_objeto.id_objeto = @Id_objeto) AND (fecha_ingreso BETWEEN convert(date, convert(varchar(10), @desde, 102)) AND convert(date, convert(varchar(10), @hasta, 102)))";
+WHERE        (tb_tipo.id_tipo = @Id_categoria) AND (tb_subtipo.id_subtipo = @Id_Subtipo) AND (fecha_ingreso BETWEEN convert(date, convert(varchar(10), @desde, 102)) AND convert(date, convert(varchar(10), @hasta, 102)))";
             this._commandCollection[11].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[11].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_categoria", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id_tipo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[11].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_Subtipo", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id_subtipo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[11].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_objeto", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id_objeto", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[11].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@desde", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[11].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@hasta", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[12] = new global::System.Data.SqlClient.SqlCommand();
@@ -12647,7 +12644,7 @@ WHERE        ( tb_tipo.id_tipo = @Id_Tipo) AND (fecha_ingreso BETWEEN convert(da
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int Buscar_Clase_y_Subtipo(db_asiloDataSet.tb_Mostrar_ReportesDataTable dataTable, string Id_Tipo, int Id_categoria, int Id_Subtipo, int Id_objeto) {
+        public virtual int Buscar_Clase_y_Subtipo(db_asiloDataSet.tb_Mostrar_ReportesDataTable dataTable, string Id_Tipo, int Id_categoria, int Id_Subtipo) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
             if ((Id_Tipo == null)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -12657,7 +12654,6 @@ WHERE        ( tb_tipo.id_tipo = @Id_Tipo) AND (fecha_ingreso BETWEEN convert(da
             }
             this.Adapter.SelectCommand.Parameters[1].Value = ((int)(Id_categoria));
             this.Adapter.SelectCommand.Parameters[2].Value = ((int)(Id_Subtipo));
-            this.Adapter.SelectCommand.Parameters[3].Value = ((int)(Id_objeto));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -12669,7 +12665,7 @@ WHERE        ( tb_tipo.id_tipo = @Id_Tipo) AND (fecha_ingreso BETWEEN convert(da
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual db_asiloDataSet.tb_Mostrar_ReportesDataTable GetDataBy5(string Id_Tipo, int Id_categoria, int Id_Subtipo, int Id_objeto) {
+        public virtual db_asiloDataSet.tb_Mostrar_ReportesDataTable GetDataBy5(string Id_Tipo, int Id_categoria, int Id_Subtipo) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
             if ((Id_Tipo == null)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -12679,7 +12675,6 @@ WHERE        ( tb_tipo.id_tipo = @Id_Tipo) AND (fecha_ingreso BETWEEN convert(da
             }
             this.Adapter.SelectCommand.Parameters[1].Value = ((int)(Id_categoria));
             this.Adapter.SelectCommand.Parameters[2].Value = ((int)(Id_Subtipo));
-            this.Adapter.SelectCommand.Parameters[3].Value = ((int)(Id_objeto));
             db_asiloDataSet.tb_Mostrar_ReportesDataTable dataTable = new db_asiloDataSet.tb_Mostrar_ReportesDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -12895,7 +12890,7 @@ WHERE        ( tb_tipo.id_tipo = @Id_Tipo) AND (fecha_ingreso BETWEEN convert(da
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int Buscar_Tiempo_Subtipo_y_Clase(db_asiloDataSet.tb_Mostrar_ReportesDataTable dataTable, string Id_Tipo, int Id_categoria, int Id_Subtipo, int Id_objeto, string desde, string hasta) {
+        public virtual int Buscar_Tiempo_Subtipo_y_Clase(db_asiloDataSet.tb_Mostrar_ReportesDataTable dataTable, string Id_Tipo, int Id_categoria, int Id_Subtipo, string desde, string hasta) {
             this.Adapter.SelectCommand = this.CommandCollection[8];
             if ((Id_Tipo == null)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -12905,18 +12900,17 @@ WHERE        ( tb_tipo.id_tipo = @Id_Tipo) AND (fecha_ingreso BETWEEN convert(da
             }
             this.Adapter.SelectCommand.Parameters[1].Value = ((int)(Id_categoria));
             this.Adapter.SelectCommand.Parameters[2].Value = ((int)(Id_Subtipo));
-            this.Adapter.SelectCommand.Parameters[3].Value = ((int)(Id_objeto));
             if ((desde == null)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(desde));
+            }
+            if ((hasta == null)) {
                 this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.SelectCommand.Parameters[4].Value = ((string)(desde));
-            }
-            if ((hasta == null)) {
-                this.Adapter.SelectCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[5].Value = ((string)(hasta));
+                this.Adapter.SelectCommand.Parameters[4].Value = ((string)(hasta));
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -12929,7 +12923,7 @@ WHERE        ( tb_tipo.id_tipo = @Id_Tipo) AND (fecha_ingreso BETWEEN convert(da
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual db_asiloDataSet.tb_Mostrar_ReportesDataTable GetDataBy7(string Id_Tipo, int Id_categoria, int Id_Subtipo, int Id_objeto, string desde, string hasta) {
+        public virtual db_asiloDataSet.tb_Mostrar_ReportesDataTable GetDataBy7(string Id_Tipo, int Id_categoria, int Id_Subtipo, string desde, string hasta) {
             this.Adapter.SelectCommand = this.CommandCollection[8];
             if ((Id_Tipo == null)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -12939,18 +12933,17 @@ WHERE        ( tb_tipo.id_tipo = @Id_Tipo) AND (fecha_ingreso BETWEEN convert(da
             }
             this.Adapter.SelectCommand.Parameters[1].Value = ((int)(Id_categoria));
             this.Adapter.SelectCommand.Parameters[2].Value = ((int)(Id_Subtipo));
-            this.Adapter.SelectCommand.Parameters[3].Value = ((int)(Id_objeto));
             if ((desde == null)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(desde));
+            }
+            if ((hasta == null)) {
                 this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.SelectCommand.Parameters[4].Value = ((string)(desde));
-            }
-            if ((hasta == null)) {
-                this.Adapter.SelectCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[5].Value = ((string)(hasta));
+                this.Adapter.SelectCommand.Parameters[4].Value = ((string)(hasta));
             }
             db_asiloDataSet.tb_Mostrar_ReportesDataTable dataTable = new db_asiloDataSet.tb_Mostrar_ReportesDataTable();
             this.Adapter.Fill(dataTable);
@@ -13083,22 +13076,21 @@ WHERE        ( tb_tipo.id_tipo = @Id_Tipo) AND (fecha_ingreso BETWEEN convert(da
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int Buscar_Tiempo_y_Subtipo(db_asiloDataSet.tb_Mostrar_ReportesDataTable dataTable, int Id_categoria, int Id_Subtipo, int Id_objeto, string desde, string hasta) {
+        public virtual int Buscar_Tiempo_y_Subtipo(db_asiloDataSet.tb_Mostrar_ReportesDataTable dataTable, int Id_categoria, int Id_Subtipo, string desde, string hasta) {
             this.Adapter.SelectCommand = this.CommandCollection[11];
             this.Adapter.SelectCommand.Parameters[0].Value = ((int)(Id_categoria));
             this.Adapter.SelectCommand.Parameters[1].Value = ((int)(Id_Subtipo));
-            this.Adapter.SelectCommand.Parameters[2].Value = ((int)(Id_objeto));
             if ((desde == null)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(desde));
+            }
+            if ((hasta == null)) {
                 this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(desde));
-            }
-            if ((hasta == null)) {
-                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[4].Value = ((string)(hasta));
+                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(hasta));
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -13111,22 +13103,21 @@ WHERE        ( tb_tipo.id_tipo = @Id_Tipo) AND (fecha_ingreso BETWEEN convert(da
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual db_asiloDataSet.tb_Mostrar_ReportesDataTable GetDataBy10(int Id_categoria, int Id_Subtipo, int Id_objeto, string desde, string hasta) {
+        public virtual db_asiloDataSet.tb_Mostrar_ReportesDataTable GetDataBy10(int Id_categoria, int Id_Subtipo, string desde, string hasta) {
             this.Adapter.SelectCommand = this.CommandCollection[11];
             this.Adapter.SelectCommand.Parameters[0].Value = ((int)(Id_categoria));
             this.Adapter.SelectCommand.Parameters[1].Value = ((int)(Id_Subtipo));
-            this.Adapter.SelectCommand.Parameters[2].Value = ((int)(Id_objeto));
             if ((desde == null)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(desde));
+            }
+            if ((hasta == null)) {
                 this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(desde));
-            }
-            if ((hasta == null)) {
-                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[4].Value = ((string)(hasta));
+                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(hasta));
             }
             db_asiloDataSet.tb_Mostrar_ReportesDataTable dataTable = new db_asiloDataSet.tb_Mostrar_ReportesDataTable();
             this.Adapter.Fill(dataTable);

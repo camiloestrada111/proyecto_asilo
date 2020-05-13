@@ -28,7 +28,7 @@ namespace admin_us
         //Tabla que uso para guardar los datos de las consultas
         public static DataTable Tabla = new DataTable();
 
-
+        //Método para formatear la tabla
         public void Estilo()
         {
             tb_inventarioDataGridView.Font = new Font("Microsoft Sans Serif", 12);
@@ -70,14 +70,32 @@ namespace admin_us
             }
             else
             {
+                
                 panel_busqueda.Visible = false;
+                
+                //Se reinician todos los comboBox y los checkBox
+                checkBox4.Checked = false;
+                checkBox3.Checked = false;
+                checkBox2.Checked = false;
+
+                combo_cat.Enabled = false;
+                combo_subtipos.Enabled = false;
+                combo_tiempo.Enabled = false;
+                combo_tipo.Enabled = false;
+
+                combo_tiempo.SelectedItem = null;
+                combo_subtipos.SelectedItem = null;
+                combo_tipo.SelectedItem = null;
+                this.tb_Mostrar_ReportesTableAdapter.Fill(this.db_asiloDataSet.tb_Mostrar_Reportes);
             }
         }
 
 
-        //ComboBox para habilitar la busqueda por tiempo
+        
         String fecha1;
         String fecha2;
+
+        //ComboBox para habilitar la busqueda por tiempo
         private void ComboBox_tipos_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -91,7 +109,7 @@ namespace admin_us
 
                 fecha1 = Convert.ToString(date_fechaDESDE.Value);
                 fecha2 = Convert.ToString(date_fechaHASTA.Value);
-                llenardatos_fechas(fecha1, fecha2);
+                
             }
             else
             {
@@ -104,34 +122,49 @@ namespace admin_us
                 if (Convert.ToInt32(combo_tiempo.SelectedIndex) == 0)
                 {
                     fecha1 = DateTime.Now.AddDays(-30).ToString("yyyy-MM-dd");
-                    llenardatos_fechas(fecha1, fecha2);
+                    
                 }
                 else
                 {
                     fecha1 = DateTime.Now.AddDays(-7).ToString("yyyy-MM-dd");
-                    llenardatos_fechas(fecha1, fecha2);
+                   
                 }
 
             }
+
+            llenardatos_fechas(fecha1, fecha2);
         }
 
+
+        //Se realiza la busqueda respecto a cuales CheckBox esten activos
         public void llenardatos_fechas(String t1, String t2)
         {
-            if (checkBox4.Checked == false && checkBox3.Checked == false)
+            
+            if (checkBox4.Checked == false && checkBox3.Checked == false && checkBox2.Checked == true) //Busqueda por fecha
             {
                 this.tb_Mostrar_ReportesTableAdapter.Buscar_por_fecha(this.db_asiloDataSet.tb_Mostrar_Reportes, t1, t2);
+
             }
-            else if (checkBox4.Checked == false && checkBox3.Checked == true)
+            else if (checkBox4.Checked == false && checkBox3.Checked == true && checkBox2.Checked == true) //Busqueda por fecha y clase
             {
                 this.tb_Mostrar_ReportesTableAdapter.Buscar_Tiempo_y_Clase(this.db_asiloDataSet.tb_Mostrar_Reportes, clase, t1, t2);
+
+            }            
+            else if (checkBox4.Checked == false && checkBox3.Checked == true && checkBox2.Checked == false) //Busqueda por clase
+            {
+                this.tb_Mostrar_ReportesTableAdapter.Buscar_por_clase(this.db_asiloDataSet.tb_Mostrar_Reportes, clase);
+
             }
-            else if (checkBox4.Checked == true && checkBox3.Checked == false)
+            else if (checkBox4.Checked == true && combo_subtipos.Text == "Ninguno") //Busquedas por categorías
             {
                 llenardatos_subtipo();
+
             }
-            else if (checkBox4.Checked == true && checkBox3.Checked == true)
+            else //Busqueda por subcategorías
             {
-                llenardatos_subtipo();
+                int ID_tipo = Convert.ToInt32(this.tb_tipoTableAdapter.Consultar_id(combo_cat.Text));
+                int ID_subtipo = Convert.ToInt32(this.tb_subtipoTableAdapter.obtener_idsubtipo(ID_tipo, combo_subtipos.Text));
+                Formas_subtipos(ID_tipo, ID_subtipo);
             }
 
 
@@ -155,19 +188,33 @@ namespace admin_us
             {
 
             }
-            if (checkBox2.Checked == true && checkBox3.Checked == true)
+
+            Formas_Tipos(id_tipos);
+            
+        }
+
+
+        //Posibilidades de busqueda respecto a la categoría del producto
+        public void Formas_Tipos(int id_tipos)
+        {
+            if (checkBox2.Checked == true && checkBox3.Checked == true) //Busqueda por fecha, categorías y clases
             {
                 this.tb_Mostrar_ReportesTableAdapter.Buscar_Tiempo_Tipo_y_Clase(this.db_asiloDataSet.tb_Mostrar_Reportes, clase, id_tipos, fecha1, fecha2);
             }
-            else if (checkBox2.Checked == true && checkBox3.Checked == false)
+            else if (checkBox2.Checked == true && checkBox3.Checked == false) //Busqueda por fecha y categorías
             {
                 this.tb_Mostrar_ReportesTableAdapter.Buscar_Tiempo_y_Tipo(this.db_asiloDataSet.tb_Mostrar_Reportes, id_tipos, fecha1, fecha2);
             }
-            else
+            else if (checkBox2.Checked == false && checkBox3.Checked == true) //Busqueda por clase y categorías
+            {
+                this.tb_Mostrar_ReportesTableAdapter.Buscar_Clase_y_Tipo(this.db_asiloDataSet.tb_Mostrar_Reportes, clase, id_tipos);
+            }
+            else //Busqueda por categorías
             {
                 this.tb_Mostrar_ReportesTableAdapter.Buscar_por_tipo(this.db_asiloDataSet.tb_Mostrar_Reportes, id_tipos);
             }
         }
+
 
         private void Combo_cat_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -190,13 +237,13 @@ namespace admin_us
                 combo_subtipos.Enabled = false;
                 combo_subtipos.SelectedItem = null;
 
-                if (checkBox2.Checked == true)
+                if (checkBox2.Checked == false && checkBox3.Checked == false)
                 {
-                    llenardatos_fechas(fecha1, fecha2);
+                    this.tb_Mostrar_ReportesTableAdapter.Fill(this.db_asiloDataSet.tb_Mostrar_Reportes);
                 }
                 else
                 {
-                    this.tb_Mostrar_ReportesTableAdapter.Fill(this.db_asiloDataSet.tb_Mostrar_Reportes);
+                    llenardatos_fechas(fecha1, fecha2);                   
                 }
 
             }
@@ -207,14 +254,35 @@ namespace admin_us
             if (combo_subtipos.Text == "Ninguno")
             {
                 int id_tipos = Convert.ToInt32(this.tb_tipoTableAdapter.Consultar_id(combo_cat.Text));
-                this.tb_Mostrar_ReportesTableAdapter.Buscar_por_tipo(this.db_asiloDataSet.tb_Mostrar_Reportes, id_tipos);
+                Formas_Tipos(id_tipos);
             }
             else
             {
                 int ID_tipo = Convert.ToInt32(this.tb_tipoTableAdapter.Consultar_id(combo_cat.Text));
                 int ID_subtipo = Convert.ToInt32(this.tb_subtipoTableAdapter.obtener_idsubtipo(ID_tipo, combo_subtipos.Text));
-                this.tb_Mostrar_ReportesTableAdapter.Buscar_por_sub_tipo(this.db_asiloDataSet.tb_Mostrar_Reportes, ID_tipo, ID_subtipo);
+                Formas_subtipos(ID_tipo, ID_subtipo);
 
+            }
+        }
+
+        //Posibilidades de busqueda respecto a la subcategoría del producto
+        public void Formas_subtipos(int ID_tipo, int ID_subtipo)
+        {
+            if (checkBox2.Checked == true && checkBox3.Checked == true) //Busqueda por fecha, subcategorías y clases
+            {
+                this.tb_Mostrar_ReportesTableAdapter.Buscar_Tiempo_Subtipo_y_Clase(this.db_asiloDataSet.tb_Mostrar_Reportes, clase, ID_tipo, ID_subtipo, fecha1, fecha2);
+            }
+            else if (checkBox2.Checked == true && checkBox3.Checked == false) //Busqueda por fecha y subcategorías
+            {
+                this.tb_Mostrar_ReportesTableAdapter.Buscar_Tiempo_y_Subtipo(this.db_asiloDataSet.tb_Mostrar_Reportes, ID_tipo, ID_subtipo, fecha1, fecha2);
+            }
+            else if (checkBox2.Checked == false && checkBox3.Checked == true) //Busqueda por clase y subcategorías
+            {
+                this.tb_Mostrar_ReportesTableAdapter.Buscar_Clase_y_Subtipo(this.db_asiloDataSet.tb_Mostrar_Reportes, clase, ID_tipo, ID_subtipo);
+            }
+            else //Busqueda por subcategorías
+            {
+                this.tb_Mostrar_ReportesTableAdapter.Buscar_por_sub_tipo(this.db_asiloDataSet.tb_Mostrar_Reportes, ID_tipo, ID_subtipo);
             }
         }
 
@@ -231,7 +299,8 @@ namespace admin_us
             {
                 combo_tipo.Enabled = false;
                 combo_tipo.SelectedItem = null;
-                if (checkBox2.Checked == false)
+
+                if (checkBox2.Checked == false && checkBox4.Checked == false)
                 {
                     this.tb_Mostrar_ReportesTableAdapter.Fill(this.db_asiloDataSet.tb_Mostrar_Reportes);
                 }
@@ -256,32 +325,31 @@ namespace admin_us
             {
                 combo_tiempo.Enabled = false;
                 combo_tiempo.SelectedItem = null;
-                if (checkBox3.Checked == false)
+
+                if (checkBox3.Checked == false && checkBox4.Checked == false)
                 {
                     this.tb_Mostrar_ReportesTableAdapter.Fill(this.db_asiloDataSet.tb_Mostrar_Reportes);
                 }
                 else
                 {
-                    this.tb_Mostrar_ReportesTableAdapter.Buscar_por_clase(this.db_asiloDataSet.tb_Mostrar_Reportes, clase);
+                    llenardatos_fechas(fecha1, fecha2);
                 }
 
             }
         }
 
+
+        //Se llenan los datos al modificar Datepicker
         private void Date_fechaDESDE_ValueChanged(object sender, EventArgs e)
         {
-            llenardatos_fechas(Convert.ToString(date_fechaDESDE.Value), Convert.ToString(date_fechaHASTA.Value));
+            fecha1 = Convert.ToString(date_fechaDESDE.Value);
+            fecha2 = Convert.ToString(date_fechaHASTA.Value);
+            llenardatos_fechas(fecha1, fecha2);
         }
 
-        private void Date_fechaHASTA_ValueChanged(object sender, EventArgs e)
-        {
-            llenardatos_fechas(Convert.ToString(date_fechaDESDE.Value), Convert.ToString(date_fechaHASTA.Value));
-
-        }
-
+        String clase;
 
         //ComboBox para habilitar la busqueda por tipo
-        String clase;
         private void Combo_tipo_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (Convert.ToInt32(combo_tipo.SelectedIndex) == 0)
@@ -292,17 +360,17 @@ namespace admin_us
             {
                 clase = "Salida";
             }
-            if (checkBox2.Checked == true)
-            {
-                llenardatos_fechas(fecha1, fecha2);
-            }
-            else
-            {
-                this.tb_Mostrar_ReportesTableAdapter.Buscar_por_clase(this.db_asiloDataSet.tb_Mostrar_Reportes, clase);
 
-            }
+            llenardatos_fechas(fecha1, fecha2);
 
+        }
 
+        //Se llenan los datos al modificar Datepicker
+        private void Date_fechaHASTA_ValueChanged(object sender, EventArgs e)
+        {
+            fecha1 = Convert.ToString(date_fechaDESDE.Value);
+            fecha2 = Convert.ToString(date_fechaHASTA.Value);
+            llenardatos_fechas(fecha1, fecha2);
         }
     }
 }

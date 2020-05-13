@@ -40,6 +40,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.combo_cat = new System.Windows.Forms.ComboBox();
+            this.tbtipoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.db_asiloDataSet = new admin_us.db_asiloDataSet();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.combo_subtipos = new System.Windows.Forms.ComboBox();
@@ -61,9 +62,6 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.tb_inventarioDataGridView = new System.Windows.Forms.DataGridView();
-            this.tb_tipoTableAdapter = new admin_us.db_asiloDataSetTableAdapters.tb_tipoTableAdapter();
-            this.tb_subtipoTableAdapter = new admin_us.db_asiloDataSetTableAdapters.tb_subtipoTableAdapter();
-            this.tb_reportesTableAdapter = new admin_us.db_asiloDataSetTableAdapters.tb_reportesTableAdapter();
             this.noDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoriaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,18 +70,22 @@
             this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbMostrarReportesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tbtipoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tb_tipoTableAdapter = new admin_us.db_asiloDataSetTableAdapters.tb_tipoTableAdapter();
+            this.tb_subtipoTableAdapter = new admin_us.db_asiloDataSetTableAdapters.tb_subtipoTableAdapter();
+            this.tb_reportesTableAdapter = new admin_us.db_asiloDataSetTableAdapters.tb_reportesTableAdapter();
             this.tb_reportesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableAdapterManager = new admin_us.db_asiloDataSetTableAdapters.TableAdapterManager();
             this.tb_Mostrar_ReportesTableAdapter = new admin_us.db_asiloDataSetTableAdapters.tb_Mostrar_ReportesTableAdapter();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.panel25.SuspendLayout();
             this.panel_busqueda.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbtipoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.db_asiloDataSet)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tb_inventarioDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbMostrarReportesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbtipoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tb_reportesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -198,6 +200,11 @@
             this.combo_cat.ValueMember = "nombre";
             this.combo_cat.SelectedIndexChanged += new System.EventHandler(this.Combo_cat_SelectedIndexChanged);
             // 
+            // tbtipoBindingSource
+            // 
+            this.tbtipoBindingSource.DataMember = "tb_tipo";
+            this.tbtipoBindingSource.DataSource = this.db_asiloDataSet;
+            // 
             // db_asiloDataSet
             // 
             this.db_asiloDataSet.DataSetName = "db_asiloDataSet";
@@ -301,6 +308,7 @@
             this.date_fechaHASTA.Size = new System.Drawing.Size(120, 26);
             this.date_fechaHASTA.TabIndex = 52;
             this.date_fechaHASTA.Value = new System.DateTime(2020, 5, 13, 0, 0, 0, 0);
+            this.date_fechaHASTA.ValueChanged += new System.EventHandler(this.Date_fechaHASTA_ValueChanged);
             // 
             // date_fechaDESDE
             // 
@@ -406,7 +414,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 164);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(147, 519);
+            this.panel2.Size = new System.Drawing.Size(147, 416);
             this.panel2.TabIndex = 4;
             // 
             // panel4
@@ -414,15 +422,16 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel4.Location = new System.Drawing.Point(889, 164);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(117, 519);
+            this.panel4.Size = new System.Drawing.Size(117, 416);
             this.panel4.TabIndex = 5;
             // 
             // panel6
             // 
+            this.panel6.Controls.Add(this.btnAgregar);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel6.Location = new System.Drawing.Point(147, 653);
+            this.panel6.Location = new System.Drawing.Point(147, 530);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(742, 30);
+            this.panel6.Size = new System.Drawing.Size(742, 50);
             this.panel6.TabIndex = 6;
             // 
             // tb_inventarioDataGridView
@@ -466,20 +475,8 @@
             this.tb_inventarioDataGridView.Location = new System.Drawing.Point(147, 164);
             this.tb_inventarioDataGridView.Name = "tb_inventarioDataGridView";
             this.tb_inventarioDataGridView.ReadOnly = true;
-            this.tb_inventarioDataGridView.Size = new System.Drawing.Size(742, 489);
+            this.tb_inventarioDataGridView.Size = new System.Drawing.Size(742, 366);
             this.tb_inventarioDataGridView.TabIndex = 7;
-            // 
-            // tb_tipoTableAdapter
-            // 
-            this.tb_tipoTableAdapter.ClearBeforeFill = true;
-            // 
-            // tb_subtipoTableAdapter
-            // 
-            this.tb_subtipoTableAdapter.ClearBeforeFill = true;
-            // 
-            // tb_reportesTableAdapter
-            // 
-            this.tb_reportesTableAdapter.ClearBeforeFill = true;
             // 
             // noDataGridViewTextBoxColumn
             // 
@@ -535,10 +532,17 @@
             this.tbMostrarReportesBindingSource.DataMember = "tb_Mostrar_Reportes";
             this.tbMostrarReportesBindingSource.DataSource = this.db_asiloDataSet;
             // 
-            // tbtipoBindingSource
+            // tb_tipoTableAdapter
             // 
-            this.tbtipoBindingSource.DataMember = "tb_tipo";
-            this.tbtipoBindingSource.DataSource = this.db_asiloDataSet;
+            this.tb_tipoTableAdapter.ClearBeforeFill = true;
+            // 
+            // tb_subtipoTableAdapter
+            // 
+            this.tb_subtipoTableAdapter.ClearBeforeFill = true;
+            // 
+            // tb_reportesTableAdapter
+            // 
+            this.tb_reportesTableAdapter.ClearBeforeFill = true;
             // 
             // tb_reportesBindingSource
             // 
@@ -565,12 +569,25 @@
             // 
             this.tb_Mostrar_ReportesTableAdapter.ClearBeforeFill = true;
             // 
+            // btnAgregar
+            // 
+            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(215)))), ((int)(((byte)(116)))));
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.ForeColor = System.Drawing.Color.White;
+            this.btnAgregar.Location = new System.Drawing.Point(313, 7);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(115, 40);
+            this.btnAgregar.TabIndex = 13;
+            this.btnAgregar.Text = "IMPRIMIR";
+            this.btnAgregar.UseVisualStyleBackColor = false;
+            // 
             // frmReportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1006, 683);
+            this.ClientSize = new System.Drawing.Size(1006, 580);
             this.Controls.Add(this.tb_inventarioDataGridView);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel4);
@@ -586,11 +603,12 @@
             this.panel_busqueda.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbtipoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.db_asiloDataSet)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tb_inventarioDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbMostrarReportesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbtipoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tb_reportesBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -643,5 +661,6 @@
         private db_asiloDataSetTableAdapters.tb_reportesTableAdapter tb_reportesTableAdapter;
         private System.Windows.Forms.BindingSource tbtipoBindingSource;
         private db_asiloDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        internal System.Windows.Forms.Button btnAgregar;
     }
 }
