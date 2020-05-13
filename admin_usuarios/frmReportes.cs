@@ -16,10 +16,10 @@ namespace admin_us
         {
             InitializeComponent();
             Estilo();
-            date_fechaHASTA.MaxDate = fecha;
+            date_fechaHASTA.MaxDate = DateTime.Now;
 
-            date_fechaDESDE.MaxDate = fecha;
-            date_fechaDESDE.Value = fecha.AddDays(-30);
+            date_fechaDESDE.MaxDate = DateTime.Now;
+            date_fechaDESDE.Value = DateTime.Now.AddDays(-30);
         }
 
         //Se usa para consultar la tabla
@@ -28,7 +28,7 @@ namespace admin_us
         //Tabla que uso para guardar los datos de las consultas
         public static DataTable Tabla = new DataTable();
 
-        DateTime fecha = DateTime.Now;
+
         public void Estilo()
         {
             tb_inventarioDataGridView.Font = new Font("Microsoft Sans Serif", 12);
@@ -54,9 +54,10 @@ namespace admin_us
             this.tb_reportesTableAdapter.Fill(this.db_asiloDataSet.tb_reportes);
             // TODO: esta línea de código carga datos en la tabla 'db_asiloDataSet.tb_Mostrar_Reportes' Puede moverla o quitarla según sea necesario.
             this.tb_Mostrar_ReportesTableAdapter.Fill(this.db_asiloDataSet.tb_Mostrar_Reportes);
-            
+
         }
 
+        //Checkbox para habilitar la busqueda por tiempo
         private void CheckBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox1.Checked == true)
@@ -73,17 +74,24 @@ namespace admin_us
             }
         }
 
+
+        //ComboBox para habilitar la busqueda por tiempo
+        String fecha1;
+        String fecha2;
         private void ComboBox_tipos_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
-                
+
+
             if (Convert.ToInt32(combo_tiempo.SelectedIndex) == 2)
             {
                 panel3.Location = new Point(359, 0);
                 panel_busqueda.Location = new Point(132, 66);
                 panel1.Visible = true;
-                llenardatos_fechas(Convert.ToString(date_fechaDESDE.Value), Convert.ToString(date_fechaHASTA.Value));
 
+
+                fecha1 = Convert.ToString(date_fechaDESDE.Value);
+                fecha2 = Convert.ToString(date_fechaHASTA.Value);
+                llenardatos_fechas(fecha1, fecha2);
             }
             else
             {
@@ -91,22 +99,42 @@ namespace admin_us
                 panel3.Location = new Point(167, 0);
                 panel1.Visible = false;
 
-                if (Convert.ToInt32(combo_tiempo.SelectedIndex) == 0) {
-                    llenardatos_fechas(DateTime.Now.AddDays(-30).ToString("yyyy-MM-dd"), DateTime.Now.ToString("yyyy-MM-dd"));
+                fecha2 = DateTime.Now.ToString("yyyy-MM-dd");
+
+                if (Convert.ToInt32(combo_tiempo.SelectedIndex) == 0)
+                {
+                    fecha1 = DateTime.Now.AddDays(-30).ToString("yyyy-MM-dd");
+                    llenardatos_fechas(fecha1, fecha2);
                 }
                 else
                 {
-                    llenardatos_fechas(DateTime.Now.AddDays(-7).ToString("yyyy-MM-dd"), DateTime.Now.ToString("yyyy-MM-dd"));
+                    fecha1 = DateTime.Now.AddDays(-7).ToString("yyyy-MM-dd");
+                    llenardatos_fechas(fecha1, fecha2);
                 }
 
-                
             }
         }
 
         public void llenardatos_fechas(String t1, String t2)
         {
-            
-            this.tb_Mostrar_ReportesTableAdapter.Buscar_por_fecha(this.db_asiloDataSet.tb_Mostrar_Reportes, t1, t2);
+            if (checkBox4.Checked == false && checkBox3.Checked == false)
+            {
+                this.tb_Mostrar_ReportesTableAdapter.Buscar_por_fecha(this.db_asiloDataSet.tb_Mostrar_Reportes, t1, t2);
+            }
+            else if (checkBox4.Checked == false && checkBox3.Checked == true)
+            {
+                this.tb_Mostrar_ReportesTableAdapter.Buscar_Tiempo_y_Clase(this.db_asiloDataSet.tb_Mostrar_Reportes, clase, t1, t2);
+            }
+            else if (checkBox4.Checked == true && checkBox3.Checked == false)
+            {
+                llenardatos_subtipo();
+            }
+            else if (checkBox4.Checked == true && checkBox3.Checked == true)
+            {
+                llenardatos_subtipo();
+            }
+
+
         }
 
         public void llenardatos_subtipo()
@@ -127,7 +155,18 @@ namespace admin_us
             {
 
             }
-            this.tb_Mostrar_ReportesTableAdapter.Buscar_por_tipo(this.db_asiloDataSet.tb_Mostrar_Reportes, id_tipos);
+            if (checkBox2.Checked == true && checkBox3.Checked == true)
+            {
+                this.tb_Mostrar_ReportesTableAdapter.Buscar_Tiempo_Tipo_y_Clase(this.db_asiloDataSet.tb_Mostrar_Reportes, clase, id_tipos, fecha1, fecha2);
+            }
+            else if (checkBox2.Checked == true && checkBox3.Checked == false)
+            {
+                this.tb_Mostrar_ReportesTableAdapter.Buscar_Tiempo_y_Tipo(this.db_asiloDataSet.tb_Mostrar_Reportes, id_tipos, fecha1, fecha2);
+            }
+            else
+            {
+                this.tb_Mostrar_ReportesTableAdapter.Buscar_por_tipo(this.db_asiloDataSet.tb_Mostrar_Reportes, id_tipos);
+            }
         }
 
         private void Combo_cat_SelectedIndexChanged(object sender, EventArgs e)
@@ -135,6 +174,7 @@ namespace admin_us
             llenardatos_subtipo();
         }
 
+        //Checkbox para habilitar la busqueda por categorías y subcategorías
         private void CheckBox4_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox4.Checked == true)
@@ -150,7 +190,15 @@ namespace admin_us
                 combo_subtipos.Enabled = false;
                 combo_subtipos.SelectedItem = null;
 
-                this.tb_Mostrar_ReportesTableAdapter.Fill(this.db_asiloDataSet.tb_Mostrar_Reportes);
+                if (checkBox2.Checked == true)
+                {
+                    llenardatos_fechas(fecha1, fecha2);
+                }
+                else
+                {
+                    this.tb_Mostrar_ReportesTableAdapter.Fill(this.db_asiloDataSet.tb_Mostrar_Reportes);
+                }
+
             }
         }
 
@@ -170,6 +218,8 @@ namespace admin_us
             }
         }
 
+
+        //Checkbox para habilitar la busqueda por tipo
         private void CheckBox3_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox3.Checked == true)
@@ -181,11 +231,20 @@ namespace admin_us
             {
                 combo_tipo.Enabled = false;
                 combo_tipo.SelectedItem = null;
-                this.tb_Mostrar_ReportesTableAdapter.Fill(this.db_asiloDataSet.tb_Mostrar_Reportes);
+                if (checkBox2.Checked == false)
+                {
+                    this.tb_Mostrar_ReportesTableAdapter.Fill(this.db_asiloDataSet.tb_Mostrar_Reportes);
+                }
+                else
+                {
+                    llenardatos_fechas(fecha1, fecha2);
+                }
 
             }
         }
 
+
+        //Checkbox para habilitar la busqueda por tiempo
         private void CheckBox2_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox2.Checked == true)
@@ -197,7 +256,14 @@ namespace admin_us
             {
                 combo_tiempo.Enabled = false;
                 combo_tiempo.SelectedItem = null;
-                this.tb_Mostrar_ReportesTableAdapter.Fill(this.db_asiloDataSet.tb_Mostrar_Reportes);
+                if (checkBox3.Checked == false)
+                {
+                    this.tb_Mostrar_ReportesTableAdapter.Fill(this.db_asiloDataSet.tb_Mostrar_Reportes);
+                }
+                else
+                {
+                    this.tb_Mostrar_ReportesTableAdapter.Buscar_por_clase(this.db_asiloDataSet.tb_Mostrar_Reportes, clase);
+                }
 
             }
         }
@@ -213,9 +279,11 @@ namespace admin_us
 
         }
 
+
+        //ComboBox para habilitar la busqueda por tipo
+        String clase;
         private void Combo_tipo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            String clase;
             if (Convert.ToInt32(combo_tipo.SelectedIndex) == 0)
             {
                 clase = "Ingreso";
@@ -224,7 +292,16 @@ namespace admin_us
             {
                 clase = "Salida";
             }
-            this.tb_Mostrar_ReportesTableAdapter.Buscar_por_clase(this.db_asiloDataSet.tb_Mostrar_Reportes, clase);
+            if (checkBox2.Checked == true)
+            {
+                llenardatos_fechas(fecha1, fecha2);
+            }
+            else
+            {
+                this.tb_Mostrar_ReportesTableAdapter.Buscar_por_clase(this.db_asiloDataSet.tb_Mostrar_Reportes, clase);
+
+            }
+
 
         }
     }
