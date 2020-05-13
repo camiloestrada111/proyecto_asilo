@@ -231,3 +231,34 @@ C:\Users\admin\Source\Repos\camiloestrada111\proyecto_asilo\admin_usuarios\obj\D
 C:\Users\admin\Source\Repos\camiloestrada111\proyecto_asilo\admin_usuarios\obj\Debug\proyecto_asilo.csproj.CoreCompileInputs.cache
 C:\Users\admin\Source\Repos\camiloestrada111\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.exe
 C:\Users\admin\Source\Repos\camiloestrada111\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.pdb
+D:\USAC-ICS\Usac 5to semestre\proyecto_asilo\admin_usuarios\bin\Debug\db_asilo.mdf
+D:\USAC-ICS\Usac 5to semestre\proyecto_asilo\admin_usuarios\bin\Debug\db_asilo_log.ldf
+D:\USAC-ICS\Usac 5to semestre\proyecto_asilo\admin_usuarios\bin\Debug\admin_us.exe.config
+D:\USAC-ICS\Usac 5to semestre\proyecto_asilo\admin_usuarios\bin\Debug\admin_us.exe
+D:\USAC-ICS\Usac 5to semestre\proyecto_asilo\admin_usuarios\bin\Debug\admin_us.pdb
+D:\USAC-ICS\Usac 5to semestre\proyecto_asilo\admin_usuarios\obj\Debug\proyecto_asilo.csprojAssemblyReference.cache
+D:\USAC-ICS\Usac 5to semestre\proyecto_asilo\admin_usuarios\obj\Debug\admin_usuarios.admin_usuarios.resources
+D:\USAC-ICS\Usac 5to semestre\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmCategorias.resources
+D:\USAC-ICS\Usac 5to semestre\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmEgresos.resources
+D:\USAC-ICS\Usac 5to semestre\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmIngresos.resources
+D:\USAC-ICS\Usac 5to semestre\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmInventario.resources
+D:\USAC-ICS\Usac 5to semestre\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmLogin.resources
+D:\USAC-ICS\Usac 5to semestre\proyecto_asilo\admin_usuarios\obj\Debug\MenuAsilo.Menu.resources
+D:\USAC-ICS\Usac 5to semestre\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmMessageBoxActualizar.resources
+D:\USAC-ICS\Usac 5to semestre\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmMessageBoxAgregado.resources
+D:\USAC-ICS\Usac 5to semestre\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmMessageBoxEliminar.resources
+D:\USAC-ICS\Usac 5to semestre\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmMessageBoxErrorYaExisteElQueQuiereAgregar.resources
+D:\USAC-ICS\Usac 5to semestre\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmMessageBoxErrorYaExisteElUsuario.resources
+D:\USAC-ICS\Usac 5to semestre\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmMessageBoxExisteUnError.resources
+D:\USAC-ICS\Usac 5to semestre\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmMessageBoxLogin.resources
+D:\USAC-ICS\Usac 5to semestre\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmMessageBoxModificar.resources
+D:\USAC-ICS\Usac 5to semestre\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmMessageBoxNoLogin.resources
+D:\USAC-ICS\Usac 5to semestre\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmMessageBoxPregunta.resources
+D:\USAC-ICS\Usac 5to semestre\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmproductos.resources
+D:\USAC-ICS\Usac 5to semestre\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmReportes.resources
+D:\USAC-ICS\Usac 5to semestre\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frm_subcategorias.resources
+D:\USAC-ICS\Usac 5to semestre\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.Properties.Resources.resources
+D:\USAC-ICS\Usac 5to semestre\proyecto_asilo\admin_usuarios\obj\Debug\proyecto_asilo.csproj.GenerateResource.cache
+D:\USAC-ICS\Usac 5to semestre\proyecto_asilo\admin_usuarios\obj\Debug\proyecto_asilo.csproj.CoreCompileInputs.cache
+D:\USAC-ICS\Usac 5to semestre\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.exe
+D:\USAC-ICS\Usac 5to semestre\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.pdb

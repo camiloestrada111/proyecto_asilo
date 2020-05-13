@@ -82,6 +82,23 @@ namespace admin_usuarios
             comboBox2.DropDownStyle = ComboBoxStyle.Simple;
             comboBox2.Text = "Nuevo";
         }
+
+        string nombreact;
+        public void nombreactual(string tex)
+        {
+            nombreact = tex;
+        }
+
+
+        public string texto1;
+        public void nombreacu(string texto)
+        {
+            texto1 = texto;
+            MessageBox.Show(texto);
+        }
+
+
+
         private void admin_usuarios_Load(object sender, EventArgs e)
         {
 
@@ -386,6 +403,7 @@ namespace admin_usuarios
         {
             if(checkBox1.Checked == true)
             {
+                MessageBox.Show(nombreact);
                 comboBox2.Enabled = true;
                 comboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
                 llenardatos();

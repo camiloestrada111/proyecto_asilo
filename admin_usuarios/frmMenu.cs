@@ -19,6 +19,18 @@ namespace MenuAsilo
             Personalizar();
         }
 
+        public void usuario(string text)
+        {
+            if (text == "1")
+            {
+                btnUsuario.Visible = true;
+            }
+            else if (text == "2")
+            {
+                btnUsuario.Visible = false;
+            }
+        }
+
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
 

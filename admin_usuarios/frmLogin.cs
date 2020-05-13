@@ -32,6 +32,7 @@ namespace admin_us
             }
         }
 
+
         private void txtContra_Leave(object sender, EventArgs e)
         {
             if (txtContra.TextLength == 0)
@@ -124,6 +125,9 @@ namespace admin_us
             {
                 
                 MenuAsilo.Menu frmMenu = new MenuAsilo.Menu();
+                admin_usuarios.admin_usuarios frmadmin = new admin_usuarios.admin_usuarios();
+                frmadmin.nombreactual(comboBox2.Text);
+                frmMenu.usuario(this.tb_usuarioTableAdapter.tipodeuser(comboBox2.Text).ToString());
                 frmMenu.Show();
                 messageBoxLogin.Show();
                 this.Hide();
@@ -131,8 +135,6 @@ namespace admin_us
             else
             {
                 messageBoxNoLogin.Show();
-
-
             }
         }
 
