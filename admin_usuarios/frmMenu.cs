@@ -369,5 +369,12 @@ namespace MenuAsilo
 
             activo = frminstancia;
         }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            /*frmReportes asd = new frmReportes();
+            asd.Show();
+            this.Hide();*/
+        }
     }
 }

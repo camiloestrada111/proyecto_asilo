@@ -39,7 +39,6 @@
             this.btn_Maximizar = new System.Windows.Forms.Button();
             this.panelIzquierda = new System.Windows.Forms.Panel();
             this.panelAdministracion = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
             this.btnCerrarS = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -55,6 +54,7 @@
             this.button6 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Contenedor = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
             this.panelCabecera.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelIzquierda.SuspendLayout();
@@ -184,6 +184,7 @@
             // 
             this.panelIzquierda.AutoScroll = true;
             this.panelIzquierda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(48)))), ((int)(((byte)(64)))));
+            this.panelIzquierda.Controls.Add(this.button5);
             this.panelIzquierda.Controls.Add(this.panelAdministracion);
             this.panelIzquierda.Controls.Add(this.btnInicio);
             this.panelIzquierda.Controls.Add(this.panelUsuario);
@@ -204,38 +205,15 @@
             // 
             // panelAdministracion
             // 
-            this.panelAdministracion.Controls.Add(this.button5);
             this.panelAdministracion.Controls.Add(this.btnCerrarS);
             this.panelAdministracion.Controls.Add(this.button4);
             this.panelAdministracion.Controls.Add(this.button3);
             this.panelAdministracion.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelAdministracion.Location = new System.Drawing.Point(0, 350);
             this.panelAdministracion.Name = "panelAdministracion";
-            this.panelAdministracion.Size = new System.Drawing.Size(282, 203);
+            this.panelAdministracion.Size = new System.Drawing.Size(282, 149);
             this.panelAdministracion.TabIndex = 4;
             this.panelAdministracion.Paint += new System.Windows.Forms.PaintEventHandler(this.panelInicio_Paint);
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(131)))), ((int)(((byte)(103)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(0, 152);
-            this.button5.Name = "button5";
-            this.button5.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
-            this.button5.Size = new System.Drawing.Size(282, 51);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "Tipos de Productos";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.Button5_Click);
             // 
             // btnCerrarS
             // 
@@ -528,6 +506,30 @@
             this.Contenedor.Size = new System.Drawing.Size(998, 644);
             this.Contenedor.TabIndex = 2;
             // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(48)))), ((int)(((byte)(64)))));
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(48)))), ((int)(((byte)(64)))));
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(191)))), ((int)(((byte)(151)))));
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(0, 499);
+            this.button5.Name = "button5";
+            this.button5.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
+            this.button5.Size = new System.Drawing.Size(282, 49);
+            this.button5.TabIndex = 10;
+            this.button5.Text = "REPORTES";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click_1);
+            // 
             // Menu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -572,7 +574,6 @@
         public System.Windows.Forms.Button btnInicio;
         public System.Windows.Forms.Button btnUsuario;
         public System.Windows.Forms.Button btnCerrarS;
-        public System.Windows.Forms.Button button5;
         public System.Windows.Forms.Button button4;
         public System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panelContenedor;
@@ -581,6 +582,7 @@
         public System.Windows.Forms.Button button8;
         public System.Windows.Forms.Button button7;
         private System.Windows.Forms.Label label3;
+        public System.Windows.Forms.Button button5;
     }
 }
 

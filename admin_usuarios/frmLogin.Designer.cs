@@ -44,7 +44,6 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tb_usuarioTableAdapter = new admin_us.db_asiloDataSetTableAdapters.tb_usuarioTableAdapter();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbusuarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbasiloDataSetBindingSource)).BeginInit();
@@ -80,7 +79,6 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.comboBox2);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.btnAceptar);
@@ -222,16 +220,6 @@
             // 
             this.tb_usuarioTableAdapter.ClearBeforeFill = true;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(258, 39);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 23;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_2);
-            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -276,6 +264,5 @@
         private db_asiloDataSet db_asiloDataSet;
         private System.Windows.Forms.BindingSource tbusuarioBindingSource;
         private db_asiloDataSetTableAdapters.tb_usuarioTableAdapter tb_usuarioTableAdapter;
-        private System.Windows.Forms.Button button1;
     }
 }
