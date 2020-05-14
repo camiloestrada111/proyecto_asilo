@@ -29,22 +29,20 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCategorias));
             this.comboBox1_nombre = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.PictureBox4 = new System.Windows.Forms.PictureBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.db_asiloDataSet = new admin_us.db_asiloDataSet();
             this.tb_tipoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tb_tipoTableAdapter = new admin_us.db_asiloDataSetTableAdapters.tb_tipoTableAdapter();
             this.tableAdapterManager = new admin_us.db_asiloDataSetTableAdapters.TableAdapterManager();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -52,16 +50,19 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.PictureBox4 = new System.Windows.Forms.PictureBox();
             this.comboBox1_nombre.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.db_asiloDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tb_tipoBindingSource)).BeginInit();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBox1_nombre
@@ -73,17 +74,6 @@
             this.comboBox1_nombre.Name = "comboBox1_nombre";
             this.comboBox1_nombre.Size = new System.Drawing.Size(369, 44);
             this.comboBox1_nombre.TabIndex = 26;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::admin_us.Properties.Resources.pencil_6x;
-            this.pictureBox1.Location = new System.Drawing.Point(5, 8);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
             // 
             // comboBox1
             // 
@@ -164,17 +154,6 @@
             this.panel2.Size = new System.Drawing.Size(369, 44);
             this.panel2.TabIndex = 24;
             // 
-            // PictureBox4
-            // 
-            this.PictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.PictureBox4.Image = global::admin_us.Properties.Resources.pencil_6x;
-            this.PictureBox4.Location = new System.Drawing.Point(6, 10);
-            this.PictureBox4.Name = "PictureBox4";
-            this.PictureBox4.Size = new System.Drawing.Size(25, 25);
-            this.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PictureBox4.TabIndex = 8;
-            this.PictureBox4.TabStop = false;
-            // 
             // txtNombre
             // 
             this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
@@ -212,6 +191,7 @@
             this.tableAdapterManager.tb_ingresosTableAdapter = null;
             this.tableAdapterManager.tb_inventarioTableAdapter = null;
             this.tableAdapterManager.tb_objetoTableAdapter = null;
+            this.tableAdapterManager.tb_reportesTableAdapter = null;
             this.tableAdapterManager.tb_salidasTableAdapter = null;
             this.tableAdapterManager.tb_subtipoTableAdapter = null;
             this.tableAdapterManager.tb_tipoTableAdapter = this.tb_tipoTableAdapter;
@@ -227,17 +207,6 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(369, 44);
             this.panel7.TabIndex = 25;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::admin_us.Properties.Resources.pencil_6x;
-            this.pictureBox2.Location = new System.Drawing.Point(4, 9);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 21;
-            this.pictureBox2.TabStop = false;
             // 
             // comboBox2
             // 
@@ -330,6 +299,39 @@
             this.label4.TabIndex = 28;
             this.label4.Text = "Modificar";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(4, 9);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 21;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(5, 8);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
+            // PictureBox4
+            // 
+            this.PictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.PictureBox4.Image = global::admin_us.Properties.Resources.justify_center_8x;
+            this.PictureBox4.Location = new System.Drawing.Point(6, 10);
+            this.PictureBox4.Name = "PictureBox4";
+            this.PictureBox4.Size = new System.Drawing.Size(25, 25);
+            this.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PictureBox4.TabIndex = 8;
+            this.PictureBox4.TabStop = false;
+            // 
             // frmCategorias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -343,17 +345,17 @@
             this.Text = "frmCategorias";
             this.Load += new System.EventHandler(this.frmCategorias_Load);
             this.comboBox1_nombre.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.db_asiloDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tb_tipoBindingSource)).EndInit();
             this.panel7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }

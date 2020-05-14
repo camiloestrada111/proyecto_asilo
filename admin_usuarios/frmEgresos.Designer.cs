@@ -264,7 +264,7 @@
             // pictureBox8
             // 
             this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox8.Image = global::admin_us.Properties.Resources.pencil_6x;
+            this.pictureBox8.Image = global::admin_us.Properties.Resources.madera;
             this.pictureBox8.Location = new System.Drawing.Point(4, 6);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(25, 25);
@@ -307,7 +307,7 @@
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Image = global::admin_us.Properties.Resources.pencil_6x;
+            this.pictureBox3.Image = global::admin_us.Properties.Resources.distintivo;
             this.pictureBox3.Location = new System.Drawing.Point(4, 6);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(25, 25);
@@ -367,7 +367,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::admin_us.Properties.Resources.pencil_6x;
+            this.pictureBox1.Image = global::admin_us.Properties.Resources.mantenimiento;
             this.pictureBox1.Location = new System.Drawing.Point(4, 6);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(25, 25);
@@ -427,7 +427,7 @@
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.Image = global::admin_us.Properties.Resources.pencil_6x;
+            this.pictureBox5.Image = global::admin_us.Properties.Resources._1141964;
             this.pictureBox5.Location = new System.Drawing.Point(4, 6);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(25, 25);

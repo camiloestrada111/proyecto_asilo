@@ -256,14 +256,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="db_asiloDataSet.xsc">
       <DependentUpon>db_asiloDataSet.xsd</DependentUpon>
     </None>
@@ -279,6 +274,11 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -296,18 +296,48 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>db_asilo.mdf</DependentUpon>
     </Content>
-    <Content Include="Resources\danger.bmp" />
-    <Content Include="Resources\Logo.jpg" />
+    <None Include="Resources\240_F_301095994_wdine6CAxAnIQCqE0IV2ZeSNPe9asPje2.png" />
+    <None Include="Resources\11419641.png" />
+    <None Include="Resources\240_F_301095994_wdine6CAxAnIQCqE0IV2ZeSNPe9asPje1.png" />
+    <None Include="Resources\240_F_301095994_wdine6CAxAnIQCqE0IV2ZeSNPe9asPje.png" />
     <None Include="Resources\user21.png" />
+    <None Include="Resources\user2.png" />
     <None Include="Resources\user.png" />
-    <None Include="Resources\man-1.png" />
+    <None Include="Resources\tipo.png" />
+    <None Include="Resources\sacar-del-carro.png" />
+    <None Include="Resources\person-6x1.png" />
     <None Include="Resources\person-6x.png" />
+    <None Include="Resources\people-8x.png" />
     <None Include="Resources\pencil-6x.png" />
-    <None Include="Resources\key-6x.png" />
     <None Include="Resources\ocultaSelec.png" />
     <None Include="Resources\oculta.png" />
     <None Include="Resources\muestraSelec.png" />
     <None Include="Resources\muestra.png" />
+    <None Include="Resources\mantenimiento.png" />
+    <None Include="Resources\man-1.png" />
+    <None Include="Resources\madera.png" />
+    <None Include="Resources\lupa.png" />
+    <None Include="Resources\Logo.jpg" />
+    <None Include="Resources\594535.png" />
+    <None Include="Resources\1141964.png" />
+    <None Include="Resources\1524539.png" />
+    <None Include="Resources\anadir-a-la-cesta.png" />
+    <None Include="Resources\anadir-a-la-cesta1.png" />
+    <None Include="Resources\buscar.png" />
+    <None Include="Resources\buscar1.png" />
+    <None Include="Resources\comprobar.png" />
+    <None Include="Resources\danger.bmp" />
+    <None Include="Resources\distintivo.png" />
+    <None Include="Resources\distintivo1.png" />
+    <None Include="Resources\distintivo2.png" />
+    <None Include="Resources\distintivo3.png" />
+    <None Include="Resources\grupo.png" />
+    <None Include="Resources\icon.png" />
+    <None Include="Resources\inventario.png" />
+    <None Include="Resources\inventario1.png" />
+    <None Include="Resources\justify-center-8x.png" />
+    <None Include="Resources\justify-center-8x1.png" />
+    <None Include="Resources\key-6x.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">

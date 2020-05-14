@@ -96,6 +96,7 @@
             this.tableAdapterManager.tb_ingresosTableAdapter = null;
             this.tableAdapterManager.tb_inventarioTableAdapter = null;
             this.tableAdapterManager.tb_objetoTableAdapter = null;
+            this.tableAdapterManager.tb_reportesTableAdapter = null;
             this.tableAdapterManager.tb_salidasTableAdapter = null;
             this.tableAdapterManager.tb_subtipoTableAdapter = this.tb_subtipoTableAdapter;
             this.tableAdapterManager.tb_tipoTableAdapter = null;
@@ -208,7 +209,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::admin_us.Properties.Resources.pencil_6x;
+            this.pictureBox1.Image = global::admin_us.Properties.Resources.mantenimiento;
             this.pictureBox1.Location = new System.Drawing.Point(4, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(25, 25);
@@ -296,7 +297,7 @@
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::admin_us.Properties.Resources.pencil_6x;
+            this.pictureBox2.Image = global::admin_us.Properties.Resources._1141964;
             this.pictureBox2.Location = new System.Drawing.Point(3, 10);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(25, 25);
@@ -332,7 +333,7 @@
             // PictureBox4
             // 
             this.PictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.PictureBox4.Image = global::admin_us.Properties.Resources.pencil_6x;
+            this.PictureBox4.Image = global::admin_us.Properties.Resources.justify_center_8x;
             this.PictureBox4.Location = new System.Drawing.Point(6, 10);
             this.PictureBox4.Name = "PictureBox4";
             this.PictureBox4.Size = new System.Drawing.Size(25, 25);

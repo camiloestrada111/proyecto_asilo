@@ -41,7 +41,7 @@
             this.panel2.Controls.Add(this.btn_Cerrar);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(304, 18);
             this.panel2.TabIndex = 19;
@@ -56,7 +56,7 @@
             this.btn_Cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Cerrar.Image = ((System.Drawing.Image)(resources.GetObject("btn_Cerrar.Image")));
             this.btn_Cerrar.Location = new System.Drawing.Point(256, 0);
-            this.btn_Cerrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Cerrar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Cerrar.Name = "btn_Cerrar";
             this.btn_Cerrar.Size = new System.Drawing.Size(49, 18);
             this.btn_Cerrar.TabIndex = 21;
@@ -84,7 +84,8 @@
             this.Controls.Add(this.lblInicio);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "frmMessageBoxErrorYaExisteElQueQuiereAgregar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

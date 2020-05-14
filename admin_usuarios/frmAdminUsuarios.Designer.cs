@@ -55,12 +55,12 @@
             this.tableAdapterManager = new admin_us.db_asiloDataSetTableAdapters.TableAdapterManager();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox4)).BeginInit();
             this.Panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -81,7 +81,7 @@
             // PictureBox4
             // 
             this.PictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.PictureBox4.Image = global::admin_us.Properties.Resources.pencil_6x;
+            this.PictureBox4.Image = global::admin_us.Properties.Resources.justify_center_8x;
             this.PictureBox4.Location = new System.Drawing.Point(6, 10);
             this.PictureBox4.Name = "PictureBox4";
             this.PictureBox4.Size = new System.Drawing.Size(25, 25);
@@ -129,7 +129,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::admin_us.Properties.Resources.pencil_6x;
+            this.pictureBox1.Image = global::admin_us.Properties.Resources.justify_center_8x;
             this.pictureBox1.Location = new System.Drawing.Point(6, 10);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(25, 25);
@@ -360,6 +360,7 @@
             this.tableAdapterManager.tb_ingresosTableAdapter = null;
             this.tableAdapterManager.tb_inventarioTableAdapter = null;
             this.tableAdapterManager.tb_objetoTableAdapter = null;
+            this.tableAdapterManager.tb_reportesTableAdapter = null;
             this.tableAdapterManager.tb_salidasTableAdapter = null;
             this.tableAdapterManager.tb_subtipoTableAdapter = null;
             this.tableAdapterManager.tb_tipoTableAdapter = null;
@@ -400,6 +401,39 @@
             this.panel6.Size = new System.Drawing.Size(998, 644);
             this.panel6.TabIndex = 21;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label4.ForeColor = System.Drawing.Color.DimGray;
+            this.label4.Location = new System.Drawing.Point(235, 97);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(73, 20);
+            this.label4.TabIndex = 25;
+            this.label4.Text = "Modificar";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label2.ForeColor = System.Drawing.Color.DimGray;
+            this.label2.Location = new System.Drawing.Point(467, 81);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(64, 20);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "Usuario";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label1.ForeColor = System.Drawing.Color.DimGray;
+            this.label1.Location = new System.Drawing.Point(439, 422);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(120, 20);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Tipo de Usuario";
+            // 
             // label3
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -429,46 +463,13 @@
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.Image = global::admin_us.Properties.Resources.pencil_6x;
+            this.pictureBox5.Image = global::admin_us.Properties.Resources.people_8x;
             this.pictureBox5.Location = new System.Drawing.Point(6, 8);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(25, 25);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 21;
             this.pictureBox5.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(439, 422);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 20);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "Tipo de Usuario";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(467, 81);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 20);
-            this.label2.TabIndex = 24;
-            this.label2.Text = "Usuario";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label4.ForeColor = System.Drawing.Color.DimGray;
-            this.label4.Location = new System.Drawing.Point(235, 97);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 20);
-            this.label4.TabIndex = 25;
-            this.label4.Text = "Modificar";
             // 
             // admin_usuarios
             // 
