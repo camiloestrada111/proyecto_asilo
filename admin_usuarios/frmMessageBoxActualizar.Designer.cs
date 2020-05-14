@@ -76,6 +76,7 @@
             this.Name = "frmMessageBoxActualizar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMessageBoxActualizar";
+            this.Load += new System.EventHandler(this.FrmMessageBoxActualizar_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

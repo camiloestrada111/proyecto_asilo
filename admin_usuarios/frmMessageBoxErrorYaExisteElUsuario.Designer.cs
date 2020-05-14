@@ -87,6 +87,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmMessageBoxErrorYaExisteElUsuario";
+            this.Load += new System.EventHandler(this.FrmMessageBoxErrorYaExisteElUsuario_Load);
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

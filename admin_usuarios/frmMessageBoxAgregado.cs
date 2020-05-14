@@ -19,6 +19,7 @@ namespace admin_us
 
         private void frmMessageBoxAgregado_Load(object sender, EventArgs e)
         {
+            this.Location = new Point((Screen.PrimaryScreen.Bounds.Width - this.Width + 282) / 2, (Screen.PrimaryScreen.Bounds.Height - this.Height) / 2);
 
         }
 

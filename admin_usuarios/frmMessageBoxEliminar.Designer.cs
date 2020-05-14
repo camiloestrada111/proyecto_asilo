@@ -76,6 +76,7 @@
             this.Name = "frmMessageBoxEliminar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMessageBoxEliminar";
+            this.Load += new System.EventHandler(this.FrmMessageBoxEliminar_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

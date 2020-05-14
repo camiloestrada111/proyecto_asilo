@@ -113,6 +113,7 @@
             this.Name = "frmMessageBoxPregunta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMessageBoxPregunta";
+            this.Load += new System.EventHandler(this.FrmMessageBoxPregunta_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

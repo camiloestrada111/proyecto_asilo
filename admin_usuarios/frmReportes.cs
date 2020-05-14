@@ -342,8 +342,8 @@ namespace admin_us
         //Se llenan los datos al modificar Datepicker
         private void Date_fechaDESDE_ValueChanged(object sender, EventArgs e)
         {
-            fecha1 = Convert.ToString(date_fechaDESDE.Value);
-            fecha2 = Convert.ToString(date_fechaHASTA.Value);
+            fecha1 = date_fechaDESDE.Value.ToString("yyyy-MM-dd");
+            fecha2 = date_fechaHASTA.Value.ToString("yyyy-MM-dd");
             llenardatos_fechas(fecha1, fecha2);
         }
 
@@ -368,9 +368,118 @@ namespace admin_us
         //Se llenan los datos al modificar Datepicker
         private void Date_fechaHASTA_ValueChanged(object sender, EventArgs e)
         {
-            fecha1 = Convert.ToString(date_fechaDESDE.Value);
-            fecha2 = Convert.ToString(date_fechaHASTA.Value);
+            fecha1 = date_fechaDESDE.Value.ToString("yyyy-MM-dd");
+            fecha2 = date_fechaHASTA.Value.ToString("yyyy-MM-dd");
             llenardatos_fechas(fecha1, fecha2);
+        }
+
+        private void BtnCrear_Click(object sender, EventArgs e)
+        {
+            String t = "REPORTE";
+
+            if (checkBox2.Checked == true && checkBox4.Checked == false && checkBox3.Checked == false)
+            {
+                t += String_Tiempo(0);
+            }
+            else if(checkBox2.Checked == false && checkBox4.Checked == true && checkBox3.Checked == false)
+            {
+                t += String_Categoria();
+            }
+            else if (checkBox2.Checked == false && checkBox4.Checked == false && checkBox3.Checked == true)
+            {
+                t += String_Tipo();
+            }
+            else if (checkBox2.Checked == true && checkBox4.Checked == true && checkBox3.Checked == false)
+            {
+                t += String_Categoria();
+                t += String_Tiempo(1);
+            }
+            else if (checkBox2.Checked == true && checkBox4.Checked == false && checkBox3.Checked == true)
+            {
+                t += String_Tipo();
+                t += String_Tiempo(1);
+            }
+            else if (checkBox2.Checked == true && checkBox4.Checked == true && checkBox3.Checked == true)
+            {
+                t += String_Tipo();
+                t += String_Categoria();
+                t += String_Tiempo(1);
+            }
+            else
+            {
+                t += " TOTAL";
+            }
+
+            frmDocumento f = new frmDocumento(db_asiloDataSet.tb_Mostrar_Reportes, t);
+            f.ShowDialog();
+        }
+
+
+        public String String_Tiempo(int i) {
+            String s = "";
+            if (Convert.ToInt32(combo_tiempo.SelectedIndex) == 2)
+            {
+                s = " ENTRE ";
+
+            }
+            else if (i == 0)
+            {
+                s = " DE ";
+            }
+            else if( i == 1 )   
+            {
+                s = " EN ";
+            }
+
+            if (Convert.ToInt32(combo_tiempo.SelectedIndex) == 0)
+            {
+                s += "LOS ÚLTIMOS 30 DÍAS";
+            }
+            else if (Convert.ToInt32(combo_tiempo.SelectedIndex) == 1)
+            {
+                s += "LOS ÚLTIMOS 7 DÍAS";
+
+            }
+            else
+            {
+                s += fecha1 + " Y " + fecha2;
+            }
+
+            return s;
+        }
+
+        public String String_Tipo() {
+            String s = "";
+
+            if (combo_tipo.Text == "Ingreso")
+            {
+                s += " DE INGRESOS";
+            }
+            else
+            {
+                s += " DE SALIDAS";
+            }
+
+            return s;
+        }
+
+        public String String_Categoria()
+        {
+            {
+                String s = "";
+
+                if (combo_subtipos.Text != "Ninguno")
+                {
+                    s += " DE " + combo_subtipos.Text.ToUpper();
+                }
+                else
+                {
+                    s += " DE " + combo_cat.Text.ToUpper();
+                }
+
+                return s;
+            }
+
         }
     }
 }

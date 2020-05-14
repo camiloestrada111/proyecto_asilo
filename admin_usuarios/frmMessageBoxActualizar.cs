@@ -21,5 +21,10 @@ namespace admin_us
         {
             this.Close();
         }
+
+        private void FrmMessageBoxActualizar_Load(object sender, EventArgs e)
+        {
+            this.Location = new Point((Screen.PrimaryScreen.Bounds.Width - this.Width + 282) / 2, (Screen.PrimaryScreen.Bounds.Height - this.Height) / 2);
+        }
     }
 }

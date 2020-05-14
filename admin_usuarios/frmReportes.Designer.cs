@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel25 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel_busqueda = new System.Windows.Forms.Panel();
@@ -61,6 +61,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.btnCrear = new System.Windows.Forms.Button();
             this.tb_inventarioDataGridView = new System.Windows.Forms.DataGridView();
             this.noDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -76,7 +77,6 @@
             this.tb_reportesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableAdapterManager = new admin_us.db_asiloDataSetTableAdapters.TableAdapterManager();
             this.tb_Mostrar_ReportesTableAdapter = new admin_us.db_asiloDataSetTableAdapters.tb_Mostrar_ReportesTableAdapter();
-            this.btnAgregar = new System.Windows.Forms.Button();
             this.panel25.SuspendLayout();
             this.panel_busqueda.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -109,7 +109,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(461, 25);
+            this.label3.Location = new System.Drawing.Point(453, 25);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(99, 25);
@@ -243,7 +243,7 @@
             this.combo_tipo.ForeColor = System.Drawing.Color.DimGray;
             this.combo_tipo.FormattingEnabled = true;
             this.combo_tipo.Items.AddRange(new object[] {
-            "Entradas",
+            "Ingresos",
             "Salidas"});
             this.combo_tipo.Location = new System.Drawing.Point(17, 35);
             this.combo_tipo.Name = "combo_tipo";
@@ -420,19 +420,33 @@
             // panel4
             // 
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(889, 164);
+            this.panel4.Location = new System.Drawing.Point(926, 164);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(117, 416);
+            this.panel4.Size = new System.Drawing.Size(80, 416);
             this.panel4.TabIndex = 5;
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.btnAgregar);
+            this.panel6.Controls.Add(this.btnCrear);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel6.Location = new System.Drawing.Point(147, 530);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(742, 50);
+            this.panel6.Size = new System.Drawing.Size(779, 50);
             this.panel6.TabIndex = 6;
+            // 
+            // btnCrear
+            // 
+            this.btnCrear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(215)))), ((int)(((byte)(116)))));
+            this.btnCrear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrear.ForeColor = System.Drawing.Color.White;
+            this.btnCrear.Location = new System.Drawing.Point(275, 7);
+            this.btnCrear.Name = "btnCrear";
+            this.btnCrear.Size = new System.Drawing.Size(162, 40);
+            this.btnCrear.TabIndex = 13;
+            this.btnCrear.Text = "CREAR REPORTE";
+            this.btnCrear.UseVisualStyleBackColor = false;
+            this.btnCrear.Click += new System.EventHandler(this.BtnCrear_Click);
             // 
             // tb_inventarioDataGridView
             // 
@@ -443,14 +457,14 @@
             this.tb_inventarioDataGridView.BackgroundColor = System.Drawing.Color.White;
             this.tb_inventarioDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_inventarioDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tb_inventarioDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tb_inventarioDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.tb_inventarioDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tb_inventarioDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.noDataGridViewTextBoxColumn,
@@ -461,21 +475,21 @@
             this.cantidadDataGridViewTextBoxColumn,
             this.tipoDataGridViewTextBoxColumn});
             this.tb_inventarioDataGridView.DataSource = this.tbMostrarReportesBindingSource;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tb_inventarioDataGridView.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tb_inventarioDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
             this.tb_inventarioDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tb_inventarioDataGridView.EnableHeadersVisualStyles = false;
             this.tb_inventarioDataGridView.GridColor = System.Drawing.Color.Gainsboro;
             this.tb_inventarioDataGridView.Location = new System.Drawing.Point(147, 164);
             this.tb_inventarioDataGridView.Name = "tb_inventarioDataGridView";
             this.tb_inventarioDataGridView.ReadOnly = true;
-            this.tb_inventarioDataGridView.Size = new System.Drawing.Size(742, 366);
+            this.tb_inventarioDataGridView.Size = new System.Drawing.Size(779, 366);
             this.tb_inventarioDataGridView.TabIndex = 7;
             // 
             // noDataGridViewTextBoxColumn
@@ -569,19 +583,6 @@
             // 
             this.tb_Mostrar_ReportesTableAdapter.ClearBeforeFill = true;
             // 
-            // btnAgregar
-            // 
-            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(215)))), ((int)(((byte)(116)))));
-            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(313, 7);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(115, 40);
-            this.btnAgregar.TabIndex = 13;
-            this.btnAgregar.Text = "IMPRIMIR";
-            this.btnAgregar.UseVisualStyleBackColor = false;
-            // 
             // frmReportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -661,6 +662,6 @@
         private db_asiloDataSetTableAdapters.tb_reportesTableAdapter tb_reportesTableAdapter;
         private System.Windows.Forms.BindingSource tbtipoBindingSource;
         private db_asiloDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        internal System.Windows.Forms.Button btnAgregar;
+        internal System.Windows.Forms.Button btnCrear;
     }
 }

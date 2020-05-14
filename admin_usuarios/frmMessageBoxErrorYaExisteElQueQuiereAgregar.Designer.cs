@@ -89,6 +89,7 @@
             this.MaximizeBox = false;
             this.Name = "frmMessageBoxErrorYaExisteElQueQuiereAgregar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.FrmMessageBoxErrorYaExisteElQueQuiereAgregar_Load);
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

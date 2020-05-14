@@ -99,6 +99,7 @@
             this.Name = "frmMessageBoxModificar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMessageBoxModificar";
+            this.Load += new System.EventHandler(this.FrmMessageBoxModificar_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -88,6 +88,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmMessageBoxExisteUnError";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.FrmMessageBoxExisteUnError_Load);
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

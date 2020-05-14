@@ -24,6 +24,8 @@ namespace admin_us
 
         private void frmMessageBoxNoLogin_Load(object sender, EventArgs e)
         {
+            this.Location = new Point((Screen.PrimaryScreen.Bounds.Width - this.Width + 282) / 2, (Screen.PrimaryScreen.Bounds.Height - this.Height) / 2);
+
         }
 
         private void btn_Cerrar_Click(object sender, EventArgs e)
