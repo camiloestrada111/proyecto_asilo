@@ -249,13 +249,15 @@ namespace admin_us
             int existe = 0;
             if (checkBox1.Checked == true)
             {
-                existe = Convert.ToInt32(this.tb_objetoTableAdapter.obtener_siexiste(txtNombre.Text, id_tipos,comboBox_pesos.Text,id_subtipos));
-            }
-            else
-            {
                 existe = Convert.ToInt32(this.tb_objetoTableAdapter.obtener_siexiste(txtNombre.Text, id_tipos, txtUsuario.Text, id_subtipos));
             }
-            if(existe == 0)
+
+            if (checkBox1.Checked == false)
+            {
+
+                existe = Convert.ToInt32(this.tb_objetoTableAdapter.obtener_siexiste(txtNombre.Text, id_tipos, comboBox_pesos.Text, id_subtipos));
+            }
+            if (existe == 0)
             {
                 if (txtNombre.Text == "Nombre")
                 {
