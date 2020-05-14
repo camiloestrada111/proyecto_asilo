@@ -35,8 +35,16 @@ namespace admin_us
                 int id_subtipos = Convert.ToInt32(this.tb_subtipoTableAdapter.obtener_idsubtipo(id_tipos, comboBox_subtipos.Text));
                 int id_objeto = Convert.ToInt32(this.tb_objetoTableAdapter.obtener_id(comboBox_objetos.Text, id_tipos, id_subtipos));
                 string pesos = Convert.ToString(this.tb_objetoTableAdapter.obtener_peso(id_objeto));
-                txtUsuario.Text = pesos;
+                txtPesos.Text = pesos;
                 PESO1 = pesos;
+                try
+                {
+                    txtNombre.Text = txtNombre.Text.Replace(pesos, "");
+                }
+                catch (Exception)
+                {
+                    
+                }
             }
             else
             {
@@ -45,7 +53,7 @@ namespace admin_us
                 btnEliminar.Enabled = false;
                 btnModificar.Enabled = false;
                 txtNombre.Text = "Nombre";
-                txtUsuario.Text = "Peso";
+                txtPesos.Text = "Peso";
             }
         }
 
@@ -74,7 +82,7 @@ namespace admin_us
                 }
             }else
             {
-                if (txtNombre.Text == comboBox_objetos.Text)
+                if (txtNombre.Text == comboBox_objetos.Text.Replace(PESO1, ""))
                 {
                     txtNombre.Text = "";
                 }
@@ -92,7 +100,7 @@ namespace admin_us
             {
                 if (txtNombre.Text.Length == 0)
                 {
-                    txtNombre.Text = comboBox_objetos.Text;
+                    txtNombre.Text = comboBox_objetos.Text.Replace(PESO1,"");
                 }
             }
         }
@@ -101,20 +109,20 @@ namespace admin_us
         {
             if (checkBox2.Checked == false)
             {
-                if (txtUsuario.Text.Length == 0)
+                if (txtPesos.Text.Length == 0)
                 {
-                    txtUsuario.Text = "Peso";
+                    txtPesos.Text = "Peso";
                 }
             }
             else
             {
-                if (txtUsuario.Text.Length == 0)
+                if (txtPesos.Text.Length == 0)
                 {
                     int id_tipos = Convert.ToInt32(this.tb_tipoTableAdapter.Consultar_id(comboBox_tipos.Text));
                     int id_subtipos = Convert.ToInt32(this.tb_subtipoTableAdapter.obtener_idsubtipo(id_tipos, comboBox_subtipos.Text));
                     int id_objeto = Convert.ToInt32(this.tb_objetoTableAdapter.obtener_id(comboBox_objetos.Text, id_tipos, id_subtipos));
                     string pesos = Convert.ToString(this.tb_objetoTableAdapter.obtener_peso(id_objeto));
-                    txtUsuario.Text = pesos;
+                    txtPesos.Text = pesos;
                     PESO1 = pesos;
                 }
             }
@@ -124,16 +132,16 @@ namespace admin_us
         {
             if (checkBox2.Checked == false)
             {
-                if (txtUsuario.Text == "Peso")
+                if (txtPesos.Text == "Peso")
                 {
-                    txtUsuario.Text = "";
+                    txtPesos.Text = "";
                 }
             }
             else
             {
-                if (txtUsuario.Text == PESO1)
+                if (txtPesos.Text == PESO1)
                 {
-                    txtUsuario.Text = "";
+                    txtPesos.Text = "";
                 }
             }
         }
@@ -179,10 +187,11 @@ namespace admin_us
             {
                 checkBox2.Checked = false;
             }
-            txtNombre.Text = comboBox_objetos.Text;
+            
             int id_objeto = Convert.ToInt32(this.tb_objetoTableAdapter.obtener_id(comboBox_objetos.Text, id_tipos, id_subtipos));
             string pesos = Convert.ToString(this.tb_objetoTableAdapter.obtener_peso(id_objeto));
-            txtUsuario.Text = pesos;
+            txtPesos.Text = pesos;
+            txtNombre.Text = comboBox_objetos.Text.Replace(pesos," ");
             PESO1 = pesos;
         }
         public void llenardatos_pesos()
@@ -220,6 +229,31 @@ namespace admin_us
         private void comboBox_objetos_SelectedIndexChanged(object sender, EventArgs e)
         {
             txtNombre.Text = comboBox_objetos.Text;
+            txtNombre.Text = txtNombre.Text.Replace(PESO1, "");
+            int id_tipos = Convert.ToInt32(this.tb_tipoTableAdapter.Consultar_id(comboBox_tipos.Text));
+            int id_subtipos = Convert.ToInt32(this.tb_subtipoTableAdapter.obtener_idsubtipo(id_tipos, comboBox_subtipos.Text));
+            int id_objeto = Convert.ToInt32(this.tb_objetoTableAdapter.obtener_id(comboBox_objetos.Text, id_tipos, id_subtipos));
+            string pesos = Convert.ToString(this.tb_objetoTableAdapter.obtener_peso(id_objeto));
+            if (checkBox1.Checked == true)
+            {
+                txtPesos.Text = pesos;
+            }
+            else
+            {
+                int salir = 23;
+                int cont = 0;
+                do
+                {
+                    comboBox_pesos.SelectedIndex = cont;
+                    if (comboBox_pesos.Text == pesos)
+                    {
+                        salir = 0;
+                    }else
+                    {
+                        cont++;
+                    }
+                } while (salir !=0);
+            }
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -227,7 +261,7 @@ namespace admin_us
             if (checkBox1.Checked == true)
             {
                 comboBox_pesos.Visible = false;
-                txtUsuario.Visible = true;
+                txtPesos.Visible = true;
                 int id_tipos = Convert.ToInt32(this.tb_tipoTableAdapter.Consultar_id(comboBox_tipos.Text));
                 int id_subtipos = Convert.ToInt32(this.tb_subtipoTableAdapter.obtener_idsubtipo(id_tipos, comboBox_subtipos.Text));
                 int id_objeto = Convert.ToInt32(this.tb_objetoTableAdapter.obtener_id(comboBox_objetos.Text, id_tipos, id_subtipos));
@@ -236,7 +270,7 @@ namespace admin_us
             else
             {
                 comboBox_pesos.Visible = true;
-                txtUsuario.Visible = false;
+                txtPesos.Visible = false;
             }
         }
 
@@ -249,7 +283,7 @@ namespace admin_us
             int existe = 0;
             if (checkBox1.Checked == true)
             {
-                existe = Convert.ToInt32(this.tb_objetoTableAdapter.obtener_siexiste(txtNombre.Text, id_tipos, txtUsuario.Text, id_subtipos));
+                existe = Convert.ToInt32(this.tb_objetoTableAdapter.obtener_siexiste(txtNombre.Text, id_tipos, txtPesos.Text, id_subtipos));
             }
 
             if (checkBox1.Checked == false)
@@ -272,24 +306,27 @@ namespace admin_us
                         }
                         else
                         {
-                            this.tb_objetoTableAdapter.agregar_objeto(txtNombre.Text, id_tipos, comboBox_objetos.Text, id_subtipos);
+                            String Nombre = txtNombre.Text + " " + comboBox_pesos.Text;
+                            this.tb_objetoTableAdapter.agregar_objeto(Nombre, id_tipos, comboBox_pesos.Text, id_subtipos);
                             txtNombre.Text = "Nombre";
                             int id_obj = Convert.ToInt32(this.tb_objetoTableAdapter.Selecionar_ultimo());
                             this.tb_inventarioTableAdapter.agregar_inventario(id_obj, 0, 0);
-                            agregarmsg.Show();                      }
+                            agregarmsg.Show();
+                        }
                     }
                     else
                     {
-                        if (txtUsuario.Text == "Peso")
+                        if (txtPesos.Text == "Peso")
                         {
 
                         }
                         else
                         {
-                            this.tb_objetoTableAdapter.agregar_objeto(txtNombre.Text, id_tipos, txtUsuario.Text, id_subtipos);
+                            String Nombre = txtNombre.Text + " " + txtPesos.Text;
+                            this.tb_objetoTableAdapter.agregar_objeto(Nombre, id_tipos, txtPesos.Text, id_subtipos);
                             int id_obj = Convert.ToInt32(this.tb_objetoTableAdapter.Selecionar_ultimo());
                             this.tb_inventarioTableAdapter.agregar_inventario(id_obj, 0, 0);
-                            MessageBox.Show("Agregado");
+                            agregarmsg.Show();
                         }
                     }
                 }
@@ -316,7 +353,7 @@ namespace admin_us
 
             if (resultado == DialogResult.OK)
             {
-                if (txtNombre.Text == comboBox_objetos.Text)
+                if (txtNombre.Text != comboBox_objetos.Text)
                 {
                     if (checkBox1.Checked == false)
                     {
@@ -329,7 +366,8 @@ namespace admin_us
                             }
                             else
                             {
-                                this.tb_objetoTableAdapter.modificar_objeto(txtNombre.Text, id_tipos, comboBox_pesos.Text, id_subtipos, id_objetos);
+                                String Nombre = txtNombre.Text + " " + comboBox_pesos.Text;
+                                this.tb_objetoTableAdapter.modificar_objeto(Nombre, id_tipos, comboBox_pesos.Text, id_subtipos, id_objetos);
                                 llenardatos_objetos();
                                 llenardatos_pesos();
                             }
@@ -341,16 +379,17 @@ namespace admin_us
                     }
                     else
                     {
-                        existe = Convert.ToInt32(this.tb_objetoTableAdapter.obtener_siexiste(txtNombre.Text, id_tipos, txtUsuario.Text, id_subtipos));
+                        existe = Convert.ToInt32(this.tb_objetoTableAdapter.obtener_siexiste(txtNombre.Text, id_tipos, txtPesos.Text, id_subtipos));
                         if (existe == 0)
                         {
-                            if (txtUsuario.Text == PESO1)
+                            if (txtPesos.Text == PESO1)
                             {
 
                             }
                             else
                             {
-                                this.tb_objetoTableAdapter.modificar_objeto(txtNombre.Text, id_tipos, txtUsuario.Text, id_subtipos, id_objetos);
+                                String Nombre = txtNombre.Text + " " + txtPesos.Text;
+                                this.tb_objetoTableAdapter.modificar_objeto(Nombre, id_tipos, txtPesos.Text, id_subtipos, id_objetos);
                                 llenardatos_objetos();
                                 llenardatos_pesos();
                             }

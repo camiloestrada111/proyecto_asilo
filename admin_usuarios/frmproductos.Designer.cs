@@ -30,9 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel_objetos = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.comboBox_objetos = new System.Windows.Forms.ComboBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -40,7 +46,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.comboBox_subtipos = new System.Windows.Forms.ComboBox();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.comboBox_tipos = new System.Windows.Forms.ComboBox();
             this.tbtipoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.db_asiloDataSet = new admin_us.db_asiloDataSet();
@@ -50,7 +56,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.comboBox_pesos = new System.Windows.Forms.ComboBox();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.txtPesos = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
@@ -63,18 +69,14 @@
             this.tb_inventarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tb_inventarioTableAdapter = new admin_us.db_asiloDataSetTableAdapters.tb_inventarioTableAdapter();
             this.tableAdapterManager = new admin_us.db_asiloDataSetTableAdapters.TableAdapterManager();
-            this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel_objetos.SuspendLayout();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.comboBox1_nombre.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbtipoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.db_asiloDataSet)).BeginInit();
             this.panel2.SuspendLayout();
@@ -85,8 +87,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbsubtipoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbobjetoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tb_inventarioBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -110,6 +110,50 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(998, 679);
             this.panel1.TabIndex = 0;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label5.ForeColor = System.Drawing.Color.DimGray;
+            this.label5.Location = new System.Drawing.Point(450, 223);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(108, 20);
+            this.label5.TabIndex = 35;
+            this.label5.Text = "Sub categoria";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label2.ForeColor = System.Drawing.Color.DimGray;
+            this.label2.Location = new System.Drawing.Point(464, 138);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(78, 20);
+            this.label2.TabIndex = 34;
+            this.label2.Text = "Categoria";
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.checkBox2.Location = new System.Drawing.Point(229, 185);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(15, 14);
+            this.checkBox2.TabIndex = 19;
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label4.ForeColor = System.Drawing.Color.DimGray;
+            this.label4.Location = new System.Drawing.Point(199, 163);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(73, 20);
+            this.label4.TabIndex = 33;
+            this.label4.Text = "Modificar";
             // 
             // label3
             // 
@@ -146,6 +190,28 @@
             this.panel_objetos.Size = new System.Drawing.Size(369, 66);
             this.panel_objetos.TabIndex = 30;
             this.panel_objetos.Visible = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label6.ForeColor = System.Drawing.Color.DimGray;
+            this.label6.Location = new System.Drawing.Point(148, 7);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(73, 20);
+            this.label6.TabIndex = 36;
+            this.label6.Text = "Producto";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.panel3.Controls.Add(this.pictureBox3);
+            this.panel3.Controls.Add(this.comboBox_objetos);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 30);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(369, 36);
+            this.panel3.TabIndex = 21;
             // 
             // pictureBox3
             // 
@@ -224,16 +290,16 @@
             this.panel7.Size = new System.Drawing.Size(369, 44);
             this.panel7.TabIndex = 28;
             // 
-            // checkBox2
+            // pictureBox5
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.checkBox2.Location = new System.Drawing.Point(229, 185);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(15, 14);
-            this.checkBox2.TabIndex = 19;
-            this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.Image = global::admin_us.Properties.Resources.pencil_6x;
+            this.pictureBox5.Location = new System.Drawing.Point(6, 9);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 21;
+            this.pictureBox5.TabStop = false;
             // 
             // comboBox_tipos
             // 
@@ -301,7 +367,7 @@
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.panel4.Controls.Add(this.pictureBox2);
             this.panel4.Controls.Add(this.comboBox_pesos);
-            this.panel4.Controls.Add(this.txtUsuario);
+            this.panel4.Controls.Add(this.txtPesos);
             this.panel4.Location = new System.Drawing.Point(319, 446);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(369, 44);
@@ -329,20 +395,20 @@
             this.comboBox_pesos.Size = new System.Drawing.Size(332, 28);
             this.comboBox_pesos.TabIndex = 21;
             // 
-            // txtUsuario
+            // txtPesos
             // 
-            this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
-            this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.ForeColor = System.Drawing.Color.DimGray;
-            this.txtUsuario.Location = new System.Drawing.Point(37, 12);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(302, 19);
-            this.txtUsuario.TabIndex = 1;
-            this.txtUsuario.Text = "Peso";
-            this.txtUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtUsuario.Click += new System.EventHandler(this.txtUsuario_Click);
-            this.txtUsuario.Leave += new System.EventHandler(this.txtUsuario_Leave);
+            this.txtPesos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.txtPesos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPesos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPesos.ForeColor = System.Drawing.Color.DimGray;
+            this.txtPesos.Location = new System.Drawing.Point(37, 12);
+            this.txtPesos.Name = "txtPesos";
+            this.txtPesos.Size = new System.Drawing.Size(302, 19);
+            this.txtPesos.TabIndex = 1;
+            this.txtPesos.Text = "Peso";
+            this.txtPesos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPesos.Click += new System.EventHandler(this.txtUsuario_Click);
+            this.txtPesos.Leave += new System.EventHandler(this.txtUsuario_Leave);
             // 
             // panel6
             // 
@@ -438,77 +504,12 @@
             this.tableAdapterManager.tb_ingresosTableAdapter = null;
             this.tableAdapterManager.tb_inventarioTableAdapter = this.tb_inventarioTableAdapter;
             this.tableAdapterManager.tb_objetoTableAdapter = this.tb_objetoTableAdapter;
+            this.tableAdapterManager.tb_reportesTableAdapter = null;
             this.tableAdapterManager.tb_salidasTableAdapter = null;
             this.tableAdapterManager.tb_subtipoTableAdapter = this.tb_subtipoTableAdapter;
             this.tableAdapterManager.tb_tipoTableAdapter = this.tb_tipoTableAdapter;
             this.tableAdapterManager.tb_usuarioTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = admin_us.db_asiloDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label4.ForeColor = System.Drawing.Color.DimGray;
-            this.label4.Location = new System.Drawing.Point(199, 163);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 20);
-            this.label4.TabIndex = 33;
-            this.label4.Text = "Modificar";
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.Image = global::admin_us.Properties.Resources.pencil_6x;
-            this.pictureBox5.Location = new System.Drawing.Point(6, 9);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 21;
-            this.pictureBox5.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(464, 138);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 20);
-            this.label2.TabIndex = 34;
-            this.label2.Text = "Categoria";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label5.ForeColor = System.Drawing.Color.DimGray;
-            this.label5.Location = new System.Drawing.Point(450, 223);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(108, 20);
-            this.label5.TabIndex = 35;
-            this.label5.Text = "Sub categoria";
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
-            this.panel3.Controls.Add(this.pictureBox3);
-            this.panel3.Controls.Add(this.comboBox_objetos);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 30);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(369, 36);
-            this.panel3.TabIndex = 21;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label6.ForeColor = System.Drawing.Color.DimGray;
-            this.label6.Location = new System.Drawing.Point(148, 7);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(73, 20);
-            this.label6.TabIndex = 36;
-            this.label6.Text = "Producto";
             // 
             // frmproductos
             // 
@@ -526,10 +527,12 @@
             this.panel1.PerformLayout();
             this.panel_objetos.ResumeLayout(false);
             this.panel_objetos.PerformLayout();
+            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.comboBox1_nombre.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbtipoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.db_asiloDataSet)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -542,8 +545,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbsubtipoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbobjetoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tb_inventarioBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -556,7 +557,7 @@
         internal System.Windows.Forms.TextBox txtNombre;
         internal System.Windows.Forms.Panel panel4;
         internal System.Windows.Forms.PictureBox pictureBox2;
-        internal System.Windows.Forms.TextBox txtUsuario;
+        internal System.Windows.Forms.TextBox txtPesos;
         private System.Windows.Forms.Panel panel6;
         internal System.Windows.Forms.Button btnModificar;
         internal System.Windows.Forms.Button btnAgregar;
