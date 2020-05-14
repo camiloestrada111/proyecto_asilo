@@ -43,7 +43,6 @@
             this.txtContra = new System.Windows.Forms.TextBox();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tb_usuarioTableAdapter = new admin_us.db_asiloDataSetTableAdapters.tb_usuarioTableAdapter();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbusuarioBindingSource)).BeginInit();
@@ -52,7 +51,6 @@
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picContra)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -60,9 +58,9 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(80)))), ((int)(((byte)(89)))));
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(370, 38);
+            this.panel1.Size = new System.Drawing.Size(493, 47);
             this.panel1.TabIndex = 16;
             // 
             // label2
@@ -70,10 +68,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(111, 168);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(148, 207);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(146, 20);
+            this.label2.Size = new System.Drawing.Size(180, 25);
             this.label2.TabIndex = 13;
             this.label2.Text = "Nombre de Usuario";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -84,12 +81,12 @@
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.btnAceptar);
             this.panel3.Controls.Add(this.btnSalir);
-            this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 38);
+            this.panel3.Location = new System.Drawing.Point(0, 47);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(370, 412);
+            this.panel3.Size = new System.Drawing.Size(493, 507);
             this.panel3.TabIndex = 19;
             // 
             // comboBox2
@@ -100,9 +97,10 @@
             this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.comboBox2.ForeColor = System.Drawing.Color.DimGray;
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(31, 191);
+            this.comboBox2.Location = new System.Drawing.Point(41, 235);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(308, 28);
+            this.comboBox2.Size = new System.Drawing.Size(409, 33);
             this.comboBox2.TabIndex = 22;
             this.comboBox2.ValueMember = "usuario";
             this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.txtContra_TextChanged);
@@ -128,18 +126,20 @@
             this.panel4.Controls.Add(this.picContra);
             this.panel4.Controls.Add(this.pictureBox3);
             this.panel4.Controls.Add(this.txtContra);
-            this.panel4.Location = new System.Drawing.Point(31, 235);
+            this.panel4.Location = new System.Drawing.Point(41, 289);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(308, 40);
+            this.panel4.Size = new System.Drawing.Size(411, 49);
             this.panel4.TabIndex = 21;
             // 
             // picContra
             // 
             this.picContra.BackColor = System.Drawing.Color.Transparent;
             this.picContra.Image = global::admin_us.Properties.Resources.oculta;
-            this.picContra.Location = new System.Drawing.Point(277, 7);
+            this.picContra.Location = new System.Drawing.Point(369, 9);
+            this.picContra.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.picContra.Name = "picContra";
-            this.picContra.Size = new System.Drawing.Size(25, 25);
+            this.picContra.Size = new System.Drawing.Size(33, 31);
             this.picContra.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picContra.TabIndex = 9;
             this.picContra.TabStop = false;
@@ -152,9 +152,10 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::admin_us.Properties.Resources.key_6x;
-            this.pictureBox3.Location = new System.Drawing.Point(3, 7);
+            this.pictureBox3.Location = new System.Drawing.Point(4, 9);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox3.Size = new System.Drawing.Size(33, 31);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 8;
             this.pictureBox3.TabStop = false;
@@ -165,9 +166,10 @@
             this.txtContra.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtContra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContra.ForeColor = System.Drawing.Color.DimGray;
-            this.txtContra.Location = new System.Drawing.Point(37, 9);
+            this.txtContra.Location = new System.Drawing.Point(49, 11);
+            this.txtContra.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtContra.Name = "txtContra";
-            this.txtContra.Size = new System.Drawing.Size(234, 19);
+            this.txtContra.Size = new System.Drawing.Size(312, 23);
             this.txtContra.TabIndex = 1;
             this.txtContra.Text = "Contraseña";
             this.txtContra.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -183,9 +185,10 @@
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.ForeColor = System.Drawing.Color.White;
-            this.btnAceptar.Location = new System.Drawing.Point(31, 291);
+            this.btnAceptar.Location = new System.Drawing.Point(41, 358);
+            this.btnAceptar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(308, 40);
+            this.btnAceptar.Size = new System.Drawing.Size(411, 49);
             this.btnAceptar.TabIndex = 19;
             this.btnAceptar.Text = "INGRESAR";
             this.btnAceptar.UseVisualStyleBackColor = false;
@@ -197,25 +200,14 @@
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.ForeColor = System.Drawing.Color.White;
-            this.btnSalir.Location = new System.Drawing.Point(31, 347);
+            this.btnSalir.Location = new System.Drawing.Point(41, 427);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(308, 40);
+            this.btnSalir.Size = new System.Drawing.Size(411, 49);
             this.btnSalir.TabIndex = 20;
             this.btnSalir.Text = "SALIR";
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::admin_us.Properties.Resources.user2;
-            this.pictureBox1.Location = new System.Drawing.Point(127, 24);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(117, 115);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 18;
-            this.pictureBox1.TabStop = false;
             // 
             // tb_usuarioTableAdapter
             // 
@@ -223,14 +215,15 @@
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(370, 450);
+            this.ClientSize = new System.Drawing.Size(493, 554);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmLogin";
@@ -244,14 +237,11 @@
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picContra)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
