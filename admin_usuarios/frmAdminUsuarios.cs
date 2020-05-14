@@ -194,6 +194,7 @@ namespace admin_usuarios
             if (checkBox1.Checked == true)
             {
                 llenardatos();
+                anularusuarioactual();
             }
         }
         //Verifica si existe ya el usuario no deja ingresar pero si hay uno igual tambien 
@@ -236,6 +237,7 @@ namespace admin_usuarios
                 MessageBox.Show("Error ya existe el usuario");
             }
             comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
+            anularusuarioactual();
         }
         //Lo mismo que con agregar pero modificando tampoco deja modificar el usuario por uno que ya exista sin contar el original
         private void btnModificar_Click(object sender, EventArgs e)
@@ -292,7 +294,7 @@ namespace admin_usuarios
                 }
                 comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
             }
-
+            anularusuarioactual();
         }
 
         private void picContra_MouseHover(object sender, EventArgs e)
@@ -353,7 +355,7 @@ namespace admin_usuarios
             {
 
             }
-            
+            anularusuarioactual();
 
         }
         //Muestra o oculta la contraseña pendiente cambiar iconos
@@ -398,15 +400,28 @@ namespace admin_usuarios
                 btnEliminar.Enabled = false;
             }
         }
+
+        public void anularusuarioactual()
+        {
+            MenuAsilo.Menu nombreactual1 = new MenuAsilo.Menu();
+            string nombreactual = nombreactual1.texto12();
+
+            if (comboBox2.Text == nombreactual)
+            {
+                btnEliminar.Enabled = false;
+            }
+        }
+
+
         //Cambia del modo ingresar usuario a el de modificar y eliminar
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             if(checkBox1.Checked == true)
             {
-                MessageBox.Show(nombreact);
                 comboBox2.Enabled = true;
                 comboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
                 llenardatos();
+                anularusuarioactual();
             }
             else
             {

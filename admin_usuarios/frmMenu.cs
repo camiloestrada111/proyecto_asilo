@@ -143,7 +143,17 @@ namespace MenuAsilo
             formNuevo.Show();
         }
 
+        public static string texto;
 
+        public string texto12()
+        {
+            return texto;
+        }
+
+        public void llamar(string tex)
+        {
+            texto = tex;
+        }
 
         private void button2_Click(object sender, EventArgs e)
         {

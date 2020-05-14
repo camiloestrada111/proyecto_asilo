@@ -118,7 +118,6 @@ namespace admin_us
             frmMessageBoxLogin messageBoxLogin = new frmMessageBoxLogin();
             frmMessageBoxNoLogin messageBoxNoLogin = new frmMessageBoxNoLogin();
 
-
             int x;
             x = Convert.ToInt32(this.tb_usuarioTableAdapter.iniciarsesion(comboBox2.Text, txtContra.Text));
             if(x == 1)
@@ -126,6 +125,7 @@ namespace admin_us
                 
                 MenuAsilo.Menu frmMenu = new MenuAsilo.Menu();
                 admin_usuarios.admin_usuarios frmadmin = new admin_usuarios.admin_usuarios();
+                frmMenu.llamar(comboBox2.Text);
                 frmadmin.nombreactual(comboBox2.Text);
                 frmMenu.usuario(this.tb_usuarioTableAdapter.tipodeuser(comboBox2.Text).ToString());
                 frmMenu.Show();
