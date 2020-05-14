@@ -399,7 +399,9 @@ namespace admin_usuarios
                 btnModificar.Enabled = false;
                 btnEliminar.Enabled = false;
             }
+            anularusuarioactual();
         }
+
 
         public void anularusuarioactual()
         {
