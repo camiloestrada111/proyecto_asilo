@@ -112,24 +112,19 @@ namespace admin_us
                 picContra.Image = admin_us.Properties.Resources.muestra;
             }
         }
-
+        public int IUsuario;
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            frmMessageBoxLogin messageBoxLogin = new frmMessageBoxLogin();
             frmMessageBoxNoLogin messageBoxNoLogin = new frmMessageBoxNoLogin();
 
             int x;
             x = Convert.ToInt32(this.tb_usuarioTableAdapter.iniciarsesion(comboBox2.Text, txtContra.Text));
             if(x == 1)
             {
-                
+                MenuAsilo.Menu.TIPOUsuario = Convert.ToInt32(tb_usuarioTableAdapter.ObtenerTipo(comboBox2.Text, txtContra.Text));
+                MenuAsilo.Menu.NUMUsuario = Convert.ToInt32(tb_usuarioTableAdapter.ObtenerId(comboBox2.Text, txtContra.Text));
                 MenuAsilo.Menu frmMenu = new MenuAsilo.Menu();
-                admin_usuarios.admin_usuarios frmadmin = new admin_usuarios.admin_usuarios();
-                frmMenu.llamar(comboBox2.Text);
-                frmadmin.nombreactual(comboBox2.Text);
-                frmMenu.usuario(this.tb_usuarioTableAdapter.tipodeuser(comboBox2.Text).ToString());
                 frmMenu.Show();
-                messageBoxLogin.Show();
                 this.Hide();
             }
             else
@@ -175,9 +170,10 @@ namespace admin_us
                 if (x == 1)
                 {
                     //MessageBox.Show("Iniciando sesion");
+                    MenuAsilo.Menu.TIPOUsuario = Convert.ToInt32(tb_usuarioTableAdapter.ObtenerTipo(comboBox2.Text, txtContra.Text));
+                    MenuAsilo.Menu.NUMUsuario = Convert.ToInt32(tb_usuarioTableAdapter.ObtenerId(comboBox2.Text, txtContra.Text));
                     MenuAsilo.Menu frmMenu = new MenuAsilo.Menu();
                     frmMenu.Show();
-                    messageBoxLogin.Show();
                     this.Hide();
                 }
                 else

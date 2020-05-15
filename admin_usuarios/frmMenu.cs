@@ -18,19 +18,7 @@ namespace MenuAsilo
             InitializeComponent();
             Personalizar();
         }
-
-        public void usuario(string text)
-        {
-            if (text == "1")
-            {
-                btnUsuario.Visible = true;
-            }
-            else if (text == "2")
-            {
-                btnUsuario.Visible = false;
-            }
-        }
-
+        
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
 
@@ -42,11 +30,19 @@ namespace MenuAsilo
         {
 
         }
-
+        public static int TIPOUsuario;
+        public static int NUMUsuario;
         private void Form1_Load(object sender, EventArgs e)
         {
-
-        }
+            if (TIPOUsuario == 1)
+            {
+                btnUsuario.Visible = true;
+            }
+            else
+            {
+                btnUsuario.Visible = false;
+            }
+        }   
 
         private void Personalizar()
         {
@@ -130,7 +126,7 @@ namespace MenuAsilo
             formNuevo.TopLevel = false;
             formNuevo.TopMost = true;
             formNuevo.BringToFront();
-
+            
             this.Contenedor.Controls.Add(formNuevo);
 
             //Centrar form
@@ -140,6 +136,7 @@ namespace MenuAsilo
             formNuevo.Anchor = AnchorStyles.None;
             Contenedor.BackgroundImage = null;
 
+            
             formNuevo.Show();
         }
 
@@ -158,13 +155,11 @@ namespace MenuAsilo
         private void button2_Click(object sender, EventArgs e)
         {
             SubMenu(); //de ultimo
-
+            admin_usuarios.admin_usuarios.NUMUsuario = NUMUsuario;
             Form frminstancia = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is admin_usuarios.admin_usuarios);
             frminstancia = new admin_usuarios.admin_usuarios();
             FormsHijos(frminstancia);
-
             activo = frminstancia;
-
         }
 
         private void button4_Click(object sender, EventArgs e)

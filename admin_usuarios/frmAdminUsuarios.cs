@@ -69,6 +69,7 @@ namespace admin_usuarios
                 btnEliminar.Enabled = true;
                 btnModificar.Enabled = true;
                 btnAgregar.Enabled = false;
+                
             }
             catch (Exception)
             {
@@ -98,10 +99,11 @@ namespace admin_usuarios
         }
 
 
-
+        public static int TIPOUsuario;
+        public static int NUMUsuario;
         private void admin_usuarios_Load(object sender, EventArgs e)
         {
-
+            
             // TODO: esta línea de código carga datos en la tabla 'db_asiloDataSet.tb_usuario' Puede moverla o quitarla según sea necesario.
             this.tb_usuarioTableAdapter.Fill(this.db_asiloDataSet.tb_usuario);
             comboBox2.Enabled = false;
@@ -195,6 +197,16 @@ namespace admin_usuarios
             {
                 llenardatos();
                 anularusuarioactual();
+                int idUs = Convert.ToInt32(tb_usuarioTableAdapter.buscar(comboBox2.Text));
+                int tiposa = Convert.ToInt32(tb_usuarioTableAdapter.BuscarTipoPorId(idUs));
+                if (tipo == 1)
+                {
+                    comboBox1.SelectedIndex = 0;
+                }
+                else
+                {
+                    comboBox1.SelectedIndex = 1;
+                }
             }
         }
         //Verifica si existe ya el usuario no deja ingresar pero si hay uno igual tambien 
@@ -224,7 +236,7 @@ namespace admin_usuarios
             }
             if(verificar == 0)
             {
-                this.tb_usuarioTableAdapter.agregarUsuarios(txtNombre.Text, txtApellido.Text, txtUsuario.Text, txtContra.Text, 1);
+                this.tb_usuarioTableAdapter.agregarUsuarios(txtNombre.Text, txtApellido.Text, txtUsuario.Text, txtContra.Text, auxiliartipo);
                 this.tb_usuarioTableAdapter.Fill(this.db_asiloDataSet.tb_usuario);
                 comboBox2.Enabled = false;
                 comboBox2.DropDownStyle = ComboBoxStyle.Simple;
@@ -405,10 +417,8 @@ namespace admin_usuarios
 
         public void anularusuarioactual()
         {
-            MenuAsilo.Menu nombreactual1 = new MenuAsilo.Menu();
-            string nombreactual = nombreactual1.texto12();
-
-            if (comboBox2.Text == nombreactual)
+            int numeroactual = Convert.ToInt32( tb_usuarioTableAdapter.buscar(comboBox2.Text));
+            if (numeroactual == NUMUsuario)
             {
                 btnEliminar.Enabled = false;
             }
