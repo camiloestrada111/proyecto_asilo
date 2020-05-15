@@ -149,7 +149,7 @@ namespace admin_us
             resultado = mensaje1.ShowDialog();
 
             frmMessageBoxErrorYaExisteElQueQuiereAgregar MessageBoxErrorYaExisteElQueQuiereAgregar = new frmMessageBoxErrorYaExisteElQueQuiereAgregar();
-
+            frmMessageBoxModificadoCorrectamente modificado = new frmMessageBoxModificadoCorrectamente();
             if (resultado == DialogResult.OK)
             {
                 if (txtNombre.Text == comboBox1.Text)
@@ -165,6 +165,7 @@ namespace admin_us
                     {
                         this.tb_subtipoTableAdapter.modificar_subtipo(txtNombre.Text, id_subtipo);
                         llenardatos(comboBox2.Text);
+                        modificado.Show();
                         //mensaje.Show();
                     }
                     else

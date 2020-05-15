@@ -12,8 +12,6 @@ namespace admin_us
 {
     public partial class frmMessageBoxModificar : Form
     {
-        frmMessageBoxModificadoCorrectamente hola = new frmMessageBoxModificadoCorrectamente();
-        
         public frmMessageBoxModificar()
         {
             InitializeComponent();
@@ -22,7 +20,6 @@ namespace admin_us
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
-            hola.Show();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

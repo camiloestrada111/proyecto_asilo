@@ -52,7 +52,7 @@
             this.lblInicio.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.lblInicio.Location = new System.Drawing.Point(90, 59);
             this.lblInicio.Name = "lblInicio";
-            this.lblInicio.Size = new System.Drawing.Size(190, 25);
+            this.lblInicio.Size = new System.Drawing.Size(153, 20);
             this.lblInicio.TabIndex = 20;
             this.lblInicio.Text = "Problema al ingresar";
             // 
@@ -74,6 +74,7 @@
             this.Name = "frmMessageBoxNoLogin";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frmMessageBoxNoLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

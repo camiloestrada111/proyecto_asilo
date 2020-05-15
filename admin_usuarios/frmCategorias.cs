@@ -112,16 +112,22 @@ namespace admin_us
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            frmMessageBoxEliminar frmMessageBoxEliminar = new frmMessageBoxEliminar();
-            frmMessageBoxEliminar.Show();
-            frmMessageBoxExisteUnError messageBoxExisteUnError = new frmMessageBoxExisteUnError();
-            frmMessageBoxEliminar mensajeeliminar = new frmMessageBoxEliminar();
-            frmMessageBoxErrorYaExisteElQueQuiereAgregar yaExiste = new frmMessageBoxErrorYaExisteElQueQuiereAgregar();
-            int ID_tipoReal = Convert.ToInt32(this.tb_tipoTableAdapter.Consultar_id(comboBox2.Text));
-            this.tb_tipoTableAdapter.Eliminar(ID_tipoReal);
-            checkBox2.Checked = false;
-            mensajeeliminar.Show();
-            
+            frmMessageBoxEliminar eliminado = new frmMessageBoxEliminar();
+            DialogResult resultado = new DialogResult();
+            Form mensaje = new frmMessageBoxPregunta();
+            frmMessageBoxEliminar eliminar = new frmMessageBoxEliminar();
+            resultado = mensaje.ShowDialog();
+            if (resultado == DialogResult.OK)
+            {
+                frmMessageBoxEliminar frmMessageBoxEliminar = new frmMessageBoxEliminar();
+                frmMessageBoxEliminar.Show();
+                frmMessageBoxExisteUnError messageBoxExisteUnError = new frmMessageBoxExisteUnError();
+                frmMessageBoxEliminar mensajeeliminar = new frmMessageBoxEliminar();
+                frmMessageBoxErrorYaExisteElQueQuiereAgregar yaExiste = new frmMessageBoxErrorYaExisteElQueQuiereAgregar();
+                int ID_tipoReal = Convert.ToInt32(this.tb_tipoTableAdapter.Consultar_id(comboBox2.Text));
+                this.tb_tipoTableAdapter.Eliminar(ID_tipoReal);
+                checkBox2.Checked = false;
+            }
         }
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
@@ -150,37 +156,47 @@ namespace admin_us
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-     
+
+            frmMessageBoxModificar mensaje = new frmMessageBoxModificar();
+            Form mensaje1 = new frmMessageBoxModificar();
+            DialogResult resultado = new DialogResult();
+            resultado = mensaje1.ShowDialog();
             frmMessageBoxExisteUnError messageBoxExisteUnError = new frmMessageBoxExisteUnError();
             frmMessageBoxActualizar messageBoxacualizado = new frmMessageBoxActualizar();
             frmMessageBoxErrorYaExisteElQueQuiereAgregar yaExiste = new frmMessageBoxErrorYaExisteElQueQuiereAgregar();
-            int ID_tipoReal = Convert.ToInt32(this.tb_tipoTableAdapter.Consultar_id(comboBox2.Text));
-            int ID_tipo = Convert.ToInt32(this.tb_tipoTableAdapter.Consultar_id(txtNombre.Text));
-            int Perecedero = Convert.ToInt32(this.tb_tipoTableAdapter.Obtener_perecedero(ID_tipoReal));
-            if (comboBox1.Text == "Sí")
+            if (resultado == DialogResult.OK)
             {
-                predecedor = 1;
-            }
-            else if (comboBox1.Text == "No")
-            {
-                predecedor = 0;
-            }
-            if (ID_tipo == 0)
-            {   
-                this.tb_tipoTableAdapter.Actualizar(txtNombre.Text, predecedor, ID_tipoReal);
-                messageBoxacualizado.Show();
-                llenardatos_tipo();
-            }
-            else
-            {
-                if (Perecedero == predecedor)
+                int ID_tipoReal = Convert.ToInt32(this.tb_tipoTableAdapter.Consultar_id(comboBox2.Text));
+                int ID_tipo = Convert.ToInt32(this.tb_tipoTableAdapter.Consultar_id(txtNombre.Text));
+                int Perecedero = Convert.ToInt32(this.tb_tipoTableAdapter.Obtener_perecedero(ID_tipoReal));
+                if (comboBox1.Text == "Sí")
                 {
-                    yaExiste.Show();
-                }else
+                    predecedor = 1;
+                }
+                else if (comboBox1.Text == "No")
+                {
+                    predecedor = 0;
+                }
+                if (ID_tipo == 0)
                 {
                     this.tb_tipoTableAdapter.Actualizar(txtNombre.Text, predecedor, ID_tipoReal);
-                    messageBoxacualizado.Show();
+                    comboBox2.Items.Clear();
                     llenardatos_tipo();
+                    messageBoxacualizado.Show();
+                }
+                else
+                {
+                    if (Perecedero == predecedor)
+                    {
+                        yaExiste.Show();
+                    }
+                    else
+                    {
+                        this.tb_tipoTableAdapter.Actualizar(txtNombre.Text, predecedor, ID_tipoReal);
+                        comboBox2.Items.Clear();
+                        llenardatos_tipo();
+                        messageBoxacualizado.Show();
+                    }
                 }
             }
         }
