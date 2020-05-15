@@ -67,9 +67,9 @@
             this.lblInicio.AutoSize = true;
             this.lblInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInicio.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblInicio.Location = new System.Drawing.Point(111, 58);
+            this.lblInicio.Location = new System.Drawing.Point(90, 59);
             this.lblInicio.Name = "lblInicio";
-            this.lblInicio.Size = new System.Drawing.Size(153, 20);
+            this.lblInicio.Size = new System.Drawing.Size(190, 25);
             this.lblInicio.TabIndex = 20;
             this.lblInicio.Text = "Problema al ingresar";
             // 

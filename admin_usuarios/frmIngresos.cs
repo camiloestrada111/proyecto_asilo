@@ -181,6 +181,8 @@ namespace admin_us
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            frmMesssageBoxIngresado frmIngresos = new frmMesssageBoxIngresado();
+
             if (combo_categoria.Text.Length == 0 || combo_subcategoria.Text.Length == 0 || combo_producto.Text.Length == 0)
             {
                 //Marca Mensaje de error
@@ -209,7 +211,7 @@ namespace admin_us
                                 this.tb_inventarioTableAdapter.Actualizar_inventario(nueva_cantidad, ID_objeto, ID_Inver);
                                 this.tb_reportesTableAdapter.AgregarRegistro(ID_objeto, Convert.ToInt32(numeric_cantidad.Value), Convert.ToString(fecha), "Ingreso");
                                 //Mensaje Agregado cambiar
-                                MessageBox.Show("Ingresado");
+                                frmIngresos.Show();
                             }
                             else
                             {
@@ -221,7 +223,7 @@ namespace admin_us
                                 this.tb_inventarioTableAdapter.Actualizar_inventario(nueva_cantidad, ID_objeto, ID_Inver);
                                 this.tb_reportesTableAdapter.AgregarRegistro(ID_objeto, Convert.ToInt32(numeric_cantidad.Value), Convert.ToString(fecha), "Ingreso");
                                 //Mensaje Agregado cambiar
-                                MessageBox.Show("Ingresado");
+                                frmIngresos.Show();
                             }
                         }else
                         {
@@ -233,7 +235,7 @@ namespace admin_us
                             this.tb_inventarioTableAdapter.Actualizar_inventario(nueva_cantidad, ID_objeto, ID_Inver);
                             this.tb_reportesTableAdapter.AgregarRegistro(ID_objeto, Convert.ToInt32(numeric_cantidad.Value), Convert.ToString(fecha), "Ingreso");
                             //Mensaje Agregado cambiar
-                            MessageBox.Show("Ingresado");
+                            frmIngresos.Show();
                         }
                     }else
                     {
@@ -255,7 +257,7 @@ namespace admin_us
                             this.tb_inventarioTableAdapter.Actualizar_inventario(nueva_cantidad, ID_objeto, ID_Inver);
                             this.tb_reportesTableAdapter.AgregarRegistro(ID_objeto, Convert.ToInt32(numeric_cantidad.Value), Convert.ToString(fecha), "Ingreso");
                             //Mensaje Agregado cambiar
-                            MessageBox.Show("Ingresado");
+                            frmIngresos.Show();
                         }
                         else
                         {
@@ -267,7 +269,7 @@ namespace admin_us
                             this.tb_inventarioTableAdapter.Actualizar_inventario(nueva_cantidad, ID_objeto, ID_Inver);
                             this.tb_reportesTableAdapter.AgregarRegistro(ID_objeto, Convert.ToInt32(numeric_cantidad.Value), Convert.ToString(fecha), "Ingreso");
                             //Mensaje Agregado cambiar
-                            MessageBox.Show("Ingresado");
+                            frmIngresos.Show();
                         }
                     }
                     else
@@ -280,7 +282,7 @@ namespace admin_us
                         this.tb_inventarioTableAdapter.Actualizar_inventario(nueva_cantidad, ID_objeto, ID_Inver);
                         this.tb_reportesTableAdapter.AgregarRegistro(ID_objeto, Convert.ToInt32(numeric_cantidad.Value), Convert.ToString(fecha), "Ingreso");
                         //Mensaje Agregado cambiar
-                        MessageBox.Show("Ingresado");
+                        frmIngresos.Show();
                     }
                 }
             }

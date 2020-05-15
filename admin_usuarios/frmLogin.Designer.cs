@@ -44,6 +44,7 @@
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.tb_usuarioTableAdapter = new admin_us.db_asiloDataSetTableAdapters.tb_usuarioTableAdapter();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbusuarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbasiloDataSetBindingSource)).BeginInit();
@@ -51,6 +52,7 @@
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picContra)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -81,6 +83,7 @@
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.btnAceptar);
             this.panel3.Controls.Add(this.btnSalir);
+            this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 47);
@@ -213,6 +216,18 @@
             // 
             this.tb_usuarioTableAdapter.ClearBeforeFill = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::admin_us.Properties.Resources.user2;
+            this.pictureBox1.Location = new System.Drawing.Point(169, 30);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(156, 142);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 18;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -237,6 +252,7 @@
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picContra)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -256,5 +272,6 @@
         private db_asiloDataSet db_asiloDataSet;
         private System.Windows.Forms.BindingSource tbusuarioBindingSource;
         private db_asiloDataSetTableAdapters.tb_usuarioTableAdapter tb_usuarioTableAdapter;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

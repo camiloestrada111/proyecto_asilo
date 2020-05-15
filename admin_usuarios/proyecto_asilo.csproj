@@ -126,6 +126,12 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMENSAJES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMENSAJES.Designer.cs">
+      <DependentUpon>frmMENSAJES.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +149,12 @@
     </Compile>
     <Compile Include="frmMessageBoxAgregado.Designer.cs">
       <DependentUpon>frmMessageBoxAgregado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMessageBoxEgreso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMessageBoxEgreso.Designer.cs">
+      <DependentUpon>frmMessageBoxEgreso.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMessageBoxEliminar.cs">
       <SubType>Form</SubType>
@@ -198,6 +210,12 @@
     <Compile Include="frmMessageBoxPregunta.Designer.cs">
       <DependentUpon>frmMessageBoxPregunta.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMesssageBoxIngresado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMesssageBoxIngresado.Designer.cs">
+      <DependentUpon>frmMesssageBoxIngresado.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmproductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -237,6 +255,9 @@
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmMENSAJES.resx">
+      <DependentUpon>frmMENSAJES.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -245,6 +266,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMessageBoxAgregado.resx">
       <DependentUpon>frmMessageBoxAgregado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMessageBoxEgreso.resx">
+      <DependentUpon>frmMessageBoxEgreso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMessageBoxEliminar.resx">
       <DependentUpon>frmMessageBoxEliminar.cs</DependentUpon>
@@ -272,6 +296,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMessageBoxPregunta.resx">
       <DependentUpon>frmMessageBoxPregunta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMesssageBoxIngresado.resx">
+      <DependentUpon>frmMesssageBoxIngresado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmproductos.resx">
       <DependentUpon>frmproductos.cs</DependentUpon>

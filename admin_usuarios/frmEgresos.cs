@@ -167,6 +167,8 @@ namespace admin_us
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            frmMessageBoxEgreso ms = new frmMessageBoxEgreso();
+
             if (combo_categoria.Text.Length == 0 || combo_subcategoria.Text.Length == 0 || combo_producto.Text.Length == 0)
             {
 
@@ -183,7 +185,7 @@ namespace admin_us
                 this.tb_inventarioTableAdapter.Actualizar_inventario(nueva_cantidad, ID_objeto, ID_Inver);
                 this.tb_reportesTableAdapter.AgregarRegistro(ID_objeto, Convert.ToInt32(numeric_cantidad.Value), Convert.ToString(fecha), "Salida");
                 //Mensaje Agregado cambiar
-                MessageBox.Show("Egresado");
+                ms.Show();
                 determinar_stock();
             }
         }
