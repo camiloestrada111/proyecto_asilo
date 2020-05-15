@@ -415,7 +415,7 @@ namespace admin_us
             Form mensaje = new frmMessageBoxPregunta();
             frmMessageBoxEliminar eliminar = new frmMessageBoxEliminar();
             resultado = mensaje.ShowDialog();
-
+            eliminar.Show();
 
             if (resultado == DialogResult.OK)
             {

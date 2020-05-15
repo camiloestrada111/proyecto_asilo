@@ -117,19 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="tmr.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btn_Cerrar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        xAAADsQBlSsOGwAAAUdJREFUOE+F1NtKAzEQBuB9Vq+sICj0FTzRVlpthargG+6yudmTu3H+8E+ZNUl7
-        MSSZTD7S7NDCOde3bXvw3hfjOBbTNIXAXNfY07wN5OXspq7roei67lhVlUfCHrgEEXnk2R9NbJEQdKuH
-        zkFYS+0zkS+sTxuSWBFbY52DiDyUZQnkXWvDJibEdsR2WmAhInqTT62ZQVooBWsWrixARG+yt0gEYSQW
-        3kzGN4O8pG6iEUEIYq842Pf97TAM15g3TfORQhBZCCHIjfSIR8j8PocgApAKHJKbXBlooZDWXIRwQH5a
-        aDYBlhJ3fJ9k0yYhFOonljf5xpqwtkbUtBFEZNZsdk9yyaadQUSiZtN9g0VNe4KIJJvNQgabNW2AiDz9
-        v0kOQo6YNm14MyB7JHLNloIQxELTynjEH9uvTMLXsYDGOYjYwTk3/QHS6wDiUqcjHgAAAABJRU5ErkJg
-        gg==
-</value>
-  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAANQAAAEAIACoagMAFgAAACgAAAAAAQAAqAEAAAEAIAAAAAAAAFADAAAAAAAAAAAAAAAAAAAA

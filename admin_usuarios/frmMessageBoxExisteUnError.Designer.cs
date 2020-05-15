@@ -28,58 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMessageBoxExisteUnError));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btn_Cerrar = new System.Windows.Forms.Button();
             this.lblInicio = new System.Windows.Forms.Label();
-            this.panel2.SuspendLayout();
+            this.tmr = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(80)))), ((int)(((byte)(89)))));
-            this.panel2.Controls.Add(this.btn_Cerrar);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(342, 29);
+            this.panel2.Size = new System.Drawing.Size(428, 36);
             this.panel2.TabIndex = 21;
-            // 
-            // btn_Cerrar
-            // 
-            this.btn_Cerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Cerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Cerrar.FlatAppearance.BorderSize = 0;
-            this.btn_Cerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(80)))), ((int)(((byte)(89)))));
-            this.btn_Cerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.btn_Cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Cerrar.Image = ((System.Drawing.Image)(resources.GetObject("btn_Cerrar.Image")));
-            this.btn_Cerrar.Location = new System.Drawing.Point(292, 8);
-            this.btn_Cerrar.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_Cerrar.Name = "btn_Cerrar";
-            this.btn_Cerrar.Size = new System.Drawing.Size(42, 15);
-            this.btn_Cerrar.TabIndex = 23;
-            this.btn_Cerrar.UseVisualStyleBackColor = true;
-            this.btn_Cerrar.Click += new System.EventHandler(this.btn_Cerrar_Click);
             // 
             // lblInicio
             // 
             this.lblInicio.AutoSize = true;
             this.lblInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInicio.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblInicio.Location = new System.Drawing.Point(117, 71);
+            this.lblInicio.Location = new System.Drawing.Point(146, 89);
             this.lblInicio.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblInicio.Name = "lblInicio";
-            this.lblInicio.Size = new System.Drawing.Size(111, 20);
+            this.lblInicio.Size = new System.Drawing.Size(137, 25);
             this.lblInicio.TabIndex = 22;
             this.lblInicio.Text = "Existe un error";
             // 
+            // tmr
+            // 
+            this.tmr.Enabled = true;
+            this.tmr.Interval = 1900;
+            this.tmr.Tick += new System.EventHandler(this.tmr_Tick_2);
+            // 
             // frmMessageBoxExisteUnError
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(342, 127);
+            this.ClientSize = new System.Drawing.Size(428, 159);
             this.ControlBox = false;
             this.Controls.Add(this.lblInicio);
             this.Controls.Add(this.panel2);
@@ -89,7 +77,6 @@
             this.Name = "frmMessageBoxExisteUnError";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.FrmMessageBoxExisteUnError_Load);
-            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -99,6 +86,6 @@
 
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblInicio;
-        private System.Windows.Forms.Button btn_Cerrar;
+        private System.Windows.Forms.Timer tmr;
     }
 }

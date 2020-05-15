@@ -112,7 +112,8 @@ namespace admin_us
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("AGREGAR EL DE PEDIR Eliminar Y QUITAR ESTE");
+            frmMessageBoxEliminar frmMessageBoxEliminar = new frmMessageBoxEliminar();
+            frmMessageBoxEliminar.Show();
             frmMessageBoxExisteUnError messageBoxExisteUnError = new frmMessageBoxExisteUnError();
             frmMessageBoxEliminar mensajeeliminar = new frmMessageBoxEliminar();
             frmMessageBoxErrorYaExisteElQueQuiereAgregar yaExiste = new frmMessageBoxErrorYaExisteElQueQuiereAgregar();
@@ -149,7 +150,7 @@ namespace admin_us
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("AGREGAR EL DE PEDIR MODIFICACION Y QUITAR ESTE");
+     
             frmMessageBoxExisteUnError messageBoxExisteUnError = new frmMessageBoxExisteUnError();
             frmMessageBoxActualizar messageBoxacualizado = new frmMessageBoxActualizar();
             frmMessageBoxErrorYaExisteElQueQuiereAgregar yaExiste = new frmMessageBoxErrorYaExisteElQueQuiereAgregar();

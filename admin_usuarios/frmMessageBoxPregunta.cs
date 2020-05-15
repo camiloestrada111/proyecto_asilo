@@ -12,6 +12,7 @@ namespace admin_us
 {
     public partial class frmMessageBoxPregunta : Form
     {
+        frmMessageBoxEliminar frmMessageBoxEliminar = new frmMessageBoxEliminar();
         public frmMessageBoxPregunta()
         {
             InitializeComponent();
@@ -22,6 +23,7 @@ namespace admin_us
         private void button1_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
+            frmMessageBoxEliminar.Show();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

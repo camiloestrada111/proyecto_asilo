@@ -85,6 +85,12 @@
     <Compile Include="db_asiloDataSet.cs">
       <DependentUpon>db_asiloDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="frmMessageBoxModificadoCorrectamente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMessageBoxModificadoCorrectamente.Designer.cs">
+      <DependentUpon>frmMessageBoxModificadoCorrectamente.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAdminUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -237,6 +243,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="frmMessageBoxModificadoCorrectamente.resx">
+      <DependentUpon>frmMessageBoxModificadoCorrectamente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAdminUsuarios.resx">
       <DependentUpon>frmAdminUsuarios.cs</DependentUpon>
     </EmbeddedResource>

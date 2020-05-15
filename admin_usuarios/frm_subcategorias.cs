@@ -140,8 +140,10 @@ namespace admin_us
 
             frmMessageBoxModificar mensaje = new frmMessageBoxModificar();
 
-            DialogResult resultado = new DialogResult();
             Form mensaje1 = new frmMessageBoxModificar();
+
+            DialogResult resultado = new DialogResult();
+       
 
 
             resultado = mensaje1.ShowDialog();

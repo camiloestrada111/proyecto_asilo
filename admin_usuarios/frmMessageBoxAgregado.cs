@@ -17,6 +17,12 @@ namespace admin_us
             InitializeComponent();
         }
 
+
+        private void tmr_Tick(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+ 
         private void frmMessageBoxAgregado_Load(object sender, EventArgs e)
         {
             this.Location = new Point((Screen.PrimaryScreen.Bounds.Width - this.Width + 282) / 2, (Screen.PrimaryScreen.Bounds.Height - this.Height) / 2);

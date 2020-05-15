@@ -544,3 +544,4 @@ C:\Users\deleo\Source\Repos\camiloestrada111\proyecto_asilo\admin_usuarios\obj\D
 C:\Users\deleo\Source\Repos\camiloestrada111\proyecto_asilo\admin_usuarios\obj\Debug\proyecto_asilo.csproj.CopyComplete
 C:\Users\deleo\Source\Repos\camiloestrada111\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmMessageBoxEgreso.resources
 C:\Users\deleo\Source\Repos\camiloestrada111\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmMesssageBoxIngresado.resources
+C:\Users\deleo\Source\Repos\camiloestrada111\proyecto_asilo\admin_usuarios\obj\Debug\admin_us.frmMessageBoxModificadoCorrectamente.resources

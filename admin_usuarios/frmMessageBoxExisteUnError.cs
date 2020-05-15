@@ -27,5 +27,20 @@ namespace admin_us
             this.Location = new Point((Screen.PrimaryScreen.Bounds.Width - this.Width + 282) / 2, (Screen.PrimaryScreen.Bounds.Height - this.Height) / 2);
 
         }
+
+        private void tmr_Tick(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void tmr_Tick_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void tmr_Tick_2(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

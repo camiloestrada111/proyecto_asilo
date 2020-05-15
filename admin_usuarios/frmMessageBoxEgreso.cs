@@ -27,5 +27,23 @@ namespace admin_us
             this.Close();
 
         }
+
+        private void frmMessageBoxEgreso_Load(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void tmr_Tick(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+
+
+        private void tmr_Tick_2(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
